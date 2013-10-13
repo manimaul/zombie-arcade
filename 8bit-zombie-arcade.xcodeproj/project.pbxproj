@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0AA006A180A4D5A00CCF93D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA0069180A4D5A00CCF93D /* Foundation.framework */; };
+		D0AA006C180A4D5A00CCF93D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */; };
+		D0AA006E180A4D5A00CCF93D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006D180A4D5A00CCF93D /* UIKit.framework */; };
+		D0AA0070180A4D5A00CCF93D /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006F180A4D5A00CCF93D /* SpriteKit.framework */; };
+		D0AA0076180A4D5A00CCF93D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0074180A4D5A00CCF93D /* InfoPlist.strings */; };
+		D0AA0078180A4D5A00CCF93D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA0077180A4D5A00CCF93D /* main.m */; };
+		D0AA007C180A4D5A00CCF93D /* ZAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA007B180A4D5A00CCF93D /* ZAAppDelegate.m */; };
+		D0AA007F180A4D5A00CCF93D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AA007D180A4D5A00CCF93D /* Main.storyboard */; };
+		D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA0081180A4D5A00CCF93D /* ZAViewController.m */; };
+		D0AA0085180A4D5A00CCF93D /* ZAMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */; };
+		D0AA0087180A4D5A00CCF93D /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0086180A4D5A00CCF93D /* Spaceship.png */; };
+		D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0088180A4D5A00CCF93D /* Images.xcassets */; };
+		D0AA0090180A4D5A00CCF93D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA008F180A4D5A00CCF93D /* XCTest.framework */; };
+		D0AA0091180A4D5A00CCF93D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA0069180A4D5A00CCF93D /* Foundation.framework */; };
+		D0AA0092180A4D5A00CCF93D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006D180A4D5A00CCF93D /* UIKit.framework */; };
+		D0AA009A180A4D5A00CCF93D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */; };
+		D0AA009C180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0AA0093180A4D5A00CCF93D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0AA005E180A4D5A00CCF93D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0AA0065180A4D5A00CCF93D;
+			remoteInfo = "8bit-zombie-arcade";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D0AA0066180A4D5A00CCF93D /* 8bit-zombie-arcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "8bit-zombie-arcade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0AA0069180A4D5A00CCF93D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0AA006D180A4D5A00CCF93D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0AA006F180A4D5A00CCF93D /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		D0AA0073180A4D5A00CCF93D /* 8bit-zombie-arcade-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "8bit-zombie-arcade-Info.plist"; sourceTree = "<group>"; };
+		D0AA0075180A4D5A00CCF93D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0AA0077180A4D5A00CCF93D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0AA0079180A4D5A00CCF93D /* 8bit-zombie-arcade-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "8bit-zombie-arcade-Prefix.pch"; sourceTree = "<group>"; };
+		D0AA007A180A4D5A00CCF93D /* ZAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAAppDelegate.h; sourceTree = "<group>"; };
+		D0AA007B180A4D5A00CCF93D /* ZAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAAppDelegate.m; sourceTree = "<group>"; };
+		D0AA007E180A4D5A00CCF93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0AA0080180A4D5A00CCF93D /* ZAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAViewController.h; sourceTree = "<group>"; };
+		D0AA0081180A4D5A00CCF93D /* ZAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAViewController.m; sourceTree = "<group>"; };
+		D0AA0083180A4D5A00CCF93D /* ZAMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAMyScene.h; sourceTree = "<group>"; };
+		D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAMyScene.m; sourceTree = "<group>"; };
+		D0AA0086180A4D5A00CCF93D /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		D0AA0088180A4D5A00CCF93D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D0AA008E180A4D5A00CCF93D /* 8bit-zombie-arcadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "8bit-zombie-arcadeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0AA008F180A4D5A00CCF93D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D0AA0097180A4D5A00CCF93D /* 8bit-zombie-arcadeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "8bit-zombie-arcadeTests-Info.plist"; sourceTree = "<group>"; };
+		D0AA0099180A4D5A00CCF93D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _bit_zombie_arcadeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0AA0063180A4D5A00CCF93D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0AA006C180A4D5A00CCF93D /* CoreGraphics.framework in Frameworks */,
+				D0AA006E180A4D5A00CCF93D /* UIKit.framework in Frameworks */,
+				D0AA0070180A4D5A00CCF93D /* SpriteKit.framework in Frameworks */,
+				D0AA006A180A4D5A00CCF93D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0AA008B180A4D5A00CCF93D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0AA0090180A4D5A00CCF93D /* XCTest.framework in Frameworks */,
+				D0AA0092180A4D5A00CCF93D /* UIKit.framework in Frameworks */,
+				D0AA0091180A4D5A00CCF93D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0AA005D180A4D5A00CCF93D = {
+			isa = PBXGroup;
+			children = (
+				D0AA0071180A4D5A00CCF93D /* 8bit-zombie-arcade */,
+				D0AA0095180A4D5A00CCF93D /* 8bit-zombie-arcadeTests */,
+				D0AA0068180A4D5A00CCF93D /* Frameworks */,
+				D0AA0067180A4D5A00CCF93D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0AA0067180A4D5A00CCF93D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA0066180A4D5A00CCF93D /* 8bit-zombie-arcade.app */,
+				D0AA008E180A4D5A00CCF93D /* 8bit-zombie-arcadeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0AA0068180A4D5A00CCF93D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA0069180A4D5A00CCF93D /* Foundation.framework */,
+				D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */,
+				D0AA006D180A4D5A00CCF93D /* UIKit.framework */,
+				D0AA006F180A4D5A00CCF93D /* SpriteKit.framework */,
+				D0AA008F180A4D5A00CCF93D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0AA0071180A4D5A00CCF93D /* 8bit-zombie-arcade */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA007A180A4D5A00CCF93D /* ZAAppDelegate.h */,
+				D0AA007B180A4D5A00CCF93D /* ZAAppDelegate.m */,
+				D0AA007D180A4D5A00CCF93D /* Main.storyboard */,
+				D0AA0080180A4D5A00CCF93D /* ZAViewController.h */,
+				D0AA0081180A4D5A00CCF93D /* ZAViewController.m */,
+				D0AA0083180A4D5A00CCF93D /* ZAMyScene.h */,
+				D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */,
+				D0AA0086180A4D5A00CCF93D /* Spaceship.png */,
+				D0AA0088180A4D5A00CCF93D /* Images.xcassets */,
+				D0AA0072180A4D5A00CCF93D /* Supporting Files */,
+			);
+			path = "8bit-zombie-arcade";
+			sourceTree = "<group>";
+		};
+		D0AA0072180A4D5A00CCF93D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA0073180A4D5A00CCF93D /* 8bit-zombie-arcade-Info.plist */,
+				D0AA0074180A4D5A00CCF93D /* InfoPlist.strings */,
+				D0AA0077180A4D5A00CCF93D /* main.m */,
+				D0AA0079180A4D5A00CCF93D /* 8bit-zombie-arcade-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0AA0095180A4D5A00CCF93D /* 8bit-zombie-arcadeTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */,
+				D0AA0096180A4D5A00CCF93D /* Supporting Files */,
+			);
+			path = "8bit-zombie-arcadeTests";
+			sourceTree = "<group>";
+		};
+		D0AA0096180A4D5A00CCF93D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA0097180A4D5A00CCF93D /* 8bit-zombie-arcadeTests-Info.plist */,
+				D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0AA0065180A4D5A00CCF93D /* 8bit-zombie-arcade */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0AA009F180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "8bit-zombie-arcade" */;
+			buildPhases = (
+				D0AA0062180A4D5A00CCF93D /* Sources */,
+				D0AA0063180A4D5A00CCF93D /* Frameworks */,
+				D0AA0064180A4D5A00CCF93D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "8bit-zombie-arcade";
+			productName = "8bit-zombie-arcade";
+			productReference = D0AA0066180A4D5A00CCF93D /* 8bit-zombie-arcade.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0AA008D180A4D5A00CCF93D /* 8bit-zombie-arcadeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0AA00A2180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "8bit-zombie-arcadeTests" */;
+			buildPhases = (
+				D0AA008A180A4D5A00CCF93D /* Sources */,
+				D0AA008B180A4D5A00CCF93D /* Frameworks */,
+				D0AA008C180A4D5A00CCF93D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0AA0094180A4D5A00CCF93D /* PBXTargetDependency */,
+			);
+			name = "8bit-zombie-arcadeTests";
+			productName = "8bit-zombie-arcadeTests";
+			productReference = D0AA008E180A4D5A00CCF93D /* 8bit-zombie-arcadeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0AA005E180A4D5A00CCF93D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZA;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Will Kamp";
+				TargetAttributes = {
+					D0AA008D180A4D5A00CCF93D = {
+						TestTargetID = D0AA0065180A4D5A00CCF93D;
+					};
+				};
+			};
+			buildConfigurationList = D0AA0061180A4D5A00CCF93D /* Build configuration list for PBXProject "8bit-zombie-arcade" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0AA005D180A4D5A00CCF93D;
+			productRefGroup = D0AA0067180A4D5A00CCF93D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0AA0065180A4D5A00CCF93D /* 8bit-zombie-arcade */,
+				D0AA008D180A4D5A00CCF93D /* 8bit-zombie-arcadeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0AA0064180A4D5A00CCF93D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0AA0076180A4D5A00CCF93D /* InfoPlist.strings in Resources */,
+				D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */,
+				D0AA0087180A4D5A00CCF93D /* Spaceship.png in Resources */,
+				D0AA007F180A4D5A00CCF93D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0AA008C180A4D5A00CCF93D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0AA009A180A4D5A00CCF93D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0AA0062180A4D5A00CCF93D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */,
+				D0AA0085180A4D5A00CCF93D /* ZAMyScene.m in Sources */,
+				D0AA0078180A4D5A00CCF93D /* main.m in Sources */,
+				D0AA007C180A4D5A00CCF93D /* ZAAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0AA008A180A4D5A00CCF93D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0AA009C180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0AA0094180A4D5A00CCF93D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0AA0065180A4D5A00CCF93D /* 8bit-zombie-arcade */;
+			targetProxy = D0AA0093180A4D5A00CCF93D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0AA0074180A4D5A00CCF93D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0AA0075180A4D5A00CCF93D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0AA007D180A4D5A00CCF93D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0AA007E180A4D5A00CCF93D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0AA0099180A4D5A00CCF93D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0AA009D180A4D5A00CCF93D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0AA009E180A4D5A00CCF93D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0AA00A0180A4D5A00CCF93D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "8bit-zombie-arcade/8bit-zombie-arcade-Prefix.pch";
+				INFOPLIST_FILE = "8bit-zombie-arcade/8bit-zombie-arcade-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0AA00A1180A4D5A00CCF93D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "8bit-zombie-arcade/8bit-zombie-arcade-Prefix.pch";
+				INFOPLIST_FILE = "8bit-zombie-arcade/8bit-zombie-arcade-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D0AA00A3180A4D5A00CCF93D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/8bit-zombie-arcade.app/8bit-zombie-arcade";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "8bit-zombie-arcade/8bit-zombie-arcade-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "8bit-zombie-arcadeTests/8bit-zombie-arcadeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D0AA00A4180A4D5A00CCF93D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/8bit-zombie-arcade.app/8bit-zombie-arcade";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "8bit-zombie-arcade/8bit-zombie-arcade-Prefix.pch";
+				INFOPLIST_FILE = "8bit-zombie-arcadeTests/8bit-zombie-arcadeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0AA0061180A4D5A00CCF93D /* Build configuration list for PBXProject "8bit-zombie-arcade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0AA009D180A4D5A00CCF93D /* Debug */,
+				D0AA009E180A4D5A00CCF93D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0AA009F180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "8bit-zombie-arcade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0AA00A0180A4D5A00CCF93D /* Debug */,
+				D0AA00A1180A4D5A00CCF93D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D0AA00A2180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "8bit-zombie-arcadeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0AA00A3180A4D5A00CCF93D /* Debug */,
+				D0AA00A4180A4D5A00CCF93D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0AA005E180A4D5A00CCF93D /* Project object */;
+}
