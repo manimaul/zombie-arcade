@@ -7,6 +7,7 @@
 //
 
 #import "ZAMyScene.h"
+#import "ZAZombieSpriteNode.h"
 
 @implementation ZAMyScene
 
@@ -18,7 +19,7 @@
         
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
-        myLabel.text = @"Hello, World!";
+        myLabel.text = @"Zombie Arcade!";
         myLabel.fontSize = 30;
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));
@@ -34,13 +35,16 @@
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
+        //SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
+        ZAZombieSpriteNode *sprite = [ZAZombieSpriteNode createZombieSprite];
+
         sprite.position = location;
         
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
+        SKAction *action = [sprite animateZombieLurch];
         
+        SKAction *rotAction = [SKAction rotateByAngle:M_PI duration:1];
         [sprite runAction:[SKAction repeatActionForever:action]];
+        [sprite runAction:[SKAction repeatAction:rotAction count:5]];
         
         [self addChild:sprite];
     }

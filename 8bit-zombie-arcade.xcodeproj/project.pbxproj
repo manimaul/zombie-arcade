@@ -24,6 +24,15 @@
 		D0AA0092180A4D5A00CCF93D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006D180A4D5A00CCF93D /* UIKit.framework */; };
 		D0AA009A180A4D5A00CCF93D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */; };
 		D0AA009C180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */; };
+		D0AA00AD180BBD8B00CCF93D /* lurch_0.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00A5180BBD8B00CCF93D /* lurch_0.png */; };
+		D0AA00AE180BBD8B00CCF93D /* lurch_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00A6180BBD8B00CCF93D /* lurch_1.png */; };
+		D0AA00AF180BBD8B00CCF93D /* lurch_2.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00A7180BBD8B00CCF93D /* lurch_2.png */; };
+		D0AA00B0180BBD8B00CCF93D /* lurch_3.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00A8180BBD8B00CCF93D /* lurch_3.png */; };
+		D0AA00B1180BBD8B00CCF93D /* lurch_4.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00A9180BBD8B00CCF93D /* lurch_4.png */; };
+		D0AA00B2180BBD8B00CCF93D /* lurch_5.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00AA180BBD8B00CCF93D /* lurch_5.png */; };
+		D0AA00B3180BBD8B00CCF93D /* lurch_6.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00AB180BBD8B00CCF93D /* lurch_6.png */; };
+		D0AA00B4180BBD8B00CCF93D /* lurch_7.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00AC180BBD8B00CCF93D /* lurch_7.png */; };
+		D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +69,16 @@
 		D0AA0097180A4D5A00CCF93D /* 8bit-zombie-arcadeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "8bit-zombie-arcadeTests-Info.plist"; sourceTree = "<group>"; };
 		D0AA0099180A4D5A00CCF93D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _bit_zombie_arcadeTests.m; sourceTree = "<group>"; };
+		D0AA00A5180BBD8B00CCF93D /* lurch_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_0.png; path = Resources/lurch_0.png; sourceTree = "<group>"; };
+		D0AA00A6180BBD8B00CCF93D /* lurch_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_1.png; path = Resources/lurch_1.png; sourceTree = "<group>"; };
+		D0AA00A7180BBD8B00CCF93D /* lurch_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_2.png; path = Resources/lurch_2.png; sourceTree = "<group>"; };
+		D0AA00A8180BBD8B00CCF93D /* lurch_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_3.png; path = Resources/lurch_3.png; sourceTree = "<group>"; };
+		D0AA00A9180BBD8B00CCF93D /* lurch_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_4.png; path = Resources/lurch_4.png; sourceTree = "<group>"; };
+		D0AA00AA180BBD8B00CCF93D /* lurch_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_5.png; path = Resources/lurch_5.png; sourceTree = "<group>"; };
+		D0AA00AB180BBD8B00CCF93D /* lurch_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_6.png; path = Resources/lurch_6.png; sourceTree = "<group>"; };
+		D0AA00AC180BBD8B00CCF93D /* lurch_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_7.png; path = Resources/lurch_7.png; sourceTree = "<group>"; };
+		D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAZombieSpriteNode.h; sourceTree = "<group>"; };
+		D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAZombieSpriteNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +109,7 @@
 		D0AA005D180A4D5A00CCF93D = {
 			isa = PBXGroup;
 			children = (
+				D0AA00B5180BBDA200CCF93D /* Sprites */,
 				D0AA0071180A4D5A00CCF93D /* 8bit-zombie-arcade */,
 				D0AA0095180A4D5A00CCF93D /* 8bit-zombie-arcadeTests */,
 				D0AA0068180A4D5A00CCF93D /* Frameworks */,
@@ -128,6 +148,8 @@
 				D0AA0081180A4D5A00CCF93D /* ZAViewController.m */,
 				D0AA0083180A4D5A00CCF93D /* ZAMyScene.h */,
 				D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */,
+				D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */,
+				D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */,
 				D0AA0086180A4D5A00CCF93D /* Spaceship.png */,
 				D0AA0088180A4D5A00CCF93D /* Images.xcassets */,
 				D0AA0072180A4D5A00CCF93D /* Supporting Files */,
@@ -162,6 +184,22 @@
 				D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0AA00B5180BBDA200CCF93D /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA00A5180BBD8B00CCF93D /* lurch_0.png */,
+				D0AA00A6180BBD8B00CCF93D /* lurch_1.png */,
+				D0AA00A7180BBD8B00CCF93D /* lurch_2.png */,
+				D0AA00A8180BBD8B00CCF93D /* lurch_3.png */,
+				D0AA00A9180BBD8B00CCF93D /* lurch_4.png */,
+				D0AA00AA180BBD8B00CCF93D /* lurch_5.png */,
+				D0AA00AB180BBD8B00CCF93D /* lurch_6.png */,
+				D0AA00AC180BBD8B00CCF93D /* lurch_7.png */,
+			);
+			name = Sprites;
+			path = "8bit-zombie-arcade";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +282,14 @@
 				D0AA0076180A4D5A00CCF93D /* InfoPlist.strings in Resources */,
 				D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */,
 				D0AA0087180A4D5A00CCF93D /* Spaceship.png in Resources */,
+				D0AA00AD180BBD8B00CCF93D /* lurch_0.png in Resources */,
+				D0AA00AE180BBD8B00CCF93D /* lurch_1.png in Resources */,
+				D0AA00AF180BBD8B00CCF93D /* lurch_2.png in Resources */,
+				D0AA00B0180BBD8B00CCF93D /* lurch_3.png in Resources */,
+				D0AA00B1180BBD8B00CCF93D /* lurch_4.png in Resources */,
+				D0AA00B2180BBD8B00CCF93D /* lurch_5.png in Resources */,
+				D0AA00B3180BBD8B00CCF93D /* lurch_6.png in Resources */,
+				D0AA00B4180BBD8B00CCF93D /* lurch_7.png in Resources */,
 				D0AA007F180A4D5A00CCF93D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */,
 				D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */,
 				D0AA0085180A4D5A00CCF93D /* ZAMyScene.m in Sources */,
 				D0AA0078180A4D5A00CCF93D /* main.m in Sources */,
@@ -398,6 +445,7 @@
 				INFOPLIST_FILE = "8bit-zombie-arcade/8bit-zombie-arcade-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -412,6 +460,7 @@
 				INFOPLIST_FILE = "8bit-zombie-arcade/8bit-zombie-arcade-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
