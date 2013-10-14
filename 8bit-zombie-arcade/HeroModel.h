@@ -10,4 +10,7 @@
 
 @interface HeroModel : CharacterModel
 
++ (id)heroWithSprite;
+- (id)initWithImageNamed:(NSString *)name;
+
 @end

@@ -10,4 +10,19 @@
 
 @implementation HeroModel
 
+- (id)initWithImageNamed:(NSString *)name{
+    self = [super initWithImageNamed:name];
+    if (self) {
+        //
+    }
+    return self;
+}
+
++ (id)heroWithSprite{
+    return [[HeroModel alloc] initWithImageNamed:@"hero"];
+}
+
+// moving
+// attacking
+
 @end
