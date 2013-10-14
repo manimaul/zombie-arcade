@@ -10,4 +10,20 @@
 
 @implementation ZombieModel
 
+- (id)initWithImageNamed:(NSString *)name{
+    self = [super initWithImageNamed:name];
+    if (self) {
+        //
+    }
+    return self;
+}
+
++ (id)zombieWithSprite{
+    return [[ZombieModel alloc] initWithImageNamed:@"zombie"];
+}
+
+// moving
+// attacking
+// dying
+
 @end

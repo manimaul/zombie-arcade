@@ -10,4 +10,7 @@
 
 @interface ZombieModel : CharacterModel
 
++ (id)zombieWithSprite;
+- (id)initWithImageNamed:(NSString *)name;
+
 @end
