@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Will Kamp. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <SpriteKit/SpriteKit.h>
 
-@interface CharacterModel : NSObject
+@interface CharacterModel : SKSpriteNode
 
 @end
