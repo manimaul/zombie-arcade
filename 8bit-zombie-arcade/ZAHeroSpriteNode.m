@@ -21,7 +21,7 @@ static const float kShowCharacterFramesOverOneSecond = 1.0f/(float) kDefaultNumb
 + (instancetype)createHeroSprite
 {
     ZAHeroSpriteNode *heroSprite = [[self class] spriteNodeWithImageNamed:@"woman_walk_west_0.png"];
-    
+    heroSprite.size = CGSizeMake(32., 32.);
     return heroSprite;
 }
 
@@ -46,7 +46,7 @@ static const float kShowCharacterFramesOverOneSecond = 1.0f/(float) kDefaultNumb
 {
     if (self.animateLurch == nil) {
         self.lurchFrames = [[self class] animationFramesForImageNamePrefix:@"woman_walk_west_" frameCount:kDefaultNumberOfFrames];
-        self.animateLurch = [SKAction animateWithTextures:self.lurchFrames timePerFrame:kShowCharacterFramesOverOneSecond resize:YES restore:NO];
+        self.animateLurch = [SKAction animateWithTextures:self.lurchFrames timePerFrame:kShowCharacterFramesOverOneSecond resize:NO restore:NO];
     }
     
     return self.animateLurch;
