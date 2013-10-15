@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong, readonly) SKAction *animateZombieLurch;
 + (instancetype)createZombieSprite;
-//- (void)walkToX:(CGFloat)x duration:(NSTimeInterval)duration completion:(MSWManSpriteNodeCompletion)completion;
+//- (void)walkToX:(CGFloat)x duration:(NSTimeInterval)duration completion:(ZAZombieSpriteNode)completion;
 
 
 @end
