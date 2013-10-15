@@ -20,7 +20,7 @@ static const float kShowCharacterFramesOverOneSecond = 1.0f/(float) kDefaultNumb
 
 + (instancetype)createZombieSprite
 {
-    ZAZombieSpriteNode *zombieSprite = [[self class] spriteNodeWithImageNamed:@"lurch_0.png"];
+    ZAZombieSpriteNode *zombieSprite = [[self class] spriteNodeWithImageNamed:@"zombie_lurch_west_0.png"];
     
     return zombieSprite;
 }
@@ -30,7 +30,6 @@ static const float kShowCharacterFramesOverOneSecond = 1.0f/(float) kDefaultNumb
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:count];
     for (NSInteger index = 0; index < count; ++index) {
         NSString *imageName = [NSString stringWithFormat:@"%@%d.png", baseImageName, index];
-        //NSLog(@"%@", imageName);
         
         SKTexture *texture = [SKTexture textureWithImageNamed:imageName];
         
@@ -46,7 +45,7 @@ static const float kShowCharacterFramesOverOneSecond = 1.0f/(float) kDefaultNumb
 - (SKAction *)animateZombieLurch
 {
     if (self.animateLurch == nil) {
-        self.lurchFrames = [[self class] animationFramesForImageNamePrefix:@"lurch_" frameCount:kDefaultNumberOfFrames];
+        self.lurchFrames = [[self class] animationFramesForImageNamePrefix:@"zombie_lurch_west_" frameCount:kDefaultNumberOfFrames];
         self.animateLurch = [SKAction animateWithTextures:self.lurchFrames timePerFrame:kShowCharacterFramesOverOneSecond resize:YES restore:NO];
     }
     
