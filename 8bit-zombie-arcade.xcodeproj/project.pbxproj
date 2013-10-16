@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A61A21C7180F29DD0007D279 /* ZAGunModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A61A21C6180F29DD0007D279 /* ZAGunModel.m */; };
+		A613274D180F2D88004816C0 /* ZAGunModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A613274C180F2D88004816C0 /* ZAGunModel.m */; };
+		A6132750180F3192004816C0 /* BulletParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = A613274E180F3192004816C0 /* BulletParticle.sks */; };
+		A6132751180F3192004816C0 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A613274F180F3192004816C0 /* spark.png */; };
 		D0AA006A180A4D5A00CCF93D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA0069180A4D5A00CCF93D /* Foundation.framework */; };
 		D0AA006C180A4D5A00CCF93D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */; };
 		D0AA006E180A4D5A00CCF93D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006D180A4D5A00CCF93D /* UIKit.framework */; };
@@ -41,8 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A61A21C5180F29DD0007D279 /* ZAGunModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAGunModel.h; sourceTree = "<group>"; };
-		A61A21C6180F29DD0007D279 /* ZAGunModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAGunModel.m; sourceTree = "<group>"; };
+		A613274B180F2D88004816C0 /* ZAGunModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAGunModel.h; sourceTree = "<group>"; };
+		A613274C180F2D88004816C0 /* ZAGunModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAGunModel.m; sourceTree = "<group>"; };
+		A613274E180F3192004816C0 /* BulletParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BulletParticle.sks; sourceTree = "<group>"; };
+		A613274F180F3192004816C0 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		D0AA0066180A4D5A00CCF93D /* 8bit-zombie-arcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "8bit-zombie-arcade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AA0069180A4D5A00CCF93D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -145,6 +149,10 @@
 				D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */,
 				D0DD0224180CC04900EAFABB /* ZAHeroSpriteNode.h */,
 				D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */,
+				A613274B180F2D88004816C0 /* ZAGunModel.h */,
+				A613274C180F2D88004816C0 /* ZAGunModel.m */,
+				A613274E180F3192004816C0 /* BulletParticle.sks */,
+				A613274F180F3192004816C0 /* spark.png */,
 				D0AA0088180A4D5A00CCF93D /* Images.xcassets */,
 				D0AA0072180A4D5A00CCF93D /* Supporting Files */,
 			);
@@ -258,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0AA0076180A4D5A00CCF93D /* InfoPlist.strings in Resources */,
+				A6132750180F3192004816C0 /* BulletParticle.sks in Resources */,
 				D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */,
+				A6132751180F3192004816C0 /* spark.png in Resources */,
 				D0AA00BA180C96CE00CCF93D /* zombie.atlas in Resources */,
 				D0AA007F180A4D5A00CCF93D /* Main.storyboard in Resources */,
 				D0DD0228180CC06000EAFABB /* woman.atlas in Resources */,
@@ -283,8 +293,8 @@
 				D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */,
 				D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */,
 				D0AA0085180A4D5A00CCF93D /* ZAMyScene.m in Sources */,
-				A61A21C7180F29DD0007D279 /* ZAGunModel.m in Sources */,
 				D0AA0078180A4D5A00CCF93D /* main.m in Sources */,
+				A613274D180F2D88004816C0 /* ZAGunModel.m in Sources */,
 				D0AA007C180A4D5A00CCF93D /* ZAAppDelegate.m in Sources */,
 				D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */,
 			);

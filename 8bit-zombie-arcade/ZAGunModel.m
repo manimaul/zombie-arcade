@@ -10,4 +10,6 @@
 
 @implementation ZAGunModel
 
+
+
 @end
