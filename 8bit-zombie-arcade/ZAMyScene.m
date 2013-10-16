@@ -8,6 +8,7 @@
 
 #import "ZAMyScene.h"
 #import "ZAZombieSpriteNode.h"
+#import "ZAHeroSpriteNode.h"
 
 @implementation ZAMyScene
 
@@ -23,7 +24,6 @@
         myLabel.fontSize = 30;
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));
-        
         [self addChild:myLabel];
     }
     return self;
@@ -35,18 +35,28 @@
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         
-        //SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        ZAZombieSpriteNode *sprite = [ZAZombieSpriteNode createZombieSprite];
-
-        sprite.position = location;
+        if ([[self children] count] % 2) {
+            ZAZombieSpriteNode *sprite = [ZAZombieSpriteNode createZombieSprite];
+            
+            sprite.position = location;
+            
+            SKAction *action = [sprite animateZombieLurch];
+            
+            [sprite runAction:[SKAction repeatActionForever:action]];
+            
+            [self addChild:sprite];
+        } else {
+            ZAHeroSpriteNode *sprite = [ZAHeroSpriteNode createHeroSprite];
+            
+            sprite.position = location;
+            
+            SKAction *action = [sprite animateHeroWalk];
+            
+            [sprite runAction:[SKAction repeatActionForever:action]];
+            
+            [self addChild:sprite];
+        }
         
-        SKAction *action = [sprite animateZombieLurch];
-        
-        SKAction *rotAction = [SKAction rotateByAngle:M_PI duration:1];
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        [sprite runAction:[SKAction repeatAction:rotAction count:5]];
-        
-        [self addChild:sprite];
     }
 }
 

@@ -18,22 +18,16 @@
 		D0AA007F180A4D5A00CCF93D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AA007D180A4D5A00CCF93D /* Main.storyboard */; };
 		D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA0081180A4D5A00CCF93D /* ZAViewController.m */; };
 		D0AA0085180A4D5A00CCF93D /* ZAMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */; };
-		D0AA0087180A4D5A00CCF93D /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0086180A4D5A00CCF93D /* Spaceship.png */; };
 		D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0088180A4D5A00CCF93D /* Images.xcassets */; };
 		D0AA0090180A4D5A00CCF93D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA008F180A4D5A00CCF93D /* XCTest.framework */; };
 		D0AA0091180A4D5A00CCF93D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA0069180A4D5A00CCF93D /* Foundation.framework */; };
 		D0AA0092180A4D5A00CCF93D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006D180A4D5A00CCF93D /* UIKit.framework */; };
 		D0AA009A180A4D5A00CCF93D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */; };
 		D0AA009C180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */; };
-		D0AA00AD180BBD8B00CCF93D /* lurch_0.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00A5180BBD8B00CCF93D /* lurch_0.png */; };
-		D0AA00AE180BBD8B00CCF93D /* lurch_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00A6180BBD8B00CCF93D /* lurch_1.png */; };
-		D0AA00AF180BBD8B00CCF93D /* lurch_2.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00A7180BBD8B00CCF93D /* lurch_2.png */; };
-		D0AA00B0180BBD8B00CCF93D /* lurch_3.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00A8180BBD8B00CCF93D /* lurch_3.png */; };
-		D0AA00B1180BBD8B00CCF93D /* lurch_4.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00A9180BBD8B00CCF93D /* lurch_4.png */; };
-		D0AA00B2180BBD8B00CCF93D /* lurch_5.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00AA180BBD8B00CCF93D /* lurch_5.png */; };
-		D0AA00B3180BBD8B00CCF93D /* lurch_6.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00AB180BBD8B00CCF93D /* lurch_6.png */; };
-		D0AA00B4180BBD8B00CCF93D /* lurch_7.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00AC180BBD8B00CCF93D /* lurch_7.png */; };
 		D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */; };
+		D0AA00BA180C96CE00CCF93D /* zombie.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00B9180C96CE00CCF93D /* zombie.atlas */; };
+		D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */; };
+		D0DD0228180CC06000EAFABB /* woman.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0DD0227180CC06000EAFABB /* woman.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,23 +59,18 @@
 		D0AA0081180A4D5A00CCF93D /* ZAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAViewController.m; sourceTree = "<group>"; };
 		D0AA0083180A4D5A00CCF93D /* ZAMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAMyScene.h; sourceTree = "<group>"; };
 		D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAMyScene.m; sourceTree = "<group>"; };
-		D0AA0086180A4D5A00CCF93D /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		D0AA0088180A4D5A00CCF93D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0AA008E180A4D5A00CCF93D /* 8bit-zombie-arcadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "8bit-zombie-arcadeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AA008F180A4D5A00CCF93D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D0AA0097180A4D5A00CCF93D /* 8bit-zombie-arcadeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "8bit-zombie-arcadeTests-Info.plist"; sourceTree = "<group>"; };
 		D0AA0099180A4D5A00CCF93D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _bit_zombie_arcadeTests.m; sourceTree = "<group>"; };
-		D0AA00A5180BBD8B00CCF93D /* lurch_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_0.png; path = Resources/lurch_0.png; sourceTree = "<group>"; };
-		D0AA00A6180BBD8B00CCF93D /* lurch_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_1.png; path = Resources/lurch_1.png; sourceTree = "<group>"; };
-		D0AA00A7180BBD8B00CCF93D /* lurch_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_2.png; path = Resources/lurch_2.png; sourceTree = "<group>"; };
-		D0AA00A8180BBD8B00CCF93D /* lurch_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_3.png; path = Resources/lurch_3.png; sourceTree = "<group>"; };
-		D0AA00A9180BBD8B00CCF93D /* lurch_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_4.png; path = Resources/lurch_4.png; sourceTree = "<group>"; };
-		D0AA00AA180BBD8B00CCF93D /* lurch_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_5.png; path = Resources/lurch_5.png; sourceTree = "<group>"; };
-		D0AA00AB180BBD8B00CCF93D /* lurch_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_6.png; path = Resources/lurch_6.png; sourceTree = "<group>"; };
-		D0AA00AC180BBD8B00CCF93D /* lurch_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lurch_7.png; path = Resources/lurch_7.png; sourceTree = "<group>"; };
 		D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAZombieSpriteNode.h; sourceTree = "<group>"; };
 		D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAZombieSpriteNode.m; sourceTree = "<group>"; };
+		D0AA00B9180C96CE00CCF93D /* zombie.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = zombie.atlas; path = "8bit-zombie-arcade/Resources/zombie.atlas"; sourceTree = "<group>"; };
+		D0DD0224180CC04900EAFABB /* ZAHeroSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAHeroSpriteNode.h; sourceTree = "<group>"; };
+		D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAHeroSpriteNode.m; sourceTree = "<group>"; };
+		D0DD0227180CC06000EAFABB /* woman.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = woman.atlas; path = "8bit-zombie-arcade/Resources/woman.atlas"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +101,8 @@
 		D0AA005D180A4D5A00CCF93D = {
 			isa = PBXGroup;
 			children = (
-				D0AA00B5180BBDA200CCF93D /* Sprites */,
+				D0AA00B9180C96CE00CCF93D /* zombie.atlas */,
+				D0DD0227180CC06000EAFABB /* woman.atlas */,
 				D0AA0071180A4D5A00CCF93D /* 8bit-zombie-arcade */,
 				D0AA0095180A4D5A00CCF93D /* 8bit-zombie-arcadeTests */,
 				D0AA0068180A4D5A00CCF93D /* Frameworks */,
@@ -153,9 +143,8 @@
 				D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */,
 				D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */,
 				D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */,
-				A61A21C5180F29DD0007D279 /* ZAGunModel.h */,
-				A61A21C6180F29DD0007D279 /* ZAGunModel.m */,
-				D0AA0086180A4D5A00CCF93D /* Spaceship.png */,
+				D0DD0224180CC04900EAFABB /* ZAHeroSpriteNode.h */,
+				D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */,
 				D0AA0088180A4D5A00CCF93D /* Images.xcassets */,
 				D0AA0072180A4D5A00CCF93D /* Supporting Files */,
 			);
@@ -189,22 +178,6 @@
 				D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D0AA00B5180BBDA200CCF93D /* Sprites */ = {
-			isa = PBXGroup;
-			children = (
-				D0AA00A5180BBD8B00CCF93D /* lurch_0.png */,
-				D0AA00A6180BBD8B00CCF93D /* lurch_1.png */,
-				D0AA00A7180BBD8B00CCF93D /* lurch_2.png */,
-				D0AA00A8180BBD8B00CCF93D /* lurch_3.png */,
-				D0AA00A9180BBD8B00CCF93D /* lurch_4.png */,
-				D0AA00AA180BBD8B00CCF93D /* lurch_5.png */,
-				D0AA00AB180BBD8B00CCF93D /* lurch_6.png */,
-				D0AA00AC180BBD8B00CCF93D /* lurch_7.png */,
-			);
-			name = Sprites;
-			path = "8bit-zombie-arcade";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,16 +259,9 @@
 			files = (
 				D0AA0076180A4D5A00CCF93D /* InfoPlist.strings in Resources */,
 				D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */,
-				D0AA0087180A4D5A00CCF93D /* Spaceship.png in Resources */,
-				D0AA00AD180BBD8B00CCF93D /* lurch_0.png in Resources */,
-				D0AA00AE180BBD8B00CCF93D /* lurch_1.png in Resources */,
-				D0AA00AF180BBD8B00CCF93D /* lurch_2.png in Resources */,
-				D0AA00B0180BBD8B00CCF93D /* lurch_3.png in Resources */,
-				D0AA00B1180BBD8B00CCF93D /* lurch_4.png in Resources */,
-				D0AA00B2180BBD8B00CCF93D /* lurch_5.png in Resources */,
-				D0AA00B3180BBD8B00CCF93D /* lurch_6.png in Resources */,
-				D0AA00B4180BBD8B00CCF93D /* lurch_7.png in Resources */,
+				D0AA00BA180C96CE00CCF93D /* zombie.atlas in Resources */,
 				D0AA007F180A4D5A00CCF93D /* Main.storyboard in Resources */,
+				D0DD0228180CC06000EAFABB /* woman.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +286,7 @@
 				A61A21C7180F29DD0007D279 /* ZAGunModel.m in Sources */,
 				D0AA0078180A4D5A00CCF93D /* main.m in Sources */,
 				D0AA007C180A4D5A00CCF93D /* ZAAppDelegate.m in Sources */,
+				D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +372,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 			};
 			name = Debug;
 		};
@@ -437,6 +405,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
