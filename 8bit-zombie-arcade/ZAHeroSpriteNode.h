@@ -6,12 +6,15 @@
 //  Copyright (c) 2013 Will Kamp. All rights reserved.
 //
 
-#import <SpriteKit/SpriteKit.h>
+#import "ZACharacherSpriteNode.h"
 
-@interface ZAHeroSpriteNode : SKSpriteNode
+static const float HERO_MOVE_POINTS_PER_SEC = 120.;
 
-@property (nonatomic, strong, readonly) SKAction *animateHeroWalk;
+@interface ZAHeroSpriteNode : ZACharacherSpriteNode
+
+@property (nonatomic) fourtyFiveDegreeCardinal cardinal;
+
 + (instancetype)createHeroSprite;
-//- (void)walkToX:(CGFloat)x duration:(NSTimeInterval)duration completion:(ZAHeroSpriteNode)completion;
+- (void)setAnimationSequenceByCardinal:(fourtyFiveDegreeCardinal)newCardinal;
 
 @end
