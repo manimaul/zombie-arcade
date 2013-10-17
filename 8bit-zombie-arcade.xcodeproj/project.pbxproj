@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D089AC3D180DDF9500BCB105 /* ZACharacherSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D089AC3C180DDF9500BCB105 /* ZACharacherSpriteNode.m */; };
 		D0AA006A180A4D5A00CCF93D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA0069180A4D5A00CCF93D /* Foundation.framework */; };
 		D0AA006C180A4D5A00CCF93D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */; };
 		D0AA006E180A4D5A00CCF93D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006D180A4D5A00CCF93D /* UIKit.framework */; };
@@ -14,7 +15,7 @@
 		D0AA0076180A4D5A00CCF93D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0074180A4D5A00CCF93D /* InfoPlist.strings */; };
 		D0AA0078180A4D5A00CCF93D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA0077180A4D5A00CCF93D /* main.m */; };
 		D0AA007C180A4D5A00CCF93D /* ZAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA007B180A4D5A00CCF93D /* ZAAppDelegate.m */; };
-		D0AA007F180A4D5A00CCF93D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AA007D180A4D5A00CCF93D /* Main.storyboard */; };
+		D0AA007F180A4D5A00CCF93D /* Iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AA007D180A4D5A00CCF93D /* Iphone.storyboard */; };
 		D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA0081180A4D5A00CCF93D /* ZAViewController.m */; };
 		D0AA0085180A4D5A00CCF93D /* ZAMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */; };
 		D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0088180A4D5A00CCF93D /* Images.xcassets */; };
@@ -25,6 +26,10 @@
 		D0AA009C180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */; };
 		D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */; };
 		D0AA00BA180C96CE00CCF93D /* zombie.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00B9180C96CE00CCF93D /* zombie.atlas */; };
+		D0C7B5D0180EE6A9007D8F41 /* Ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C7B5CF180EE6A9007D8F41 /* Ipad.storyboard */; };
+		D0C7B5D7180EFF72007D8F41 /* ZACharachterAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */; };
+		D0C7B5DE180F3582007D8F41 /* ZAHeroAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5DD180F3582007D8F41 /* ZAHeroAnimationFrames.m */; };
+		D0C7B5E1180F35B8007D8F41 /* ZAZombieAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5E0180F35B8007D8F41 /* ZAZombieAnimationFrames.m */; };
 		D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */; };
 		D0DD0228180CC06000EAFABB /* woman.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0DD0227180CC06000EAFABB /* woman.atlas */; };
 /* End PBXBuildFile section */
@@ -40,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D089AC3B180DDF9500BCB105 /* ZACharacherSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZACharacherSpriteNode.h; path = "8bit-zombie-arcade/ZACharacherSpriteNode.h"; sourceTree = "<group>"; };
+		D089AC3C180DDF9500BCB105 /* ZACharacherSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZACharacherSpriteNode.m; path = "8bit-zombie-arcade/ZACharacherSpriteNode.m"; sourceTree = "<group>"; };
 		D0AA0066180A4D5A00CCF93D /* 8bit-zombie-arcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "8bit-zombie-arcade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AA0069180A4D5A00CCF93D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -51,22 +58,30 @@
 		D0AA0079180A4D5A00CCF93D /* 8bit-zombie-arcade-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "8bit-zombie-arcade-Prefix.pch"; sourceTree = "<group>"; };
 		D0AA007A180A4D5A00CCF93D /* ZAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAAppDelegate.h; sourceTree = "<group>"; };
 		D0AA007B180A4D5A00CCF93D /* ZAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAAppDelegate.m; sourceTree = "<group>"; };
-		D0AA007E180A4D5A00CCF93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D0AA0080180A4D5A00CCF93D /* ZAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAViewController.h; sourceTree = "<group>"; };
-		D0AA0081180A4D5A00CCF93D /* ZAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAViewController.m; sourceTree = "<group>"; };
-		D0AA0083180A4D5A00CCF93D /* ZAMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAMyScene.h; sourceTree = "<group>"; };
-		D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAMyScene.m; sourceTree = "<group>"; };
-		D0AA0088180A4D5A00CCF93D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D0AA007E180A4D5A00CCF93D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Iphone.storyboard; sourceTree = "<group>"; };
+		D0AA0080180A4D5A00CCF93D /* ZAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZAViewController.h; path = "8bit-zombie-arcade/ZAViewController.h"; sourceTree = "<group>"; };
+		D0AA0081180A4D5A00CCF93D /* ZAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZAViewController.m; path = "8bit-zombie-arcade/ZAViewController.m"; sourceTree = "<group>"; };
+		D0AA0083180A4D5A00CCF93D /* ZAMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZAMyScene.h; path = "8bit-zombie-arcade/ZAMyScene.h"; sourceTree = "<group>"; };
+		D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZAMyScene.m; path = "8bit-zombie-arcade/ZAMyScene.m"; sourceTree = "<group>"; };
+		D0AA0088180A4D5A00CCF93D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "8bit-zombie-arcade/Images.xcassets"; sourceTree = "<group>"; };
 		D0AA008E180A4D5A00CCF93D /* 8bit-zombie-arcadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "8bit-zombie-arcadeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AA008F180A4D5A00CCF93D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D0AA0097180A4D5A00CCF93D /* 8bit-zombie-arcadeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "8bit-zombie-arcadeTests-Info.plist"; sourceTree = "<group>"; };
 		D0AA0099180A4D5A00CCF93D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _bit_zombie_arcadeTests.m; sourceTree = "<group>"; };
-		D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAZombieSpriteNode.h; sourceTree = "<group>"; };
-		D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAZombieSpriteNode.m; sourceTree = "<group>"; };
+		D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAZombieSpriteNode.h; path = "8bit-zombie-arcade/ZAZombieSpriteNode.h"; sourceTree = "<group>"; };
+		D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAZombieSpriteNode.m; path = "8bit-zombie-arcade/ZAZombieSpriteNode.m"; sourceTree = "<group>"; };
 		D0AA00B9180C96CE00CCF93D /* zombie.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = zombie.atlas; path = "8bit-zombie-arcade/Resources/zombie.atlas"; sourceTree = "<group>"; };
-		D0DD0224180CC04900EAFABB /* ZAHeroSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAHeroSpriteNode.h; sourceTree = "<group>"; };
-		D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAHeroSpriteNode.m; sourceTree = "<group>"; };
+		D0C7B5CF180EE6A9007D8F41 /* Ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ipad.storyboard; sourceTree = "<group>"; };
+		D0C7B5D1180EE90F007D8F41 /* CGPointF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGPointF.h; path = "8bit-zombie-arcade/CGPointF.h"; sourceTree = "<group>"; };
+		D0C7B5D5180EFF72007D8F41 /* ZACharachterAnimationFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZACharachterAnimationFrames.h; path = "8bit-zombie-arcade/ZACharachterAnimationFrames.h"; sourceTree = "<group>"; };
+		D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZACharachterAnimationFrames.m; path = "8bit-zombie-arcade/ZACharachterAnimationFrames.m"; sourceTree = "<group>"; };
+		D0C7B5DC180F3582007D8F41 /* ZAHeroAnimationFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAHeroAnimationFrames.h; path = "8bit-zombie-arcade/ZAHeroAnimationFrames.h"; sourceTree = "<group>"; };
+		D0C7B5DD180F3582007D8F41 /* ZAHeroAnimationFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAHeroAnimationFrames.m; path = "8bit-zombie-arcade/ZAHeroAnimationFrames.m"; sourceTree = "<group>"; };
+		D0C7B5DF180F35B8007D8F41 /* ZAZombieAnimationFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAZombieAnimationFrames.h; path = "8bit-zombie-arcade/ZAZombieAnimationFrames.h"; sourceTree = "<group>"; };
+		D0C7B5E0180F35B8007D8F41 /* ZAZombieAnimationFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAZombieAnimationFrames.m; path = "8bit-zombie-arcade/ZAZombieAnimationFrames.m"; sourceTree = "<group>"; };
+		D0DD0224180CC04900EAFABB /* ZAHeroSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAHeroSpriteNode.h; path = "8bit-zombie-arcade/ZAHeroSpriteNode.h"; sourceTree = "<group>"; };
+		D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAHeroSpriteNode.m; path = "8bit-zombie-arcade/ZAHeroSpriteNode.m"; sourceTree = "<group>"; };
 		D0DD0227180CC06000EAFABB /* woman.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = woman.atlas; path = "8bit-zombie-arcade/Resources/woman.atlas"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,13 +110,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D089AC3A180DDF5100BCB105 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D089AC3B180DDF9500BCB105 /* ZACharacherSpriteNode.h */,
+				D089AC3C180DDF9500BCB105 /* ZACharacherSpriteNode.m */,
+				D0DD0224180CC04900EAFABB /* ZAHeroSpriteNode.h */,
+				D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */,
+				D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */,
+				D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D089AC3F180DE00F00BCB105 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA0088180A4D5A00CCF93D /* Images.xcassets */,
+				D0DD0227180CC06000EAFABB /* woman.atlas */,
+				D0AA00B9180C96CE00CCF93D /* zombie.atlas */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D089AC40180DE03800BCB105 /* Model_Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model_Controllers;
+			sourceTree = "<group>";
+		};
+		D089AC41180DE04400BCB105 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA007D180A4D5A00CCF93D /* Iphone.storyboard */,
+				D0C7B5CF180EE6A9007D8F41 /* Ipad.storyboard */,
+				D0AA0083180A4D5A00CCF93D /* ZAMyScene.h */,
+				D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D089AC42180DE04E00BCB105 /* View_Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA0080180A4D5A00CCF93D /* ZAViewController.h */,
+				D0AA0081180A4D5A00CCF93D /* ZAViewController.m */,
+			);
+			name = View_Controllers;
+			sourceTree = "<group>";
+		};
 		D0AA005D180A4D5A00CCF93D = {
 			isa = PBXGroup;
 			children = (
-				D0AA00B9180C96CE00CCF93D /* zombie.atlas */,
-				D0DD0227180CC06000EAFABB /* woman.atlas */,
-				D0AA0071180A4D5A00CCF93D /* 8bit-zombie-arcade */,
-				D0AA0095180A4D5A00CCF93D /* 8bit-zombie-arcadeTests */,
+				D0C7B5DB180F336F007D8F41 /* Singletons */,
+				D0C7B5D4180EE9B4007D8F41 /* CategoriesAndInlines */,
+				D089AC3A180DDF5100BCB105 /* Models */,
+				D089AC40180DE03800BCB105 /* Model_Controllers */,
+				D089AC41180DE04400BCB105 /* Views */,
+				D089AC42180DE04E00BCB105 /* View_Controllers */,
+				D0AA0071180A4D5A00CCF93D /* Delegates */,
+				D089AC3F180DE00F00BCB105 /* Resources */,
+				D0AA0072180A4D5A00CCF93D /* Supporting Files */,
+				D0AA0095180A4D5A00CCF93D /* Tests */,
 				D0AA0068180A4D5A00CCF93D /* Frameworks */,
 				D0AA0067180A4D5A00CCF93D /* Products */,
 			);
@@ -128,23 +199,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D0AA0071180A4D5A00CCF93D /* 8bit-zombie-arcade */ = {
+		D0AA0071180A4D5A00CCF93D /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
 				D0AA007A180A4D5A00CCF93D /* ZAAppDelegate.h */,
 				D0AA007B180A4D5A00CCF93D /* ZAAppDelegate.m */,
-				D0AA007D180A4D5A00CCF93D /* Main.storyboard */,
-				D0AA0080180A4D5A00CCF93D /* ZAViewController.h */,
-				D0AA0081180A4D5A00CCF93D /* ZAViewController.m */,
-				D0AA0083180A4D5A00CCF93D /* ZAMyScene.h */,
-				D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */,
-				D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */,
-				D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */,
-				D0DD0224180CC04900EAFABB /* ZAHeroSpriteNode.h */,
-				D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */,
-				D0AA0088180A4D5A00CCF93D /* Images.xcassets */,
-				D0AA0072180A4D5A00CCF93D /* Supporting Files */,
 			);
+			name = Delegates;
 			path = "8bit-zombie-arcade";
 			sourceTree = "<group>";
 		};
@@ -157,14 +218,16 @@
 				D0AA0079180A4D5A00CCF93D /* 8bit-zombie-arcade-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = "8bit-zombie-arcade";
 			sourceTree = "<group>";
 		};
-		D0AA0095180A4D5A00CCF93D /* 8bit-zombie-arcadeTests */ = {
+		D0AA0095180A4D5A00CCF93D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */,
 				D0AA0096180A4D5A00CCF93D /* Supporting Files */,
 			);
+			name = Tests;
 			path = "8bit-zombie-arcadeTests";
 			sourceTree = "<group>";
 		};
@@ -175,6 +238,27 @@
 				D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0C7B5D4180EE9B4007D8F41 /* CategoriesAndInlines */ = {
+			isa = PBXGroup;
+			children = (
+				D0C7B5D1180EE90F007D8F41 /* CGPointF.h */,
+			);
+			name = CategoriesAndInlines;
+			sourceTree = "<group>";
+		};
+		D0C7B5DB180F336F007D8F41 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				D0C7B5D5180EFF72007D8F41 /* ZACharachterAnimationFrames.h */,
+				D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */,
+				D0C7B5DF180F35B8007D8F41 /* ZAZombieAnimationFrames.h */,
+				D0C7B5E0180F35B8007D8F41 /* ZAZombieAnimationFrames.m */,
+				D0C7B5DC180F3582007D8F41 /* ZAHeroAnimationFrames.h */,
+				D0C7B5DD180F3582007D8F41 /* ZAHeroAnimationFrames.m */,
+			);
+			name = Singletons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,10 +338,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C7B5D0180EE6A9007D8F41 /* Ipad.storyboard in Resources */,
 				D0AA0076180A4D5A00CCF93D /* InfoPlist.strings in Resources */,
 				D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */,
 				D0AA00BA180C96CE00CCF93D /* zombie.atlas in Resources */,
-				D0AA007F180A4D5A00CCF93D /* Main.storyboard in Resources */,
+				D0AA007F180A4D5A00CCF93D /* Iphone.storyboard in Resources */,
 				D0DD0228180CC06000EAFABB /* woman.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,11 +363,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */,
+				D089AC3D180DDF9500BCB105 /* ZACharacherSpriteNode.m in Sources */,
+				D0C7B5DE180F3582007D8F41 /* ZAHeroAnimationFrames.m in Sources */,
 				D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */,
 				D0AA0085180A4D5A00CCF93D /* ZAMyScene.m in Sources */,
 				D0AA0078180A4D5A00CCF93D /* main.m in Sources */,
 				D0AA007C180A4D5A00CCF93D /* ZAAppDelegate.m in Sources */,
+				D0C7B5E1180F35B8007D8F41 /* ZAZombieAnimationFrames.m in Sources */,
 				D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */,
+				D0C7B5D7180EFF72007D8F41 /* ZACharachterAnimationFrames.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,12 +402,13 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		D0AA007D180A4D5A00CCF93D /* Main.storyboard */ = {
+		D0AA007D180A4D5A00CCF93D /* Iphone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D0AA007E180A4D5A00CCF93D /* Base */,
 			);
-			name = Main.storyboard;
+			name = Iphone.storyboard;
+			path = "8bit-zombie-arcade";
 			sourceTree = "<group>";
 		};
 		D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */ = {
@@ -414,9 +504,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "8bit-zombie-arcade/8bit-zombie-arcade-Prefix.pch";
 				INFOPLIST_FILE = "8bit-zombie-arcade/8bit-zombie-arcade-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -429,9 +520,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "8bit-zombie-arcade/8bit-zombie-arcade-Prefix.pch";
 				INFOPLIST_FILE = "8bit-zombie-arcade/8bit-zombie-arcade-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
