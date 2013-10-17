@@ -7,12 +7,13 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "ZACharacherSpriteNode.h"
 
-@interface ZAZombieSpriteNode : SKSpriteNode
+static const float ZOMBIE_MOVE_POINTS_PER_SEC = 90.;
+
+@interface ZAZombieSpriteNode : ZACharacherSpriteNode
 
 @property (nonatomic, strong, readonly) SKAction *animateZombieLurch;
 + (instancetype)createZombieSprite;
-//- (void)walkToX:(CGFloat)x duration:(NSTimeInterval)duration completion:(ZAZombieSpriteNode)completion;
-
 
 @end
