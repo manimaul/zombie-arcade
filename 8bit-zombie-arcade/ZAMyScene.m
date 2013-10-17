@@ -12,14 +12,27 @@
 #import "CGPointF.h"
 #import "ZAHeroAnimationFrames.h"
 
+@interface ZAMyScene ()
+
+@property (nonatomic, strong) SKEmitterNode *bullet;
+
+@end
+
 @implementation ZAMyScene {
+    
+    
+    
     NSTimeInterval lastUpdateTime;
     NSTimeInterval deltaTime;
     
     ZAHeroSpriteNode *heroSpriteNode;
     CGPoint firstTouchPoint;
     CGPoint velocity; //x = vector(direction) and y = length (speed in points per second)
+    
+//    SKEmitterNode *bullet;
 }
+
+
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
@@ -41,6 +54,10 @@
             heroSpriteNode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
             [self addChild:heroSpriteNode];
         }];
+        
+        _bullet = [self shootBullet];
+        [self addChild:_bullet];
+
     }
     return self;
 }
@@ -176,7 +193,12 @@
 //    CGPoint endPoint = [touch locationInView:self.view];
 //    CGPoint originPoint = CGPointMake(endPoint.x - heroSpriteNode.position.x, endPoint.y - heroSpriteNode.position.y);
 //    [heroSpriteNode setAnimationSequenceByCardinal:[self getFortyFiveDegreeCardinalFromDegree:[self getVector:originPoint]]];
+    
+
     [self moveSpriteToward:touchLocation];
+    _bullet.particleBirthRate = 5;
+    _bullet.position = touchLocation;
+    
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -198,6 +220,31 @@
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInNode:self.scene];
     [self moveSpriteToward:touchLocation];
+    
+    
+//    SKSpriteNode *bullet = [SKSpriteNode spriteNodeWithImageNamed:@"bullet.png"];
+    
+//    bullet.position = touchLocation;
+//    //bullet.position = location;
+//    bullet.zPosition = 1;
+//    bullet.scale = 0.8;
+//    
+//    bullet.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:bullet.size];
+//    bullet.physicsBody.dynamic = NO;
+    
+    _bullet.particleBirthRate = 0;
+
+}
+
+- (SKEmitterNode *)shootBullet
+{
+    NSString *bulletPath = [[NSBundle mainBundle] pathForResource:@"bullet" ofType:@"sks"];
+    _bullet = [NSKeyedUnarchiver unarchiveObjectWithFile:bulletPath];
+    
+    NSLog(@"Bullet fired %@", _bullet);
+//    bullet.numParticlesToEmit = 10.0f;
+    
+    return _bullet;
 }
 
 @end

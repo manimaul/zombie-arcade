@@ -10,14 +10,14 @@
 
 @implementation ZABulletNode
 
-- (instancetype)initWithPosition:(CGPoint)position
-{
-    if (self = [super initWithPosition:position]) {
-        self.name = @"bullet";
-        [self configureCollisionBody];
-    }
-    return self;
-}
+//- (instancetype)initWithPosition:(CGPoint)position
+//{
+//    if (self = [super initWithPosition:position]) {
+//        self.name = @"bullet";
+//        [self configureCollisionBody];
+//    }
+//    return self;
+//}
 
 + (SKTexture *)generateTexture
 {

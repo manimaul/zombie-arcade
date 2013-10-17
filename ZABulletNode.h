@@ -8,6 +8,6 @@
 
 #import "ZAEntity.h"
 
-@interface ZABulletNode : ZAEntity
+@interface ZABulletNode : SKSpriteNode
 
 @end
