@@ -7,48 +7,65 @@
 //
 
 #import "ZAHeroSpriteNode.h"
-
-static const int kDefaultNumberOfFrames = 8;
-static const float kShowCharacterFramesOverOneSecond = 1.0f/(float) kDefaultNumberOfFrames;
-
-@interface ZAHeroSpriteNode ()
-@property (nonatomic, strong, readwrite) SKAction *animateLurch;
-@property (nonatomic, strong) NSArray *lurchFrames;
-@end
+#import "ZAHeroAnimationFrames.h"
 
 @implementation ZAHeroSpriteNode
 
 + (instancetype)createHeroSprite
 {
-    ZAHeroSpriteNode *heroSprite = [[self class] spriteNodeWithImageNamed:@"woman_walk_west_0.png"];
-    
+    ZAHeroSpriteNode *heroSprite = [[ZAHeroSpriteNode alloc] initWithCharachterType:hero];
+    heroSprite.cardinal = west;
+    [heroSprite actionLoop];
     return heroSprite;
 }
 
-+ (NSArray *)animationFramesForImageNamePrefix:(NSString *)baseImageName frameCount:(NSInteger)count
+- (void)setAnimationSequenceByCardinal:(fourtyFiveDegreeCardinal)newCardinal
 {
-    NSMutableArray *array = [NSMutableArray arrayWithCapacity:count];
-    for (NSInteger index = 0; index < count; ++index) {
-        NSString *imageName = [NSString stringWithFormat:@"%@%d.png", baseImageName, index];
-        
-        SKTexture *texture = [SKTexture textureWithImageNamed:imageName];
-        
-        [array addObject:texture];
+    if (self.cardinal != newCardinal) {
+        [self removeAllActions];
+        self.cardinal = newCardinal;
+        [self actionLoop];
+    } else
+        self.cardinal = newCardinal;
+}
+
+-(void)actionLoop
+{
+    ZAHeroAnimationFrames *frames = [ZAHeroAnimationFrames sharedFrames];
+    SKAction *action;
+    switch (self.cardinal) {
+        case north:
+            action = [frames animateWalkNorth];
+            break;
+        case northeast:
+            action = [frames animateWalkNorthEast];
+            break;
+        case east:
+            action = [frames animateWalkEast];
+            break;
+        case southeast:
+            action = [frames animateWalkSouthEast];
+            break;
+        case south:
+            action = [frames animateWalkSouth];
+            break;
+        case southwest:
+            action = [frames animateWalkSouthWest];
+            break;
+        case west:
+            action = [frames animateWalkWest];
+            break;
+        case northwest:
+            action = [frames animateWalkNorthWest];
+            break;
+            
+        default:
+            break;
     }
-    
-    return [NSArray arrayWithArray:array];
+    [self runAction:[SKAction sequence:@[action, [SKAction runBlock:^{
+        [self actionLoop];
+    }]]]];
 }
 
 
-#pragma mark - [Accessor Overrides]
-
-- (SKAction *)animateHeroWalk
-{
-    if (self.animateLurch == nil) {
-        self.lurchFrames = [[self class] animationFramesForImageNamePrefix:@"woman_walk_west_" frameCount:kDefaultNumberOfFrames];
-        self.animateLurch = [SKAction animateWithTextures:self.lurchFrames timePerFrame:kShowCharacterFramesOverOneSecond resize:YES restore:NO];
-    }
-    
-    return self.animateLurch;
-}
 @end
