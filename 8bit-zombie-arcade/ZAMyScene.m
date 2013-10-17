@@ -11,6 +11,7 @@
 #import "ZAHeroSpriteNode.h"
 #import "CGPointF.h"
 #import "ZAHeroAnimationFrames.h"
+#import "ZAZombieAnimationFrames.h"
 
 @implementation ZAMyScene {
     NSTimeInterval lastUpdateTime;
@@ -35,11 +36,20 @@
                                        CGRectGetMidY(self.frame));
         [self addChild:myLabel];
         
+        //build hero shared assets and then add hero to center of screen
         ZAHeroAnimationFrames *heroFrames = [ZAHeroAnimationFrames sharedFrames];
         [heroFrames buildFramesAsyncWithCallback:^{
             heroSpriteNode = [ZAHeroSpriteNode createHeroSprite];
             heroSpriteNode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
             [self addChild:heroSpriteNode];
+        }];
+        
+        //build zombie shared assets and then add zombies to screen
+        ZAZombieAnimationFrames *zombieFrames = [ZAZombieAnimationFrames sharedFrames];
+        [zombieFrames buildFramesAsyncWithCallback:^{
+            ZAZombieSpriteNode *zombie = [ZAZombieSpriteNode createZombieSprite];
+            zombie.position = CGPointMake(self.frame.origin.x, CGRectGetMinY(self.frame));
+            [self addChild:zombie];
         }];
     }
     return self;
