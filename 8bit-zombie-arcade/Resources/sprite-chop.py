@@ -41,23 +41,23 @@ def renderSequenceSet(img, name, anim_angles, anim_sequences, render_sequences):
 				name_sequence = name + "_" + sequence #+ "_" + angle #walk_west
 				name_sequence_angel = name_sequence + "_" + angle
 				atlas_path = os.path.join(base_dir, name_sequence_angel + ".atlas")
-				# if not os.path.isdir(atlas_path):
-				# 	os.mkdir(atlas_path)
+				if not os.path.isdir(atlas_path):
+					os.mkdir(atlas_path)
 				#print "renderSequence( %s %s %d %d %d)" %(atlas_path, name_sequence_angel, num_frames, x ,y)
 				renderSequence(img, atlas_path, name_sequence_angel, num_frames, x, y)
 			x = x + num_frames
 
 
-#### zombie
-#8 angles
-name = "zombie"
-sprite_sheet = "zombie.png"
-img = Image.open(sprite_sheet)
-anim_angles = [ "west", "northwest", "north", "northeast", "east", "southeast", "south", "southwest" ]
-anim_sequences = [ ("stance",4), ("walk",8), ("slam",4), ("attack",4), ("block",2), ("fall",6), ("die",8) ]
-##set of sequences we actually want to render
-render_sequences = {"attack", "walk", "die"}
-renderSequenceSet(img, name, anim_angles, anim_sequences, render_sequences)
+# #### zombie
+# #8 angles
+# name = "zombie"
+# sprite_sheet = "zombie.png"
+# img = Image.open(sprite_sheet)
+# anim_angles = [ "west", "northwest", "north", "northeast", "east", "southeast", "south", "southwest" ]
+# anim_sequences = [ ("stance",4), ("walk",8), ("slam",4), ("attack",4), ("block",2), ("fall",6), ("die",8) ]
+# ##set of sequences we actually want to render
+# render_sequences = {"attack", "walk", "die"}
+# renderSequenceSet(img, name, anim_angles, anim_sequences, render_sequences)
 
 
 # #### woman

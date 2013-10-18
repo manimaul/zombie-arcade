@@ -25,13 +25,59 @@
 		D0AA009A180A4D5A00CCF93D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */; };
 		D0AA009C180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */; };
 		D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */; };
-		D0AA00BA180C96CE00CCF93D /* zombie.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0AA00B9180C96CE00CCF93D /* zombie.atlas */; };
+		D0C418CB1810B9D2009565BC /* zombie_attack_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418B31810B9D2009565BC /* zombie_attack_east.atlas */; };
+		D0C418CC1810B9D2009565BC /* zombie_attack_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418B41810B9D2009565BC /* zombie_attack_north.atlas */; };
+		D0C418CD1810B9D2009565BC /* zombie_attack_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418B51810B9D2009565BC /* zombie_attack_northeast.atlas */; };
+		D0C418CE1810B9D2009565BC /* zombie_attack_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418B61810B9D2009565BC /* zombie_attack_northwest.atlas */; };
+		D0C418CF1810B9D2009565BC /* zombie_attack_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418B71810B9D2009565BC /* zombie_attack_south.atlas */; };
+		D0C418D01810B9D2009565BC /* zombie_attack_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418B81810B9D2009565BC /* zombie_attack_southeast.atlas */; };
+		D0C418D11810B9D2009565BC /* zombie_attack_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418B91810B9D2009565BC /* zombie_attack_southwest.atlas */; };
+		D0C418D21810B9D2009565BC /* zombie_attack_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418BA1810B9D2009565BC /* zombie_attack_west.atlas */; };
+		D0C418D31810B9D2009565BC /* zombie_die_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418BB1810B9D2009565BC /* zombie_die_east.atlas */; };
+		D0C418D41810B9D2009565BC /* zombie_die_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418BC1810B9D2009565BC /* zombie_die_north.atlas */; };
+		D0C418D51810B9D2009565BC /* zombie_die_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418BD1810B9D2009565BC /* zombie_die_northeast.atlas */; };
+		D0C418D61810B9D2009565BC /* zombie_die_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418BE1810B9D2009565BC /* zombie_die_northwest.atlas */; };
+		D0C418D71810B9D2009565BC /* zombie_die_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418BF1810B9D2009565BC /* zombie_die_south.atlas */; };
+		D0C418D81810B9D2009565BC /* zombie_die_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418C01810B9D2009565BC /* zombie_die_southeast.atlas */; };
+		D0C418D91810B9D2009565BC /* zombie_die_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418C11810B9D2009565BC /* zombie_die_southwest.atlas */; };
+		D0C418DA1810B9D2009565BC /* zombie_die_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418C21810B9D2009565BC /* zombie_die_west.atlas */; };
+		D0C418DB1810B9D2009565BC /* zombie_walk_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418C31810B9D2009565BC /* zombie_walk_east.atlas */; };
+		D0C418DC1810B9D2009565BC /* zombie_walk_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418C41810B9D2009565BC /* zombie_walk_north.atlas */; };
+		D0C418DD1810B9D2009565BC /* zombie_walk_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418C51810B9D2009565BC /* zombie_walk_northeast.atlas */; };
+		D0C418DE1810B9D2009565BC /* zombie_walk_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418C61810B9D2009565BC /* zombie_walk_northwest.atlas */; };
+		D0C418DF1810B9D2009565BC /* zombie_walk_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418C71810B9D2009565BC /* zombie_walk_south.atlas */; };
+		D0C418E01810B9D2009565BC /* zombie_walk_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418C81810B9D2009565BC /* zombie_walk_southeast.atlas */; };
+		D0C418E11810B9D2009565BC /* zombie_walk_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418C91810B9D2009565BC /* zombie_walk_southwest.atlas */; };
+		D0C418E21810B9D2009565BC /* zombie_walk_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418CA1810B9D2009565BC /* zombie_walk_west.atlas */; };
+		D0C418FC1810B9E4009565BC /* woman_die_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418E41810B9E3009565BC /* woman_die_east.atlas */; };
+		D0C418FD1810B9E4009565BC /* woman_die_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418E51810B9E3009565BC /* woman_die_north.atlas */; };
+		D0C418FE1810B9E4009565BC /* woman_die_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418E61810B9E3009565BC /* woman_die_northeast.atlas */; };
+		D0C418FF1810B9E4009565BC /* woman_die_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418E71810B9E3009565BC /* woman_die_northwest.atlas */; };
+		D0C419001810B9E4009565BC /* woman_die_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418E81810B9E3009565BC /* woman_die_south.atlas */; };
+		D0C419011810B9E4009565BC /* woman_die_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418E91810B9E3009565BC /* woman_die_southeast.atlas */; };
+		D0C419021810B9E4009565BC /* woman_die_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418EA1810B9E3009565BC /* woman_die_southwest.atlas */; };
+		D0C419031810B9E4009565BC /* woman_die_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418EB1810B9E3009565BC /* woman_die_west.atlas */; };
+		D0C419041810B9E4009565BC /* woman_stance_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418EC1810B9E3009565BC /* woman_stance_east.atlas */; };
+		D0C419051810B9E4009565BC /* woman_stance_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418ED1810B9E3009565BC /* woman_stance_north.atlas */; };
+		D0C419061810B9E4009565BC /* woman_stance_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418EE1810B9E3009565BC /* woman_stance_northeast.atlas */; };
+		D0C419071810B9E4009565BC /* woman_stance_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418EF1810B9E3009565BC /* woman_stance_northwest.atlas */; };
+		D0C419081810B9E4009565BC /* woman_stance_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418F01810B9E3009565BC /* woman_stance_south.atlas */; };
+		D0C419091810B9E4009565BC /* woman_stance_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418F11810B9E3009565BC /* woman_stance_southeast.atlas */; };
+		D0C4190A1810B9E4009565BC /* woman_stance_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418F21810B9E3009565BC /* woman_stance_southwest.atlas */; };
+		D0C4190B1810B9E4009565BC /* woman_stance_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418F31810B9E3009565BC /* woman_stance_west.atlas */; };
+		D0C4190C1810B9E4009565BC /* woman_walk_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418F41810B9E3009565BC /* woman_walk_east.atlas */; };
+		D0C4190D1810B9E4009565BC /* woman_walk_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418F51810B9E3009565BC /* woman_walk_north.atlas */; };
+		D0C4190E1810B9E4009565BC /* woman_walk_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418F61810B9E3009565BC /* woman_walk_northeast.atlas */; };
+		D0C4190F1810B9E4009565BC /* woman_walk_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418F71810B9E4009565BC /* woman_walk_northwest.atlas */; };
+		D0C419101810B9E4009565BC /* woman_walk_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418F81810B9E4009565BC /* woman_walk_south.atlas */; };
+		D0C419111810B9E4009565BC /* woman_walk_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418F91810B9E4009565BC /* woman_walk_southeast.atlas */; };
+		D0C419121810B9E4009565BC /* woman_walk_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418FA1810B9E4009565BC /* woman_walk_southwest.atlas */; };
+		D0C419131810B9E4009565BC /* woman_walk_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418FB1810B9E4009565BC /* woman_walk_west.atlas */; };
 		D0C7B5D0180EE6A9007D8F41 /* Ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C7B5CF180EE6A9007D8F41 /* Ipad.storyboard */; };
 		D0C7B5D7180EFF72007D8F41 /* ZACharachterAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */; };
 		D0C7B5DE180F3582007D8F41 /* ZAHeroAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5DD180F3582007D8F41 /* ZAHeroAnimationFrames.m */; };
 		D0C7B5E1180F35B8007D8F41 /* ZAZombieAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5E0180F35B8007D8F41 /* ZAZombieAnimationFrames.m */; };
 		D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */; };
-		D0DD0228180CC06000EAFABB /* woman.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0DD0227180CC06000EAFABB /* woman.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +117,54 @@
 		D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _bit_zombie_arcadeTests.m; sourceTree = "<group>"; };
 		D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAZombieSpriteNode.h; path = "8bit-zombie-arcade/ZAZombieSpriteNode.h"; sourceTree = "<group>"; };
 		D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAZombieSpriteNode.m; path = "8bit-zombie-arcade/ZAZombieSpriteNode.m"; sourceTree = "<group>"; };
-		D0AA00B9180C96CE00CCF93D /* zombie.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = zombie.atlas; path = "8bit-zombie-arcade/Resources/zombie.atlas"; sourceTree = "<group>"; };
+		D0C418B31810B9D2009565BC /* zombie_attack_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_east.atlas; sourceTree = "<group>"; };
+		D0C418B41810B9D2009565BC /* zombie_attack_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_north.atlas; sourceTree = "<group>"; };
+		D0C418B51810B9D2009565BC /* zombie_attack_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_northeast.atlas; sourceTree = "<group>"; };
+		D0C418B61810B9D2009565BC /* zombie_attack_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_northwest.atlas; sourceTree = "<group>"; };
+		D0C418B71810B9D2009565BC /* zombie_attack_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_south.atlas; sourceTree = "<group>"; };
+		D0C418B81810B9D2009565BC /* zombie_attack_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_southeast.atlas; sourceTree = "<group>"; };
+		D0C418B91810B9D2009565BC /* zombie_attack_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_southwest.atlas; sourceTree = "<group>"; };
+		D0C418BA1810B9D2009565BC /* zombie_attack_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_west.atlas; sourceTree = "<group>"; };
+		D0C418BB1810B9D2009565BC /* zombie_die_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_east.atlas; sourceTree = "<group>"; };
+		D0C418BC1810B9D2009565BC /* zombie_die_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_north.atlas; sourceTree = "<group>"; };
+		D0C418BD1810B9D2009565BC /* zombie_die_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_northeast.atlas; sourceTree = "<group>"; };
+		D0C418BE1810B9D2009565BC /* zombie_die_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_northwest.atlas; sourceTree = "<group>"; };
+		D0C418BF1810B9D2009565BC /* zombie_die_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_south.atlas; sourceTree = "<group>"; };
+		D0C418C01810B9D2009565BC /* zombie_die_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_southeast.atlas; sourceTree = "<group>"; };
+		D0C418C11810B9D2009565BC /* zombie_die_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_southwest.atlas; sourceTree = "<group>"; };
+		D0C418C21810B9D2009565BC /* zombie_die_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_west.atlas; sourceTree = "<group>"; };
+		D0C418C31810B9D2009565BC /* zombie_walk_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_east.atlas; sourceTree = "<group>"; };
+		D0C418C41810B9D2009565BC /* zombie_walk_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_north.atlas; sourceTree = "<group>"; };
+		D0C418C51810B9D2009565BC /* zombie_walk_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_northeast.atlas; sourceTree = "<group>"; };
+		D0C418C61810B9D2009565BC /* zombie_walk_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_northwest.atlas; sourceTree = "<group>"; };
+		D0C418C71810B9D2009565BC /* zombie_walk_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_south.atlas; sourceTree = "<group>"; };
+		D0C418C81810B9D2009565BC /* zombie_walk_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_southeast.atlas; sourceTree = "<group>"; };
+		D0C418C91810B9D2009565BC /* zombie_walk_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_southwest.atlas; sourceTree = "<group>"; };
+		D0C418CA1810B9D2009565BC /* zombie_walk_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_west.atlas; sourceTree = "<group>"; };
+		D0C418E41810B9E3009565BC /* woman_die_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_east.atlas; sourceTree = "<group>"; };
+		D0C418E51810B9E3009565BC /* woman_die_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_north.atlas; sourceTree = "<group>"; };
+		D0C418E61810B9E3009565BC /* woman_die_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_northeast.atlas; sourceTree = "<group>"; };
+		D0C418E71810B9E3009565BC /* woman_die_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_northwest.atlas; sourceTree = "<group>"; };
+		D0C418E81810B9E3009565BC /* woman_die_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_south.atlas; sourceTree = "<group>"; };
+		D0C418E91810B9E3009565BC /* woman_die_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_southeast.atlas; sourceTree = "<group>"; };
+		D0C418EA1810B9E3009565BC /* woman_die_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_southwest.atlas; sourceTree = "<group>"; };
+		D0C418EB1810B9E3009565BC /* woman_die_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_west.atlas; sourceTree = "<group>"; };
+		D0C418EC1810B9E3009565BC /* woman_stance_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_east.atlas; sourceTree = "<group>"; };
+		D0C418ED1810B9E3009565BC /* woman_stance_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_north.atlas; sourceTree = "<group>"; };
+		D0C418EE1810B9E3009565BC /* woman_stance_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_northeast.atlas; sourceTree = "<group>"; };
+		D0C418EF1810B9E3009565BC /* woman_stance_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_northwest.atlas; sourceTree = "<group>"; };
+		D0C418F01810B9E3009565BC /* woman_stance_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_south.atlas; sourceTree = "<group>"; };
+		D0C418F11810B9E3009565BC /* woman_stance_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_southeast.atlas; sourceTree = "<group>"; };
+		D0C418F21810B9E3009565BC /* woman_stance_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_southwest.atlas; sourceTree = "<group>"; };
+		D0C418F31810B9E3009565BC /* woman_stance_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_west.atlas; sourceTree = "<group>"; };
+		D0C418F41810B9E3009565BC /* woman_walk_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_east.atlas; sourceTree = "<group>"; };
+		D0C418F51810B9E3009565BC /* woman_walk_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_north.atlas; sourceTree = "<group>"; };
+		D0C418F61810B9E3009565BC /* woman_walk_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_northeast.atlas; sourceTree = "<group>"; };
+		D0C418F71810B9E4009565BC /* woman_walk_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_northwest.atlas; sourceTree = "<group>"; };
+		D0C418F81810B9E4009565BC /* woman_walk_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_south.atlas; sourceTree = "<group>"; };
+		D0C418F91810B9E4009565BC /* woman_walk_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_southeast.atlas; sourceTree = "<group>"; };
+		D0C418FA1810B9E4009565BC /* woman_walk_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_southwest.atlas; sourceTree = "<group>"; };
+		D0C418FB1810B9E4009565BC /* woman_walk_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_west.atlas; sourceTree = "<group>"; };
 		D0C7B5CF180EE6A9007D8F41 /* Ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ipad.storyboard; sourceTree = "<group>"; };
 		D0C7B5D1180EE90F007D8F41 /* CGPointF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGPointF.h; path = "8bit-zombie-arcade/CGPointF.h"; sourceTree = "<group>"; };
 		D0C7B5D5180EFF72007D8F41 /* ZACharachterAnimationFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZACharachterAnimationFrames.h; path = "8bit-zombie-arcade/ZACharachterAnimationFrames.h"; sourceTree = "<group>"; };
@@ -82,7 +175,6 @@
 		D0C7B5E0180F35B8007D8F41 /* ZAZombieAnimationFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAZombieAnimationFrames.m; path = "8bit-zombie-arcade/ZAZombieAnimationFrames.m"; sourceTree = "<group>"; };
 		D0DD0224180CC04900EAFABB /* ZAHeroSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAHeroSpriteNode.h; path = "8bit-zombie-arcade/ZAHeroSpriteNode.h"; sourceTree = "<group>"; };
 		D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAHeroSpriteNode.m; path = "8bit-zombie-arcade/ZAHeroSpriteNode.m"; sourceTree = "<group>"; };
-		D0DD0227180CC06000EAFABB /* woman.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = woman.atlas; path = "8bit-zombie-arcade/Resources/woman.atlas"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				D0AA0088180A4D5A00CCF93D /* Images.xcassets */,
-				D0DD0227180CC06000EAFABB /* woman.atlas */,
-				D0AA00B9180C96CE00CCF93D /* zombie.atlas */,
+				D0C418E31810B9E3009565BC /* woman */,
+				D0C418B21810B9D2009565BC /* zombie */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -240,6 +332,70 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D0C418B21810B9D2009565BC /* zombie */ = {
+			isa = PBXGroup;
+			children = (
+				D0C418B31810B9D2009565BC /* zombie_attack_east.atlas */,
+				D0C418B41810B9D2009565BC /* zombie_attack_north.atlas */,
+				D0C418B51810B9D2009565BC /* zombie_attack_northeast.atlas */,
+				D0C418B61810B9D2009565BC /* zombie_attack_northwest.atlas */,
+				D0C418B71810B9D2009565BC /* zombie_attack_south.atlas */,
+				D0C418B81810B9D2009565BC /* zombie_attack_southeast.atlas */,
+				D0C418B91810B9D2009565BC /* zombie_attack_southwest.atlas */,
+				D0C418BA1810B9D2009565BC /* zombie_attack_west.atlas */,
+				D0C418BB1810B9D2009565BC /* zombie_die_east.atlas */,
+				D0C418BC1810B9D2009565BC /* zombie_die_north.atlas */,
+				D0C418BD1810B9D2009565BC /* zombie_die_northeast.atlas */,
+				D0C418BE1810B9D2009565BC /* zombie_die_northwest.atlas */,
+				D0C418BF1810B9D2009565BC /* zombie_die_south.atlas */,
+				D0C418C01810B9D2009565BC /* zombie_die_southeast.atlas */,
+				D0C418C11810B9D2009565BC /* zombie_die_southwest.atlas */,
+				D0C418C21810B9D2009565BC /* zombie_die_west.atlas */,
+				D0C418C31810B9D2009565BC /* zombie_walk_east.atlas */,
+				D0C418C41810B9D2009565BC /* zombie_walk_north.atlas */,
+				D0C418C51810B9D2009565BC /* zombie_walk_northeast.atlas */,
+				D0C418C61810B9D2009565BC /* zombie_walk_northwest.atlas */,
+				D0C418C71810B9D2009565BC /* zombie_walk_south.atlas */,
+				D0C418C81810B9D2009565BC /* zombie_walk_southeast.atlas */,
+				D0C418C91810B9D2009565BC /* zombie_walk_southwest.atlas */,
+				D0C418CA1810B9D2009565BC /* zombie_walk_west.atlas */,
+			);
+			name = zombie;
+			path = "8bit-zombie-arcade/Resources/zombie";
+			sourceTree = "<group>";
+		};
+		D0C418E31810B9E3009565BC /* woman */ = {
+			isa = PBXGroup;
+			children = (
+				D0C418E41810B9E3009565BC /* woman_die_east.atlas */,
+				D0C418E51810B9E3009565BC /* woman_die_north.atlas */,
+				D0C418E61810B9E3009565BC /* woman_die_northeast.atlas */,
+				D0C418E71810B9E3009565BC /* woman_die_northwest.atlas */,
+				D0C418E81810B9E3009565BC /* woman_die_south.atlas */,
+				D0C418E91810B9E3009565BC /* woman_die_southeast.atlas */,
+				D0C418EA1810B9E3009565BC /* woman_die_southwest.atlas */,
+				D0C418EB1810B9E3009565BC /* woman_die_west.atlas */,
+				D0C418EC1810B9E3009565BC /* woman_stance_east.atlas */,
+				D0C418ED1810B9E3009565BC /* woman_stance_north.atlas */,
+				D0C418EE1810B9E3009565BC /* woman_stance_northeast.atlas */,
+				D0C418EF1810B9E3009565BC /* woman_stance_northwest.atlas */,
+				D0C418F01810B9E3009565BC /* woman_stance_south.atlas */,
+				D0C418F11810B9E3009565BC /* woman_stance_southeast.atlas */,
+				D0C418F21810B9E3009565BC /* woman_stance_southwest.atlas */,
+				D0C418F31810B9E3009565BC /* woman_stance_west.atlas */,
+				D0C418F41810B9E3009565BC /* woman_walk_east.atlas */,
+				D0C418F51810B9E3009565BC /* woman_walk_north.atlas */,
+				D0C418F61810B9E3009565BC /* woman_walk_northeast.atlas */,
+				D0C418F71810B9E4009565BC /* woman_walk_northwest.atlas */,
+				D0C418F81810B9E4009565BC /* woman_walk_south.atlas */,
+				D0C418F91810B9E4009565BC /* woman_walk_southeast.atlas */,
+				D0C418FA1810B9E4009565BC /* woman_walk_southwest.atlas */,
+				D0C418FB1810B9E4009565BC /* woman_walk_west.atlas */,
+			);
+			name = woman;
+			path = "8bit-zombie-arcade/Resources/woman";
+			sourceTree = "<group>";
+		};
 		D0C7B5D4180EE9B4007D8F41 /* CategoriesAndInlines */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,12 +494,58 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C418D51810B9D2009565BC /* zombie_die_northeast.atlas in Resources */,
+				D0C418DA1810B9D2009565BC /* zombie_die_west.atlas in Resources */,
+				D0C418D61810B9D2009565BC /* zombie_die_northwest.atlas in Resources */,
+				D0C4190B1810B9E4009565BC /* woman_stance_west.atlas in Resources */,
+				D0C418DB1810B9D2009565BC /* zombie_walk_east.atlas in Resources */,
+				D0C418CB1810B9D2009565BC /* zombie_attack_east.atlas in Resources */,
 				D0C7B5D0180EE6A9007D8F41 /* Ipad.storyboard in Resources */,
+				D0C418D91810B9D2009565BC /* zombie_die_southwest.atlas in Resources */,
+				D0C419111810B9E4009565BC /* woman_walk_southeast.atlas in Resources */,
+				D0C418E21810B9D2009565BC /* zombie_walk_west.atlas in Resources */,
+				D0C418E11810B9D2009565BC /* zombie_walk_southwest.atlas in Resources */,
+				D0C419101810B9E4009565BC /* woman_walk_south.atlas in Resources */,
+				D0C4190F1810B9E4009565BC /* woman_walk_northwest.atlas in Resources */,
+				D0C418D21810B9D2009565BC /* zombie_attack_west.atlas in Resources */,
+				D0C4190D1810B9E4009565BC /* woman_walk_north.atlas in Resources */,
+				D0C418CF1810B9D2009565BC /* zombie_attack_south.atlas in Resources */,
+				D0C418CE1810B9D2009565BC /* zombie_attack_northwest.atlas in Resources */,
 				D0AA0076180A4D5A00CCF93D /* InfoPlist.strings in Resources */,
+				D0C419081810B9E4009565BC /* woman_stance_south.atlas in Resources */,
+				D0C418CC1810B9D2009565BC /* zombie_attack_north.atlas in Resources */,
+				D0C419061810B9E4009565BC /* woman_stance_northeast.atlas in Resources */,
 				D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */,
-				D0AA00BA180C96CE00CCF93D /* zombie.atlas in Resources */,
+				D0C419001810B9E4009565BC /* woman_die_south.atlas in Resources */,
+				D0C418FD1810B9E4009565BC /* woman_die_north.atlas in Resources */,
 				D0AA007F180A4D5A00CCF93D /* Iphone.storyboard in Resources */,
-				D0DD0228180CC06000EAFABB /* woman.atlas in Resources */,
+				D0C4190A1810B9E4009565BC /* woman_stance_southwest.atlas in Resources */,
+				D0C419131810B9E4009565BC /* woman_walk_west.atlas in Resources */,
+				D0C418D81810B9D2009565BC /* zombie_die_southeast.atlas in Resources */,
+				D0C418E01810B9D2009565BC /* zombie_walk_southeast.atlas in Resources */,
+				D0C4190C1810B9E4009565BC /* woman_walk_east.atlas in Resources */,
+				D0C419031810B9E4009565BC /* woman_die_west.atlas in Resources */,
+				D0C418DE1810B9D2009565BC /* zombie_walk_northwest.atlas in Resources */,
+				D0C419041810B9E4009565BC /* woman_stance_east.atlas in Resources */,
+				D0C419091810B9E4009565BC /* woman_stance_southeast.atlas in Resources */,
+				D0C418D31810B9D2009565BC /* zombie_die_east.atlas in Resources */,
+				D0C418DD1810B9D2009565BC /* zombie_walk_northeast.atlas in Resources */,
+				D0C418FE1810B9E4009565BC /* woman_die_northeast.atlas in Resources */,
+				D0C419071810B9E4009565BC /* woman_stance_northwest.atlas in Resources */,
+				D0C419051810B9E4009565BC /* woman_stance_north.atlas in Resources */,
+				D0C418D01810B9D2009565BC /* zombie_attack_southeast.atlas in Resources */,
+				D0C4190E1810B9E4009565BC /* woman_walk_northeast.atlas in Resources */,
+				D0C418DF1810B9D2009565BC /* zombie_walk_south.atlas in Resources */,
+				D0C418FC1810B9E4009565BC /* woman_die_east.atlas in Resources */,
+				D0C419121810B9E4009565BC /* woman_walk_southwest.atlas in Resources */,
+				D0C418D11810B9D2009565BC /* zombie_attack_southwest.atlas in Resources */,
+				D0C418D71810B9D2009565BC /* zombie_die_south.atlas in Resources */,
+				D0C418FF1810B9E4009565BC /* woman_die_northwest.atlas in Resources */,
+				D0C419021810B9E4009565BC /* woman_die_southwest.atlas in Resources */,
+				D0C419011810B9E4009565BC /* woman_die_southeast.atlas in Resources */,
+				D0C418D41810B9D2009565BC /* zombie_die_north.atlas in Resources */,
+				D0C418DC1810B9D2009565BC /* zombie_walk_north.atlas in Resources */,
+				D0C418CD1810B9D2009565BC /* zombie_attack_northeast.atlas in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,30 +34,30 @@
     ZAHeroAnimationFrames *frames = [ZAHeroAnimationFrames sharedFrames];
     SKAction *action;
     switch (self.cardinal) {
-        case north:
-            action = [frames animateWalkNorth];
-            break;
-        case northeast:
-            action = [frames animateWalkNorthEast];
-            break;
-        case east:
-            action = [frames animateWalkEast];
-            break;
-        case southeast:
-            action = [frames animateWalkSouthEast];
-            break;
-        case south:
-            action = [frames animateWalkSouth];
-            break;
-        case southwest:
-            action = [frames animateWalkSouthWest];
-            break;
-        case west:
-            action = [frames animateWalkWest];
-            break;
-        case northwest:
-            action = [frames animateWalkNorthWest];
-            break;
+//        case north:
+//            action = [frames animateWalkNorth];
+//            break;
+//        case northeast:
+//            action = [frames animateWalkNorthEast];
+//            break;
+//        case east:
+//            action = [frames animateWalkEast];
+//            break;
+//        case southeast:
+//            action = [frames animateWalkSouthEast];
+//            break;
+//        case south:
+//            action = [frames animateWalkSouth];
+//            break;
+//        case southwest:
+//            action = [frames animateWalkSouthWest];
+//            break;
+//        case west:
+//            action = [frames animateWalkWest];
+//            break;
+//        case northwest:
+//            action = [frames animateWalkNorthWest];
+//            break;
             
         default:
             break;

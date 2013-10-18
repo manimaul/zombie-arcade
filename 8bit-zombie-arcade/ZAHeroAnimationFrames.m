@@ -22,7 +22,7 @@
 
 -(void)buildFramesAsyncWithCallback:(void(^)(void))completionBlock
 {
-    [self loadAsyncCharachter:@"woman" withCallback:completionBlock];
+    //[self loadAsyncCharachter:@"woman" withCallback:completionBlock];
 }
 
 @end

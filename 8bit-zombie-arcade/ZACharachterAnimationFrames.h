@@ -11,22 +11,10 @@
 
 @interface ZACharachterAnimationFrames : NSObject
 
-@property (nonatomic, strong, readonly) SKAction *animateWalkNorth;
+@property (nonatomic, strong, readonly) NSDictionary *animationFrames;
 
-@property (nonatomic, strong, readonly) SKAction *animateWalkNorthEast;
++(ZACharachterAnimationFrames *)sharedFrames;
 
-@property (nonatomic, strong, readonly) SKAction *animateWalkEast;
-
-@property (nonatomic, strong, readonly) SKAction *animateWalkSouthEast;
-
-@property (nonatomic, strong, readonly) SKAction *animateWalkSouth;
-
-@property (nonatomic, strong, readonly) SKAction *animateWalkSouthWest;
-
-@property (nonatomic, strong, readonly) SKAction *animateWalkWest;
-
-@property (nonatomic, strong, readonly) SKAction *animateWalkNorthWest;
-
--(void)loadAsyncCharachter:(NSString*)charachter withCallback:(void(^)(void))completionBlock;
+-(void)loadAsyncWithCallback:(void(^)(void))completionBlock;
 
 @end

@@ -12,6 +12,7 @@
 #import "CGPointF.h"
 #import "ZAHeroAnimationFrames.h"
 #import "ZAZombieAnimationFrames.h"
+#import "ZACharacherSpriteNode.h"
 
 @implementation ZAMyScene {
     NSTimeInterval lastUpdateTime;
@@ -35,6 +36,11 @@
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                                        CGRectGetMidY(self.frame));
         [self addChild:myLabel];
+        
+        ZACharachterAnimationFrames *frames = [ZACharachterAnimationFrames sharedFrames];
+        [frames loadAsyncWithCallback:^{
+            //
+        }];
         
         //build hero shared assets and then add hero to center of screen
         ZAHeroAnimationFrames *heroFrames = [ZAHeroAnimationFrames sharedFrames];
