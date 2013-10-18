@@ -6,28 +6,14 @@
 //  Copyright (c) 2013 Will Kamp. All rights reserved.
 //
 
+/*
+ Note!!! this is not a singleton: however, this class is inteded to be a superclass of individual singletons
+ who hold animation frames for a particular type of node.
+ */
+
 #import "ZACharachterAnimationFrames.h"
 
-static const int kDefaultNumberOfFrames = 8;
-static const float kShowCharacterFramesOverOneSecond = 1.0f/(float) kDefaultNumberOfFrames;
-
 @interface ZACharachterAnimationFrames ()
-
-@property (nonatomic, strong) NSArray *walkNorthFrames;
-
-@property (nonatomic, strong) NSArray *walkNorthEastFrames;
-
-@property (nonatomic, strong) NSArray *walkEastFrames;
-
-@property (nonatomic, strong) NSArray *walkSouthEastFrames;
-
-@property (nonatomic, strong) NSArray *walkSouthFrames;
-
-@property (nonatomic, strong) NSArray *walkSouthWestFrames;
-
-@property (nonatomic, strong) NSArray *walkWestFrames;
-
-@property (nonatomic, strong) NSArray *walkNorthWestFrames;
 
 @property (nonatomic) BOOL loaded;
 
@@ -41,6 +27,7 @@ static const float kShowCharacterFramesOverOneSecond = 1.0f/(float) kDefaultNumb
     static ZACharachterAnimationFrames *shared = nil;
     dispatch_once(&predicate, ^{
         shared = [[ZACharachterAnimationFrames alloc] init];
+        shared.loaded = false;
     });
     return shared;
 }
