@@ -194,11 +194,16 @@
 //    CGPoint originPoint = CGPointMake(endPoint.x - heroSpriteNode.position.x, endPoint.y - heroSpriteNode.position.y);
 //    [heroSpriteNode setAnimationSequenceByCardinal:[self getFortyFiveDegreeCardinalFromDegree:[self getVector:originPoint]]];
     
-
     [self moveSpriteToward:touchLocation];
-    _bullet.particleBirthRate = 5;
-    _bullet.position = touchLocation;
     
+//    _bullet.particleBirthRate = 5;
+    _bullet.numParticlesToEmit = 5;
+    _bullet.position = (heroSpriteNode.position);
+    [_bullet runAction:[SKAction sequence:@[
+//                                           [SKAction fadeInWithDuration:0.2],
+                                           [SKAction moveTo:touchLocation duration:0.5],
+//                                           [SKAction removeFromParent]
+                                           ]]];
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -222,17 +227,7 @@
     [self moveSpriteToward:touchLocation];
     
     
-//    SKSpriteNode *bullet = [SKSpriteNode spriteNodeWithImageNamed:@"bullet.png"];
-    
-//    bullet.position = touchLocation;
-//    //bullet.position = location;
-//    bullet.zPosition = 1;
-//    bullet.scale = 0.8;
-//    
-//    bullet.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:bullet.size];
-//    bullet.physicsBody.dynamic = NO;
-    
-    _bullet.particleBirthRate = 0;
+//    _bullet.particleBirthRate = 0;
 
 }
 
@@ -240,9 +235,6 @@
 {
     NSString *bulletPath = [[NSBundle mainBundle] pathForResource:@"bullet" ofType:@"sks"];
     _bullet = [NSKeyedUnarchiver unarchiveObjectWithFile:bulletPath];
-    
-    NSLog(@"Bullet fired %@", _bullet);
-//    bullet.numParticlesToEmit = 10.0f;
     
     return _bullet;
 }
