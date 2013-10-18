@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "ZACharachterAnimationFrames.h"
 
 typedef enum {
     north,
@@ -20,6 +21,13 @@ typedef enum {
 } fourtyFiveDegreeCardinal;
 
 typedef enum {
+    stance,
+    walk,
+    attack,
+    die    
+} charachterActions;
+
+typedef enum {
     hero,
     zombie
 } charachterType;
@@ -27,6 +35,11 @@ typedef enum {
 @interface ZACharacherSpriteNode : SKSpriteNode
 
 @property (nonatomic, strong, readonly) NSString* charachterAtlasPrefix;
+@property (nonatomic, strong, readonly) ZACharachterAnimationFrames *frames;
+@property (nonatomic) fourtyFiveDegreeCardinal cardinal;
+@property (nonatomic) charachterActions action;
+
 -(id)initWithCharachterType:(charachterType)type;
+- (void)setAnimationSequenceByCardinal:(fourtyFiveDegreeCardinal)newCardinal;
 
 @end

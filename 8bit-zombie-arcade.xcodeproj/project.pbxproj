@@ -75,8 +75,6 @@
 		D0C419131810B9E4009565BC /* woman_walk_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418FB1810B9E4009565BC /* woman_walk_west.atlas */; };
 		D0C7B5D0180EE6A9007D8F41 /* Ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C7B5CF180EE6A9007D8F41 /* Ipad.storyboard */; };
 		D0C7B5D7180EFF72007D8F41 /* ZACharachterAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */; };
-		D0C7B5DE180F3582007D8F41 /* ZAHeroAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5DD180F3582007D8F41 /* ZAHeroAnimationFrames.m */; };
-		D0C7B5E1180F35B8007D8F41 /* ZAZombieAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5E0180F35B8007D8F41 /* ZAZombieAnimationFrames.m */; };
 		D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */; };
 /* End PBXBuildFile section */
 
@@ -169,10 +167,6 @@
 		D0C7B5D1180EE90F007D8F41 /* CGPointF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGPointF.h; path = "8bit-zombie-arcade/CGPointF.h"; sourceTree = "<group>"; };
 		D0C7B5D5180EFF72007D8F41 /* ZACharachterAnimationFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZACharachterAnimationFrames.h; path = "8bit-zombie-arcade/ZACharachterAnimationFrames.h"; sourceTree = "<group>"; };
 		D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZACharachterAnimationFrames.m; path = "8bit-zombie-arcade/ZACharachterAnimationFrames.m"; sourceTree = "<group>"; };
-		D0C7B5DC180F3582007D8F41 /* ZAHeroAnimationFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAHeroAnimationFrames.h; path = "8bit-zombie-arcade/ZAHeroAnimationFrames.h"; sourceTree = "<group>"; };
-		D0C7B5DD180F3582007D8F41 /* ZAHeroAnimationFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAHeroAnimationFrames.m; path = "8bit-zombie-arcade/ZAHeroAnimationFrames.m"; sourceTree = "<group>"; };
-		D0C7B5DF180F35B8007D8F41 /* ZAZombieAnimationFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAZombieAnimationFrames.h; path = "8bit-zombie-arcade/ZAZombieAnimationFrames.h"; sourceTree = "<group>"; };
-		D0C7B5E0180F35B8007D8F41 /* ZAZombieAnimationFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAZombieAnimationFrames.m; path = "8bit-zombie-arcade/ZAZombieAnimationFrames.m"; sourceTree = "<group>"; };
 		D0DD0224180CC04900EAFABB /* ZAHeroSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAHeroSpriteNode.h; path = "8bit-zombie-arcade/ZAHeroSpriteNode.h"; sourceTree = "<group>"; };
 		D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAHeroSpriteNode.m; path = "8bit-zombie-arcade/ZAHeroSpriteNode.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -409,10 +403,6 @@
 			children = (
 				D0C7B5D5180EFF72007D8F41 /* ZACharachterAnimationFrames.h */,
 				D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */,
-				D0C7B5DF180F35B8007D8F41 /* ZAZombieAnimationFrames.h */,
-				D0C7B5E0180F35B8007D8F41 /* ZAZombieAnimationFrames.m */,
-				D0C7B5DC180F3582007D8F41 /* ZAHeroAnimationFrames.h */,
-				D0C7B5DD180F3582007D8F41 /* ZAHeroAnimationFrames.m */,
 			);
 			name = Singletons;
 			sourceTree = "<group>";
@@ -566,12 +556,10 @@
 			files = (
 				D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */,
 				D089AC3D180DDF9500BCB105 /* ZACharacherSpriteNode.m in Sources */,
-				D0C7B5DE180F3582007D8F41 /* ZAHeroAnimationFrames.m in Sources */,
 				D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */,
 				D0AA0085180A4D5A00CCF93D /* ZAMyScene.m in Sources */,
 				D0AA0078180A4D5A00CCF93D /* main.m in Sources */,
 				D0AA007C180A4D5A00CCF93D /* ZAAppDelegate.m in Sources */,
-				D0C7B5E1180F35B8007D8F41 /* ZAZombieAnimationFrames.m in Sources */,
 				D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */,
 				D0C7B5D7180EFF72007D8F41 /* ZACharachterAnimationFrames.m in Sources */,
 			);

@@ -12,9 +12,12 @@
 @interface ZACharachterAnimationFrames : NSObject
 
 @property (nonatomic, strong, readonly) NSDictionary *animationFrames;
+@property (nonatomic, strong, readonly) NSDictionary * atlasActions;
+@property (nonatomic, strong, readonly) NSArray *subCardinals;
 
 +(ZACharachterAnimationFrames *)sharedFrames;
 
 -(void)loadAsyncWithCallback:(void(^)(void))completionBlock;
+-(SKAction*)animationForSequence:(NSString*)sequence;
 
 @end

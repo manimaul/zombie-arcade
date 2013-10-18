@@ -13,6 +13,9 @@
 + (instancetype)createZombieSprite
 {
     ZAZombieSpriteNode *zombieSprite = [[ZAZombieSpriteNode alloc] initWithCharachterType:zombie];
+    zombieSprite.cardinal = west;
+    zombieSprite.action = walk;
+    zombieSprite.speed = 110.;
     return zombieSprite;
 }
 
