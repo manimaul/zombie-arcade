@@ -39,41 +39,33 @@ static const float kShowCharacterFramesOverOneSecond = 1.0f/(float) kDefaultNumb
 @end
 
 @implementation ZACharachterAnimationFrames
+int frameCount = 8;
 
 -(void)loadAsyncCharachter:(NSString*)charachter withCallback:(void(^)(void))completionBlock
 {
     if (!self.loaded) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             self.loaded = YES;
-            
-            int frameCount = 8;
-            float framesPerSecond = 1.0f/(float) frameCount;
+            [self populateTextures:charachter];
             
             //populate all the animation sequence frames for hero
             
-            self.walkNorthFrames = [self animationFramesForImageNamePrefix:[NSString stringWithFormat:@"%@_walk_north_", charachter] frameCount:frameCount];
+            float framesPerSecond = 1.0f/(float) frameCount;
+            
             _animateWalkNorth = [SKAction animateWithTextures:self.walkNorthFrames timePerFrame:framesPerSecond resize:YES restore:NO];;
             
-            
-            self.walkNorthEastFrames = [self animationFramesForImageNamePrefix:[NSString stringWithFormat:@"%@_walk_northeast_", charachter] frameCount:frameCount];
             _animateWalkNorthEast = [SKAction animateWithTextures:self.walkNorthEastFrames timePerFrame:framesPerSecond resize:YES restore:NO];;
             
-            self.walkEastFrames = [self animationFramesForImageNamePrefix:[NSString stringWithFormat:@"%@_walk_east_", charachter] frameCount:frameCount];
             _animateWalkEast = [SKAction animateWithTextures:self.walkEastFrames timePerFrame:framesPerSecond resize:YES restore:NO];;
             
-            self.walkSouthEastFrames = [self animationFramesForImageNamePrefix:[NSString stringWithFormat:@"%@_walk_southeast_", charachter] frameCount:frameCount];
             _animateWalkSouthEast = [SKAction animateWithTextures:self.walkSouthEastFrames timePerFrame:framesPerSecond resize:YES restore:NO];;
             
-            self.walkSouthFrames = [self animationFramesForImageNamePrefix:[NSString stringWithFormat:@"%@_walk_south_", charachter] frameCount:frameCount];
             _animateWalkSouth = [SKAction animateWithTextures:self.walkSouthFrames timePerFrame:framesPerSecond resize:YES restore:NO];;
             
-            
-            self.walkSouthWestFrames = [self animationFramesForImageNamePrefix:[NSString stringWithFormat:@"%@_walk_southwest_", charachter] frameCount:frameCount];
             _animateWalkSouthWest = [SKAction animateWithTextures:self.walkSouthWestFrames timePerFrame:framesPerSecond resize:YES restore:NO];;
             
-            self.walkWestFrames = [self animationFramesForImageNamePrefix:[NSString stringWithFormat:@"%@_walk_west_", charachter] frameCount:frameCount];
             _animateWalkWest = [SKAction animateWithTextures:self.walkWestFrames timePerFrame:framesPerSecond resize:YES restore:NO];
-            self.walkNorthWestFrames = [self animationFramesForImageNamePrefix:[NSString stringWithFormat:@"%@_walk_northwest_", charachter] frameCount:frameCount];
+            
             _animateWalkNorthWest = [SKAction animateWithTextures:self.walkNorthWestFrames timePerFrame:framesPerSecond resize:YES restore:NO];;
             
             //put the completion block back on the mainQueue so UI stuff can happen
@@ -82,19 +74,29 @@ static const float kShowCharacterFramesOverOneSecond = 1.0f/(float) kDefaultNumb
     }
 }
 
-
--(NSArray *)animationFramesForImageNamePrefix:(NSString *)baseImageName frameCount:(int)count
-{
-    NSMutableArray *frames = [NSMutableArray arrayWithCapacity:count];
-    for (int i = 0; i < count; ++i) {
-        NSString *imageName = [NSString stringWithFormat:@"%@%d.png", baseImageName, i];
-        //NSLog(@"%@", imageName);
-        SKTexture *texture = [SKTexture textureWithImageNamed:imageName];
-        
-        [frames addObject:texture];
+- (NSArray *)loadTextures:(NSString*)direction character:(NSString*)charachter{
+    
+    SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:[NSString stringWithFormat:@"%@",charachter]];
+    NSMutableArray *array = [NSMutableArray array];
+    for (int i = 0; i < frameCount; i++) {
+        NSString *string = [NSString stringWithFormat:@"%@_walk_%@_%d",charachter,direction,i];
+        SKTexture *texture = [atlas textureNamed:string];
+        [array addObject:texture];
     }
     
-    return frames;
+    return array;
+}
+
+- (void)populateTextures:(NSString*)charachter{
+    
+    self.walkNorthFrames = [self loadTextures:@"north" character:charachter];
+    self.walkNorthEastFrames = [self loadTextures:@"northeast" character:charachter];
+    self.walkEastFrames = [self loadTextures:@"east" character:charachter];
+    self.walkSouthEastFrames = [self loadTextures:@"southeast" character:charachter];
+    self.walkSouthFrames = [self loadTextures:@"south" character:charachter];
+    self.walkSouthWestFrames = [self loadTextures:@"southwest" character:charachter];
+    self.walkWestFrames = [self loadTextures:@"west" character:charachter];
+    self.walkNorthWestFrames = [self loadTextures:@"northwest" character:charachter];
 }
 
 @end
