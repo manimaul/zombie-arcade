@@ -14,7 +14,8 @@
 
 @interface ZAMyScene ()
 
-@property (nonatomic, strong) SKEmitterNode *bullet;
+//@property (nonatomic, strong) SKEmitterNode *bullet;
+@property (nonatomic) CGPoint fireLocation;
 
 @end
 
@@ -55,8 +56,8 @@
             [self addChild:heroSpriteNode];
         }];
         
-        _bullet = [self shootBullet];
-        [self addChild:_bullet];
+//        _bullet = [self shootBullet];
+//        [self addChild:_bullet];
 
     }
     return self;
@@ -190,20 +191,15 @@
     
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInNode:self.scene];
+    self.fireLocation = touchLocation;
 //    CGPoint endPoint = [touch locationInView:self.view];
 //    CGPoint originPoint = CGPointMake(endPoint.x - heroSpriteNode.position.x, endPoint.y - heroSpriteNode.position.y);
 //    [heroSpriteNode setAnimationSequenceByCardinal:[self getFortyFiveDegreeCardinalFromDegree:[self getVector:originPoint]]];
     
     [self moveSpriteToward:touchLocation];
+    [self fireBullet];
     
-//    _bullet.particleBirthRate = 5;
-    _bullet.numParticlesToEmit = 5;
-    _bullet.position = (heroSpriteNode.position);
-    [_bullet runAction:[SKAction sequence:@[
-//                                           [SKAction fadeInWithDuration:0.2],
-                                           [SKAction moveTo:touchLocation duration:0.5],
-//                                           [SKAction removeFromParent]
-                                           ]]];
+
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -231,12 +227,32 @@
 
 }
 
+- (void)fireBullet
+{
+    SKEmitterNode *bullet = [self shootBullet];
+    [self addChild:bullet];
+    bullet.particleBirthRate = 5;
+//    bullet.numParticlesToEmit = 5;
+    
+    bullet.position = (heroSpriteNode.position);
+    [bullet runAction:[SKAction sequence:@[
+                                            [SKAction moveTo:self.fireLocation duration:0.5],
+                                            [SKAction removeFromParent],
+                                            [SKAction runBlock:^{
+        [self fireBullet];
+    }]
+                                            ]]];
+    
+    
+}
+
 - (SKEmitterNode *)shootBullet
 {
+    SKEmitterNode *bullet;
     NSString *bulletPath = [[NSBundle mainBundle] pathForResource:@"bullet" ofType:@"sks"];
-    _bullet = [NSKeyedUnarchiver unarchiveObjectWithFile:bulletPath];
+    bullet = [NSKeyedUnarchiver unarchiveObjectWithFile:bulletPath];
     
-    return _bullet;
+    return bullet;
 }
 
 @end
