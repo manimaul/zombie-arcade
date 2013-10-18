@@ -99,18 +99,4 @@ int frameCount = 8;
     self.walkNorthWestFrames = [self loadTextures:@"northwest" character:charachter];
 }
 
--(NSArray *)animationFramesForImageNamePrefix:(NSString *)baseImageName frameCount:(int)count
-{
-    NSMutableArray *frames = [NSMutableArray arrayWithCapacity:count];
-    for (int i = 0; i < count; ++i) {
-        NSString *imageName = [NSString stringWithFormat:@"%@%d.png", baseImageName, i];
-        //NSLog(@"%@", imageName);
-        SKTexture *texture = [SKTexture textureWithImageNamed:imageName];
-        
-        [frames addObject:texture];
-    }
-    
-    return frames;
-}
-
 @end
