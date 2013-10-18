@@ -7,64 +7,20 @@
 //
 
 #import "ZAHeroSpriteNode.h"
-#import "ZAHeroAnimationFrames.h"
+#import "ZACharachterAnimationFrames.h"
 
 @implementation ZAHeroSpriteNode
+
+static NSArray* actions = nil;
+
 
 + (instancetype)createHeroSprite
 {
     ZAHeroSpriteNode *heroSprite = [[ZAHeroSpriteNode alloc] initWithCharachterType:hero];
     heroSprite.cardinal = west;
-    [heroSprite actionLoop];
+    heroSprite.action = stance;
+    heroSprite.speed = 120.;
     return heroSprite;
-}
-
-- (void)setAnimationSequenceByCardinal:(fourtyFiveDegreeCardinal)newCardinal
-{
-    if (self.cardinal != newCardinal) {
-        [self removeAllActions];
-        self.cardinal = newCardinal;
-        [self actionLoop];
-    } else
-        self.cardinal = newCardinal;
-}
-
--(void)actionLoop
-{
-    ZAHeroAnimationFrames *frames = [ZAHeroAnimationFrames sharedFrames];
-    SKAction *action;
-    switch (self.cardinal) {
-        case north:
-            action = [frames animateWalkNorth];
-            break;
-        case northeast:
-            action = [frames animateWalkNorthEast];
-            break;
-        case east:
-            action = [frames animateWalkEast];
-            break;
-        case southeast:
-            action = [frames animateWalkSouthEast];
-            break;
-        case south:
-            action = [frames animateWalkSouth];
-            break;
-        case southwest:
-            action = [frames animateWalkSouthWest];
-            break;
-        case west:
-            action = [frames animateWalkWest];
-            break;
-        case northwest:
-            action = [frames animateWalkNorthWest];
-            break;
-            
-        default:
-            break;
-    }
-    [self runAction:[SKAction sequence:@[action, [SKAction runBlock:^{
-        [self actionLoop];
-    }]]]];
 }
 
 

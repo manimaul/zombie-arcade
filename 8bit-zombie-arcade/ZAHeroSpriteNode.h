@@ -8,13 +8,8 @@
 
 #import "ZACharacherSpriteNode.h"
 
-static const float HERO_MOVE_POINTS_PER_SEC = 120.;
-
 @interface ZAHeroSpriteNode : ZACharacherSpriteNode
 
-@property (nonatomic) fourtyFiveDegreeCardinal cardinal;
-
 + (instancetype)createHeroSprite;
-- (void)setAnimationSequenceByCardinal:(fourtyFiveDegreeCardinal)newCardinal;
 
 @end
