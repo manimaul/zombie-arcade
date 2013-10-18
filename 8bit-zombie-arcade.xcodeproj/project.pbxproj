@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A6A6B52C180FA1D600F9A238 /* ZAEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A6B52B180FA1D600F9A238 /* ZAEntity.m */; };
+		A6A6B52F180FA2F600F9A238 /* ZABulletNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A6B52E180FA2F600F9A238 /* ZABulletNode.m */; };
+		A6A6B5321810832000F9A238 /* bullet.sks in Resources */ = {isa = PBXBuildFile; fileRef = A6A6B5301810832000F9A238 /* bullet.sks */; };
+		A6A6B5331810832000F9A238 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A6A6B5311810832000F9A238 /* spark.png */; };
 		D089AC3D180DDF9500BCB105 /* ZACharacherSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D089AC3C180DDF9500BCB105 /* ZACharacherSpriteNode.m */; };
 		D0AA006A180A4D5A00CCF93D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA0069180A4D5A00CCF93D /* Foundation.framework */; };
 		D0AA006C180A4D5A00CCF93D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */; };
@@ -45,6 +49,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A6A6B52A180FA1D600F9A238 /* ZAEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAEntity.h; sourceTree = "<group>"; };
+		A6A6B52B180FA1D600F9A238 /* ZAEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAEntity.m; sourceTree = "<group>"; };
+		A6A6B52D180FA2F600F9A238 /* ZABulletNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZABulletNode.h; sourceTree = "<group>"; };
+		A6A6B52E180FA2F600F9A238 /* ZABulletNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZABulletNode.m; sourceTree = "<group>"; };
+		A6A6B5301810832000F9A238 /* bullet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bullet.sks; sourceTree = "<group>"; };
+		A6A6B5311810832000F9A238 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		D089AC3B180DDF9500BCB105 /* ZACharacherSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZACharacherSpriteNode.h; path = "8bit-zombie-arcade/ZACharacherSpriteNode.h"; sourceTree = "<group>"; };
 		D089AC3C180DDF9500BCB105 /* ZACharacherSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZACharacherSpriteNode.m; path = "8bit-zombie-arcade/ZACharacherSpriteNode.m"; sourceTree = "<group>"; };
 		D0AA0066180A4D5A00CCF93D /* 8bit-zombie-arcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "8bit-zombie-arcade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +129,10 @@
 				D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */,
 				D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */,
 				D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */,
+				A6A6B52A180FA1D600F9A238 /* ZAEntity.h */,
+				A6A6B52B180FA1D600F9A238 /* ZAEntity.m */,
+				A6A6B52D180FA2F600F9A238 /* ZABulletNode.h */,
+				A6A6B52E180FA2F600F9A238 /* ZABulletNode.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -163,6 +177,8 @@
 		D0AA005D180A4D5A00CCF93D = {
 			isa = PBXGroup;
 			children = (
+				A6A6B5301810832000F9A238 /* bullet.sks */,
+				A6A6B5311810832000F9A238 /* spark.png */,
 				D0C7B5DB180F336F007D8F41 /* Singletons */,
 				D0C7B5D4180EE9B4007D8F41 /* CategoriesAndInlines */,
 				D089AC3A180DDF5100BCB105 /* Models */,
@@ -338,10 +354,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A6B5321810832000F9A238 /* bullet.sks in Resources */,
 				D0C7B5D0180EE6A9007D8F41 /* Ipad.storyboard in Resources */,
 				D0AA0076180A4D5A00CCF93D /* InfoPlist.strings in Resources */,
 				D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */,
 				D0AA00BA180C96CE00CCF93D /* zombie.atlas in Resources */,
+				A6A6B5331810832000F9A238 /* spark.png in Resources */,
 				D0AA007F180A4D5A00CCF93D /* Iphone.storyboard in Resources */,
 				D0DD0228180CC06000EAFABB /* woman.atlas in Resources */,
 			);
@@ -364,11 +382,13 @@
 			files = (
 				D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */,
 				D089AC3D180DDF9500BCB105 /* ZACharacherSpriteNode.m in Sources */,
+				A6A6B52F180FA2F600F9A238 /* ZABulletNode.m in Sources */,
 				D0C7B5DE180F3582007D8F41 /* ZAHeroAnimationFrames.m in Sources */,
 				D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */,
 				D0AA0085180A4D5A00CCF93D /* ZAMyScene.m in Sources */,
 				D0AA0078180A4D5A00CCF93D /* main.m in Sources */,
 				D0AA007C180A4D5A00CCF93D /* ZAAppDelegate.m in Sources */,
+				A6A6B52C180FA1D600F9A238 /* ZAEntity.m in Sources */,
 				D0C7B5E1180F35B8007D8F41 /* ZAZombieAnimationFrames.m in Sources */,
 				D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */,
 				D0C7B5D7180EFF72007D8F41 /* ZACharachterAnimationFrames.m in Sources */,
