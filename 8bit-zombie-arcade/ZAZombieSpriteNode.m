@@ -15,8 +15,16 @@
     ZAZombieSpriteNode *zombieSprite = [[ZAZombieSpriteNode alloc] initWithCharachterType:zombie];
     zombieSprite.cardinal = west;
     zombieSprite.action = walk;
-    zombieSprite.speed = 110.;
+    zombieSprite.movementSpeed = 70.;
     return zombieSprite;
+}
+
+#pragma mark - actions
+
+- (void)attack
+{
+    self.action = attack;
+    self.velocity = CGPointMake(0., 0.);
 }
 
 @end

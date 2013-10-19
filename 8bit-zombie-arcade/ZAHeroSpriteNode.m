@@ -19,7 +19,7 @@ static NSArray* actions = nil;
     ZAHeroSpriteNode *heroSprite = [[ZAHeroSpriteNode alloc] initWithCharachterType:hero];
     heroSprite.cardinal = west;
     heroSprite.action = stance;
-    heroSprite.speed = 120.;
+    heroSprite.movementSpeed = 120.;
     return heroSprite;
 }
 

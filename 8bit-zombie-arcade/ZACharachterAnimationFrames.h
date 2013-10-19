@@ -12,8 +12,8 @@
 @interface ZACharachterAnimationFrames : NSObject
 
 @property (nonatomic, strong, readonly) NSDictionary *animationFrames;
-@property (nonatomic, strong, readonly) NSDictionary * atlasActions;
-@property (nonatomic, strong, readonly) NSArray *subCardinals;
+//@property (nonatomic, strong, readonly) NSDictionary * atlasActions;
+//@property (nonatomic, strong, readonly) NSArray *subCardinals;
 
 +(ZACharachterAnimationFrames *)sharedFrames;
 

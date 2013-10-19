@@ -13,6 +13,9 @@
  These functions are in the header on purpose because they are static inline.
  */
 
+#ifndef _bit_zombie_arcade_CGPointF_h
+#define _bit_zombie_arcade_CGPointF_h
+
 static inline CGFloat ScalarSign(CGFloat a)
 {
     return a >= 0 ? 1 : -1;
@@ -60,3 +63,5 @@ static inline CGFloat CGPointToAngle(const CGPoint a)
 {
     return atan2f(a.y, a.x);
 }
+
+#endif

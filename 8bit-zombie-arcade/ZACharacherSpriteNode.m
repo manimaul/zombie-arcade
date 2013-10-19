@@ -7,6 +7,8 @@
 //
 
 #import "ZACharacherSpriteNode.h"
+#import "ZAHelpers.h"
+#import "CGPointF.h"
 
 @implementation ZACharacherSpriteNode
 
@@ -32,9 +34,94 @@
         _frames = [ZACharachterAnimationFrames sharedFrames];
         [self actionLoop];
     }
-    
     return self;
 }
+
+- (void)updateForDeltaTime:(NSTimeInterval)dt
+{
+    CGPoint amountToMove = CGPointMultiplyScalar(self.velocity, dt);
+    self.position = CGPointAdd(self.position, amountToMove);
+}
+
+-(BOOL)isInBounds
+{
+    if (self.position.x <= CGPointZero.x) {
+        return NO;
+    }
+    if (self.position.x >= self.scene.size.width) {
+        return NO;
+    }
+    if (self.position.y <= CGPointZero.y) {
+        return NO;
+    }
+    if (self.position.y >= self.scene.size.height) {
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (void)boundsCheck
+{
+    CGPoint newPosition = self.position;
+    CGPoint newVelocity = self.velocity;
+    CGPoint bottomLeft = CGPointZero;
+    CGPoint topRight = CGPointMake(self.scene.size.width, self.scene.size.height);
+    if (newPosition.x <= bottomLeft.x) {
+        newPosition.x = bottomLeft.x;
+        newVelocity.x = -newVelocity.x;
+    }
+    if (newPosition.x >= topRight.x) {
+        newPosition.x = topRight.x;
+        newVelocity.x = -newVelocity.x;
+    }
+    if (newPosition.y <= bottomLeft.y) {
+        newPosition.y = bottomLeft.y;
+        newVelocity.y = -newVelocity.y;
+    }
+    if (newPosition.y >= topRight.y) {
+        newPosition.y = topRight.y;
+        newVelocity.y = -newVelocity.y;
+    }
+    self.position = newPosition;
+    if (!CGPointEqualToPoint(self.velocity, newVelocity)) {
+        self.cardinal = getFortyFiveDegreeCardinalFromDegree(getVector(newVelocity));
+        //[self setAnimationSequenceByCardinal:self.cardinal];
+    }
+    self.velocity = newVelocity;
+    
+}
+
+#pragma mark - actions
+
+- (void)moveToward:(CGPoint)location
+{
+    CGPoint offset = CGPointSubtract(location, self.position);
+    CGFloat length = CGPointLength(offset);
+    CGPoint direction = CGPointMake(offset.x / length, offset.y / length);
+    self.velocity = CGPointMultiplyScalar(direction, self.movementSpeed);
+    self.action = walk;
+    [self setAnimationSequenceByCardinal:getFortyFiveDegreeCardinalFromDegree(getVector(self.velocity))];
+}
+
+- (void)performDeath:(NSMutableArray*)trackedNodes
+{
+    [self removeAllActions];
+    self.velocity = CGPointMake(0., 0.);
+    self.action = die;
+    SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action]];
+    if (animation) {
+        [self runAction:[SKAction sequence:@[animation, [SKAction fadeOutWithDuration:1.25],[SKAction runBlock:^{
+            [self removeFromParent];
+        }]]]];
+    } else {
+        [self removeFromParent];
+    }
+    if (trackedNodes)
+        [trackedNodes removeObject:self];
+}
+
+#pragma mark - animation
 
 - (void)setAnimationSequenceByCardinal:(fourtyFiveDegreeCardinal)newCardinal
 {
@@ -97,6 +184,10 @@
 
 -(void)actionLoop
 {
+    if (self.action == die)
+        return;
+    
+    [self boundsCheck];
     SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action]];
     if (animation) {
         [self runAction:[SKAction sequence:@[animation, [SKAction runBlock:^{
