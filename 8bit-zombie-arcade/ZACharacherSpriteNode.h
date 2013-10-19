@@ -38,8 +38,18 @@ typedef enum {
 @property (nonatomic, strong, readonly) ZACharachterAnimationFrames *frames;
 @property (nonatomic) fourtyFiveDegreeCardinal cardinal;
 @property (nonatomic) charachterActions action;
+@property (nonatomic) CGPoint velocity; //x = vector(direction) and y = length (speed in points per second)
+@property (nonatomic) CGFloat movementSpeed;
 
 -(id)initWithCharachterType:(charachterType)type;
 - (void)setAnimationSequenceByCardinal:(fourtyFiveDegreeCardinal)newCardinal;
+-(BOOL)isInBounds;
+
+//call this every scene update
+- (void)updateForDeltaTime:(NSTimeInterval)dt;
+
+//charachter control methods
+- (void)moveToward:(CGPoint)location;
+- (void)performDeath:(NSMutableArray*)trackedNodes;
 
 @end

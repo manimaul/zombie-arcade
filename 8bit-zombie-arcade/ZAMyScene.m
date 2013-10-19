@@ -16,10 +16,8 @@
 @implementation ZAMyScene {
     NSTimeInterval lastUpdateTime;
     NSTimeInterval deltaTime;
-    
+    NSMutableArray *zombieNodes;
     ZAHeroSpriteNode *heroSpriteNode;
-    CGPoint firstTouchPoint;
-    CGPoint velocity; //x = vector(direction) and y = length (speed in points per second)
 }
 
 -(id)initWithSize:(CGSize)size {    
@@ -36,18 +34,55 @@
                                        CGRectGetMidY(self.frame));
         [self addChild:myLabel];
         
+        zombieNodes = [NSMutableArray arrayWithCapacity:kMaxZombies];
+        
         ZACharachterAnimationFrames *frames = [ZACharachterAnimationFrames sharedFrames];
         [frames loadAsyncWithCallback:^{
             heroSpriteNode = [ZAHeroSpriteNode createHeroSprite];
             heroSpriteNode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
             [self addChild:heroSpriteNode];
             
-            ZAZombieSpriteNode *zombie = [ZAZombieSpriteNode createZombieSprite];
-            zombie.position = CGPointMake(64., 64.);
-            [self addChild:zombie];
+            [self zombieLoop];
         }];
     }
     return self;
+}
+
+-(void)spawnZombie
+{
+    if ([zombieNodes count] < kMaxZombies) {
+        ZAZombieSpriteNode *zombie = [ZAZombieSpriteNode createZombieSprite];
+        zombie.position = CGPointMake(64., 64.);
+    
+        [self addChild:zombie];
+        [zombieNodes addObject:zombie];
+        [zombie moveToward:heroSpriteNode.position];
+    }
+}
+
+-(void)zombieLoop
+{
+    [self spawnZombie];
+    
+    if (zombieNodes.count && heroSpriteNode.isInBounds) {
+        ZAZombieSpriteNode *randomZombie = [zombieNodes objectAtIndex:(arc4random() % zombieNodes.count)];
+        [randomZombie moveToward:heroSpriteNode.position];
+        
+        //kill a random zombie and spawn 2 more
+        ZAZombieSpriteNode *randomZombie2 = [zombieNodes objectAtIndex:(arc4random() % zombieNodes.count)];
+        if ([randomZombie2 isInBounds] && zombieNodes.count > 3) {
+            [randomZombie2 performDeath:zombieNodes];
+            [self spawnZombie];
+            [self spawnZombie];
+        }
+        
+        ZAZombieSpriteNode *randomZombie3 = [zombieNodes objectAtIndex:(arc4random() % zombieNodes.count)];
+        if ([randomZombie3 isInBounds] && zombieNodes.count > 2) {
+            [randomZombie3 attack];
+        }
+    }
+    
+    [self performSelector:@selector(zombieLoop) withObject:nil afterDelay:3];
 }
 
 -(void)update:(CFTimeInterval)currentTime {
@@ -59,151 +94,34 @@
     }
     
     lastUpdateTime = currentTime;
-    //NSLog(@"%0.2f milliseconds since last update", deltaTime * 1000);
-    
-    //[self moveSprite:heroSpriteNode velocity:CGPointMake(HERO_MOVE_POINTS_PER_SEC, 0)];
-    [self moveSprite:heroSpriteNode velocity:velocity];
-    [self boundsCheckPlayer];
-}
-
-- (void)boundsCheckPlayer
-{
-    if (!heroSpriteNode)
-        return;
-    
-    CGPoint newPosition = heroSpriteNode.position;
-    CGPoint newVelocity = velocity;
-    CGPoint bottomLeft = CGPointZero;
-    CGPoint topRight = CGPointMake(self.size.width, self.size.height);
-    if (newPosition.x <= bottomLeft.x) {
-        newPosition.x = bottomLeft.x;
-        newVelocity.x = -newVelocity.x;
+    [heroSpriteNode updateForDeltaTime:deltaTime];
+    for (ZAZombieSpriteNode *zombie in zombieNodes) {
+        [zombie updateForDeltaTime:deltaTime];
     }
-    if (newPosition.x >= topRight.x) {
-        newPosition.x = topRight.x;
-        newVelocity.x = -newVelocity.x;
-    }
-    if (newPosition.y <= bottomLeft.y) {
-        newPosition.y = bottomLeft.y;
-        newVelocity.y = -newVelocity.y;
-    }
-    if (newPosition.y >= topRight.y) {
-        newPosition.y = topRight.y;
-        newVelocity.y = -newVelocity.y;
-    }
-    heroSpriteNode.position = newPosition;
-    if (!CGPointEqualToPoint(velocity, newVelocity)) {
-        [heroSpriteNode  setAnimationSequenceByCardinal:[self getFortyFiveDegreeCardinalFromDegree:[self getVector:newVelocity]]];
-    }
-    velocity = newVelocity;
-    
-}
-
-- (void)moveSprite:(SKSpriteNode *)sprite velocity:(CGPoint)vel
-{
-    CGPoint amountToMove = CGPointMultiplyScalar(vel, deltaTime);
-    sprite.position = CGPointAdd(sprite.position, amountToMove);
-   
-}
-
-- (void)moveSpriteToward:(CGPoint)location
-{
-    if (!heroSpriteNode)
-        return;
-    
-    CGPoint offset = CGPointSubtract(location, heroSpriteNode.position);
-    CGFloat length = CGPointLength(offset);
-    CGPoint direction = CGPointMake(offset.x / length, offset.y / length);
-    velocity = CGPointMultiplyScalar(direction, heroSpriteNode.speed);
-    heroSpriteNode.action = walk;
-    [heroSpriteNode  setAnimationSequenceByCardinal:[self getFortyFiveDegreeCardinalFromDegree:[self getVector:velocity]]];
-    NSLog(@"direction:%d", [self getVector:velocity]);
-}
-
--(int)getVector:(CGPoint)point
-{
-    // Provides a directional bearing from (0,0) to the given point.
-    // standard cartesian plain coords: X goes up, Y goes right
-    // result returns degrees, -180 to 180 ish: 0 degrees = up, -90 = left, 90 = right
-    CGFloat radians = atan2f(point.y, point.x);
-    int degrees = radians * (180. / M_PI);
-    
-    if (degrees < 0)
-        degrees = 360 + degrees;
-    
-    return degrees;
-}
-
--(fourtyFiveDegreeCardinal)getFortyFiveDegreeCardinalFromDegree:(int)degree
-{
-    degree = degree % 360;
-    
-    if (degree >=0 && degree < 22) {
-        return east;
-    }
-    if (degree >= 22 && degree < 67) {
-        return northeast;
-    }
-    if (degree >= 67 && degree < 112) {
-        return north;
-    }
-    if (degree >= 112 && degree < 157) {
-        return northwest;
-    }
-    if (degree >= 157 && degree < 202) {
-        return west;
-    }
-    if (degree >= 202 && degree < 247) {
-        return southwest;
-    }
-    if (degree >= 247 && degree < 292) {
-        return south;
-    }
-    if (degree >= 292 && degree < 337) {
-        return southeast;
-    }
-    if (degree >= 337 && degree <= 360) {
-        return east;
-    }
-    return north;
 }
 
 #pragma mark - touches
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-//    if (moveDegrees == -2 ) {
-//        firstTouchPoint = [[touches anyObject] locationInView:self.view];
-//        moveDegrees = -1;
-//    }
-    
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInNode:self.scene];
-//    CGPoint endPoint = [touch locationInView:self.view];
-//    CGPoint originPoint = CGPointMake(endPoint.x - heroSpriteNode.position.x, endPoint.y - heroSpriteNode.position.y);
-//    [heroSpriteNode setAnimationSequenceByCardinal:[self getFortyFiveDegreeCardinalFromDegree:[self getVector:originPoint]]];
-    [self moveSpriteToward:touchLocation];
+    [heroSpriteNode moveToward:touchLocation];
+    
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-//    if (moveDegrees >= -1) {
-//        CGPoint endPoint = [[touches anyObject] locationInView:self.view];
-//        CGPoint originPoint = CGPointMake(endPoint.x - firstTouchPoint.x, endPoint.y - firstTouchPoint.y);
-//        NSLog(@"move degrees = %d", moveDegrees);
-//        moveDegrees = [self getVector:originPoint];
-//    }
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInNode:self.scene];
-    [self moveSpriteToward:touchLocation];
+    [heroSpriteNode moveToward:touchLocation];
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-//    moveDegrees = -2;
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInNode:self.scene];
-    [self moveSpriteToward:touchLocation];
+    [heroSpriteNode moveToward:touchLocation];
 }
 
 @end

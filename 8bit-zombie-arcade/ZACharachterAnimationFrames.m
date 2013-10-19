@@ -38,23 +38,21 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             self.loaded = YES;
             
-            _atlasActions = @{ @"woman" : @[@"die", @"stance", @"walk"] ,
-                               @"zombie": @[@"attack", @"die", @"walk"] };
+            NSDictionary * atlasActions = @{@"woman" : @{@"die": @6, @"stance": @4, @"walk": @8},
+                                            @"zombie": @{@"die": @8, @"walk": @8, @"attack": @4} };
             
-            NSDictionary *action_frames = @{@"die": @6, @"stance": @4, @"walk": @8, @"attack": @4};
-            
-            _subCardinals = @[@"east", @"north", @"northeast", @"northwest",
+            NSArray *subCardinals = @[@"east", @"north", @"northeast", @"northwest",
                                       @"south", @"southeast", @"southwest", @"west"];
             
             NSMutableDictionary *db = [[NSMutableDictionary alloc] init];
             
             //build frame arrays for each and every atlas
-            for (NSString* charachter in [_atlasActions keyEnumerator]) {
-                for (NSString *action in [_atlasActions objectForKey:charachter]) {
-                    for (NSString *subC in _subCardinals) {
+            for (NSString* charachter in [atlasActions keyEnumerator]) {
+                for (NSString *action in [[atlasActions objectForKey:charachter] keyEnumerator]) {
+                    for (NSString *subC in subCardinals) {
                         NSString *sequence = [NSString stringWithFormat:@"%@_%@_%@", charachter, action, subC];
                         //NSLog(@"%@_%@_%@", charachter, action, subC);
-                        NSNumber *numFrames = [action_frames objectForKey:action];
+                        NSNumber *numFrames = [[atlasActions objectForKey:charachter] objectForKey:action];
                         NSArray *frames = [self loadFramesFromAtlas:sequence withNumberOfFrames:numFrames.integerValue];
                         
                         [db setObject:frames forKey:sequence];
@@ -75,7 +73,7 @@
     NSArray *textures = [_animationFrames objectForKey:sequence];
     
     if (textures)
-        return [SKAction animateWithTextures:textures timePerFrame:12.5 resize:YES restore:NO];
+        return [SKAction animateWithTextures:textures timePerFrame:.125 resize:YES restore:NO];
     
     return nil;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D07DED3C1812515F0070E750 /* Ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07DED3A1812515F0070E750 /* Ipad.storyboard */; };
 		D089AC3D180DDF9500BCB105 /* ZACharacherSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D089AC3C180DDF9500BCB105 /* ZACharacherSpriteNode.m */; };
 		D0AA006A180A4D5A00CCF93D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA0069180A4D5A00CCF93D /* Foundation.framework */; };
 		D0AA006C180A4D5A00CCF93D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */; };
@@ -73,7 +74,6 @@
 		D0C419111810B9E4009565BC /* woman_walk_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418F91810B9E4009565BC /* woman_walk_southeast.atlas */; };
 		D0C419121810B9E4009565BC /* woman_walk_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418FA1810B9E4009565BC /* woman_walk_southwest.atlas */; };
 		D0C419131810B9E4009565BC /* woman_walk_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0C418FB1810B9E4009565BC /* woman_walk_west.atlas */; };
-		D0C7B5D0180EE6A9007D8F41 /* Ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C7B5CF180EE6A9007D8F41 /* Ipad.storyboard */; };
 		D0C7B5D7180EFF72007D8F41 /* ZACharachterAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */; };
 		D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */; };
 /* End PBXBuildFile section */
@@ -89,6 +89,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D07DED3B1812515F0070E750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "8bit-zombie-arcade/Base.lproj/Ipad.storyboard"; sourceTree = "<group>"; };
+		D07DED3D1812516C0070E750 /* ZAHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZAHelpers.h; path = "8bit-zombie-arcade/ZAHelpers.h"; sourceTree = "<group>"; };
 		D089AC3B180DDF9500BCB105 /* ZACharacherSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZACharacherSpriteNode.h; path = "8bit-zombie-arcade/ZACharacherSpriteNode.h"; sourceTree = "<group>"; };
 		D089AC3C180DDF9500BCB105 /* ZACharacherSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZACharacherSpriteNode.m; path = "8bit-zombie-arcade/ZACharacherSpriteNode.m"; sourceTree = "<group>"; };
 		D0AA0066180A4D5A00CCF93D /* 8bit-zombie-arcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "8bit-zombie-arcade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,7 +165,6 @@
 		D0C418F91810B9E4009565BC /* woman_walk_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_southeast.atlas; sourceTree = "<group>"; };
 		D0C418FA1810B9E4009565BC /* woman_walk_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_southwest.atlas; sourceTree = "<group>"; };
 		D0C418FB1810B9E4009565BC /* woman_walk_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_west.atlas; sourceTree = "<group>"; };
-		D0C7B5CF180EE6A9007D8F41 /* Ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ipad.storyboard; sourceTree = "<group>"; };
 		D0C7B5D1180EE90F007D8F41 /* CGPointF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGPointF.h; path = "8bit-zombie-arcade/CGPointF.h"; sourceTree = "<group>"; };
 		D0C7B5D5180EFF72007D8F41 /* ZACharachterAnimationFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZACharachterAnimationFrames.h; path = "8bit-zombie-arcade/ZACharachterAnimationFrames.h"; sourceTree = "<group>"; };
 		D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZACharachterAnimationFrames.m; path = "8bit-zombie-arcade/ZACharachterAnimationFrames.m"; sourceTree = "<group>"; };
@@ -229,8 +230,8 @@
 		D089AC41180DE04400BCB105 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D07DED3A1812515F0070E750 /* Ipad.storyboard */,
 				D0AA007D180A4D5A00CCF93D /* Iphone.storyboard */,
-				D0C7B5CF180EE6A9007D8F41 /* Ipad.storyboard */,
 				D0AA0083180A4D5A00CCF93D /* ZAMyScene.h */,
 				D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */,
 			);
@@ -393,6 +394,7 @@
 		D0C7B5D4180EE9B4007D8F41 /* CategoriesAndInlines */ = {
 			isa = PBXGroup;
 			children = (
+				D07DED3D1812516C0070E750 /* ZAHelpers.h */,
 				D0C7B5D1180EE90F007D8F41 /* CGPointF.h */,
 			);
 			name = CategoriesAndInlines;
@@ -490,7 +492,6 @@
 				D0C4190B1810B9E4009565BC /* woman_stance_west.atlas in Resources */,
 				D0C418DB1810B9D2009565BC /* zombie_walk_east.atlas in Resources */,
 				D0C418CB1810B9D2009565BC /* zombie_attack_east.atlas in Resources */,
-				D0C7B5D0180EE6A9007D8F41 /* Ipad.storyboard in Resources */,
 				D0C418D91810B9D2009565BC /* zombie_die_southwest.atlas in Resources */,
 				D0C419111810B9E4009565BC /* woman_walk_southeast.atlas in Resources */,
 				D0C418E21810B9D2009565BC /* zombie_walk_west.atlas in Resources */,
@@ -505,6 +506,7 @@
 				D0C419081810B9E4009565BC /* woman_stance_south.atlas in Resources */,
 				D0C418CC1810B9D2009565BC /* zombie_attack_north.atlas in Resources */,
 				D0C419061810B9E4009565BC /* woman_stance_northeast.atlas in Resources */,
+				D07DED3C1812515F0070E750 /* Ipad.storyboard in Resources */,
 				D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */,
 				D0C419001810B9E4009565BC /* woman_die_south.atlas in Resources */,
 				D0C418FD1810B9E4009565BC /* woman_die_north.atlas in Resources */,
@@ -584,6 +586,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D07DED3A1812515F0070E750 /* Ipad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D07DED3B1812515F0070E750 /* Base */,
+			);
+			name = Ipad.storyboard;
+			sourceTree = "<group>";
+		};
 		D0AA0074180A4D5A00CCF93D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -9,9 +9,11 @@
 #import <SpriteKit/SpriteKit.h>
 #import "ZACharacherSpriteNode.h"
 
+static const NSInteger kMaxZombies = 5;
 
 @interface ZAZombieSpriteNode : ZACharacherSpriteNode
 
 + (instancetype)createZombieSprite;
+- (void)attack;
 
 @end
