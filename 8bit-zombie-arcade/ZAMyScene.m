@@ -18,6 +18,9 @@
     NSTimeInterval deltaTime;
     NSMutableArray *zombieNodes;
     ZAHeroSpriteNode *heroSpriteNode;
+    CGPoint firstTouchPoint;
+    CGPoint fireLocation;
+    CGPoint velocity; //x = vector(direction) and y = length (speed in points per second)
 }
 
 -(id)initWithSize:(CGSize)size {    
@@ -107,6 +110,8 @@
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInNode:self.scene];
     [heroSpriteNode moveToward:touchLocation];
+	fireLocation = touchLocation;
+	[self fireBullet];
     
 }
 
@@ -122,6 +127,29 @@
     UITouch *touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInNode:self.scene];
     [heroSpriteNode moveToward:touchLocation];
+}
+
+- (void)fireBullet
+{
+    SKEmitterNode *bullet = [self shootBullet];
+    if (bullet) {
+        [self addChild:bullet];
+        bullet.particleBirthRate = 5;
+        bullet.position = (heroSpriteNode.position);
+        [bullet runAction:[SKAction sequence:@[[SKAction moveTo:fireLocation duration:0.5],
+                                               [SKAction removeFromParent],
+                                               [SKAction runBlock:^{[self fireBullet];}]
+                                              ]]];
+    }
+}
+
+- (SKEmitterNode *)shootBullet
+{
+    SKEmitterNode *bullet;
+    NSString *bulletPath = [[NSBundle mainBundle] pathForResource:@"bullet" ofType:@"sks"];
+    bullet = [NSKeyedUnarchiver unarchiveObjectWithFile:bulletPath];
+    
+    return bullet;
 }
 
 @end
