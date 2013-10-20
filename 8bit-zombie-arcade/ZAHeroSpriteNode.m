@@ -23,5 +23,13 @@ static NSArray* actions = nil;
     return heroSprite;
 }
 
+#pragma mark - actions
+
+- (void)stop
+{
+    self.velocity = CGPointMake(0., 0.);
+    [self setImmediateAction:stance];
+}
+
 
 @end

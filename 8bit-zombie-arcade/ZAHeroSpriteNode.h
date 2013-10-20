@@ -11,5 +11,6 @@
 @interface ZAHeroSpriteNode : ZACharacherSpriteNode
 
 + (instancetype)createHeroSprite;
+- (void)stop;
 
 @end

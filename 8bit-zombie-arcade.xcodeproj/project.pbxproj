@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D03A79B118131839001097B5 /* bullet.sks in Resources */ = {isa = PBXBuildFile; fileRef = D03A79AF18131839001097B5 /* bullet.sks */; };
 		D03A79B218131839001097B5 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = D03A79B018131839001097B5 /* spark.png */; };
+		D085911418139A9000C1CAC5 /* tiles.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D085911318139A9000C1CAC5 /* tiles.atlas */; };
 		D089AC3D180DDF9500BCB105 /* ZACharacherSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D089AC3C180DDF9500BCB105 /* ZACharacherSpriteNode.m */; };
 		D0AA006A180A4D5A00CCF93D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA0069180A4D5A00CCF93D /* Foundation.framework */; };
 		D0AA006C180A4D5A00CCF93D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */; };
@@ -99,6 +100,7 @@
 		D03A79B018131839001097B5 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = "8bit-zombie-arcade/Resources/spark.png"; sourceTree = "<group>"; };
 		D07DED3B1812515F0070E750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "8bit-zombie-arcade/Base.lproj/Ipad.storyboard"; sourceTree = "<group>"; };
 		D07DED3D1812516C0070E750 /* ZAHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZAHelpers.h; path = "8bit-zombie-arcade/ZAHelpers.h"; sourceTree = "<group>"; };
+		D085911318139A9000C1CAC5 /* tiles.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = tiles.atlas; path = "8bit-zombie-arcade/Resources/world/tiles.atlas"; sourceTree = "<group>"; };
 		D089AC3B180DDF9500BCB105 /* ZACharacherSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZACharacherSpriteNode.h; path = "8bit-zombie-arcade/ZACharacherSpriteNode.h"; sourceTree = "<group>"; };
 		D089AC3C180DDF9500BCB105 /* ZACharacherSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZACharacherSpriteNode.m; path = "8bit-zombie-arcade/ZACharacherSpriteNode.m"; sourceTree = "<group>"; };
 		D0AA0066180A4D5A00CCF93D /* 8bit-zombie-arcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "8bit-zombie-arcade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +229,7 @@
 			children = (
 				D03A79AF18131839001097B5 /* bullet.sks */,
 				D03A79B018131839001097B5 /* spark.png */,
+				D085911318139A9000C1CAC5 /* tiles.atlas */,
 				D0F65C731812FFAC0071172D /* zombie */,
 				D0F65C421812FF9F0071172D /* woman */,
 				D0AA0088180A4D5A00CCF93D /* Images.xcassets */,
@@ -519,6 +522,7 @@
 				D0F65C911812FFAC0071172D /* zombie_attack_southeast.atlas in Resources */,
 				D0F65C8F1812FFAC0071172D /* zombie_attack_northwest.atlas in Resources */,
 				D0F65CA21812FFAC0071172D /* zombie_walk_southwest.atlas in Resources */,
+				D085911418139A9000C1CAC5 /* tiles.atlas in Resources */,
 				D0F65C921812FFAC0071172D /* zombie_attack_southwest.atlas in Resources */,
 				D0F65C8D1812FFAC0071172D /* zombie_attack_north.atlas in Resources */,
 				D0F65CA31812FFAC0071172D /* zombie_walk_west.atlas in Resources */,

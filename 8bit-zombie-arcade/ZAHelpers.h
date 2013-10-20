@@ -9,21 +9,7 @@
 #ifndef _bit_zombie_arcade_ZAHelpers_h
 #define _bit_zombie_arcade_ZAHelpers_h
 
-static inline int getVector(CGPoint point)
-{
-    // Provides a directional bearing from (0,0) to the given point.
-    // standard cartesian plain coords: X goes up, Y goes right
-    // result returns degrees, -180 to 180 ish: 0 degrees = up, -90 = left, 90 = right
-    CGFloat radians = atan2f(point.y, point.x);
-    int degrees = radians * (180. / M_PI);
-    
-    if (degrees < 0)
-        degrees = 360 + degrees;
-    
-    return degrees;
-}
-
-static inline fourtyFiveDegreeCardinal getFortyFiveDegreeCardinalFromDegree(int degree)
+static inline fourtyFiveDegreeCardinal FortyFiveDegreeCardinalFromDegree(int degree)
 {
     degree = degree % 360;
     

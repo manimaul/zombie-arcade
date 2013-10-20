@@ -6,11 +6,6 @@
 //  Copyright (c) 2013 Will Kamp. All rights reserved.
 //
 
-/*
- Note!!! this is not a singleton: however, this class is inteded to be a superclass of individual singletons
- who hold animation frames for a particular type of node.
- */
-
 #import "ZACharachterAnimationFrames.h"
 
 @interface ZACharachterAnimationFrames ()

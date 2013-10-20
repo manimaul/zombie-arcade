@@ -59,9 +59,37 @@ static inline CGPoint CGPointNormalize(const CGPoint a)
     return CGPointMake(a.x / length, a.y / length);
 }
 
-static inline CGFloat CGPointToAngle(const CGPoint a)
+static inline CGFloat CGPointToAngleRadians(const CGPoint a)
 {
     return atan2f(a.y, a.x);
+}
+
+static inline CGFloat DegreesToRadians(const CGFloat d)
+{
+    CGFloat radians = d * (M_PI / 180.);
+    return radians;
+}
+
+static inline CGFloat RadiansToDegrees(const CGFloat r)
+{
+    CGFloat degrees = r * (180. / M_PI);
+    
+    if (degrees < 0)
+        degrees = 360 + degrees;
+    
+    return degrees;
+}
+
+static inline CGPoint ProjectPoint(const CGPoint point, const CGFloat distance, const CGFloat radians)
+{
+    CGFloat x = point.x + distance * cosf(radians);
+    CGFloat y = point.y + distance * sinf(radians);
+    return CGPointMake(x, y);
+}
+
+static inline CGFloat CGPointToAngleDegrees(const CGPoint a)
+{
+    return (RadiansToDegrees(CGPointToAngleRadians(a)));
 }
 
 #endif
