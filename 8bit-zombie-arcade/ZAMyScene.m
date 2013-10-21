@@ -21,12 +21,13 @@
     ZAHeroSpriteNode *heroSpriteNode;
     SKSpriteNode *controller;
     UITouch *firstTouch;
-    NSInteger touchCount; //touches.count is unreliable
+    UITouch *secondTouch;
+    BOOL secondTouchDown;
     //BOOL haveFirstTouch; //touches.count is unreliable in touchesBegan
     CGPoint firstTouchLocation;
 }
 
--(id)initWithSize:(CGSize)size {    
+-(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         self.scaleMode = SKSceneScaleModeAspectFit;
@@ -68,7 +69,7 @@
             [self zombieLoop];
         }];
         
-        touchCount = 0;
+        secondTouchDown = NO;
     }
     return self;
 }
@@ -78,7 +79,7 @@
     if ([zombieNodes count] < kMaxZombies) {
         ZAZombieSpriteNode *zombie = [ZAZombieSpriteNode createZombieSprite];
         zombie.position = CGPointMake(64., 64.);
-    
+        
         [self addChild:zombie];
         [zombieNodes addObject:zombie];
         [zombie moveToward:heroSpriteNode.position];
@@ -127,56 +128,93 @@
 
 #pragma mark - touches
 
+-(BOOL)isTouchLeftHemisphere:(CGPoint)touchLocation
+{
+    if (touchLocation.x <= self.scene.size.width / 2.)
+        return YES;
+    
+    return NO;
+}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (!touchCount) {
-        UITouch *touch = [touches anyObject];
-        firstTouch = touch;
-        firstTouchLocation = [firstTouch locationInNode:self.scene];
-        controller.position = firstTouchLocation;
-        controller.hidden = NO;
-    } else {
-        //call method to start weapon fire here
-        [self fireBulletTowardAngleRadians:CGPointToAngleRadians(heroSpriteNode.velocity)];
-    }
+    UITouch *touch = [touches anyObject];
+    CGPoint touchLocation = [touch locationInNode:self.scene];
     
-    touchCount++;
+    if ([self isTouchLeftHemisphere:touchLocation]) {
+        if (controller.hidden) {
+            firstTouch = touch;
+            firstTouchLocation = touchLocation;
+            controller.position = firstTouchLocation;
+            controller.hidden = NO;
+        }
+    } else if (!secondTouchDown) {
+        secondTouch = touch;
+        [heroSpriteNode setContinuousFire:YES];
+        secondTouchDown = YES;
+//        [self fireBulletTowardAngleRadians:CGPointToAngleRadians(heroSpriteNode.velocity)];
+
+    }
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    //firstTouch has move to a newLocation
-    CGPoint touchLocation = [firstTouch locationInNode:self.scene];
     
-    //calculate angle of first touch location and new location
-    [heroSpriteNode moveTowardAngleRadians:CGPointToAngleRadians(CGPointSubtract(touchLocation, firstTouchLocation))];
+    if ([touches containsObject:firstTouch]) {
+        
+        //firstTouch has move to a newLocation
+        CGPoint touchLocation = [firstTouch locationInNode:self.scene];
+        
+        //calculate angle of first touch location and new location
+        [heroSpriteNode moveTowardAngleRadians:CGPointToAngleRadians(CGPointSubtract(touchLocation, firstTouchLocation))];
+    }
+    
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (touchCount <= 2) {
-        //call method to stop continuous weapon fire here
-    }
-    if (touchCount <= 1) {
-        //stop hero motion
-        [heroSpriteNode stop];
+    if ([touches containsObject:firstTouch]) {
         controller.hidden = YES;
+        [heroSpriteNode stop];
     }
     
-    touchCount--;
+    if ([touches containsObject:secondTouch]) {
+        [heroSpriteNode setContinuousFire:NO];
+        secondTouchDown = NO;
+    }
+    
+    //    if (touchCount <= 2) {
+    //        //call method to stop continuous weapon fire here
+    //    }
+    //    if (touchCount <= 1) {
+    //        //stop hero motion
+    //        [heroSpriteNode stop];
+    //        controller.hidden = YES;
+    //    }
+    //
+    //    touchCount--;
 }
 
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (touchCount <= 2) {
-        //call method to stop continuous weapon fire here
-    }
-    if (touchCount <= 1) {
-        //stop hero motion
-        [heroSpriteNode stop];
+    if ([touches containsObject:firstTouch]) {
         controller.hidden = YES;
+        [heroSpriteNode stop];
     }
-    touchCount--;
+    
+    if ([touches containsObject:secondTouch]) {
+        [heroSpriteNode setContinuousFire:NO];
+        secondTouchDown = NO;
+    }
+    //    if (touchCount <= 2) {
+    //        //call method to stop continuous weapon fire here
+    //    }
+    //    if (touchCount <= 1) {
+    //        //stop hero motion
+    //        [heroSpriteNode stop];
+    //        controller.hidden = YES;
+    //    }
+    //    touchCount--;
 }
 
 - (void)fireBulletTowardAngleRadians:(CGFloat)radians

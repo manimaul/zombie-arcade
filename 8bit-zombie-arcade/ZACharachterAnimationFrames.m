@@ -63,12 +63,12 @@
     }
 }
 
--(SKAction*)animationForSequence:(NSString*)sequence
+-(SKAction*)animationForSequence:(NSString*)sequence withTimePerFrame:(CGFloat)tpf
 {
     NSArray *textures = [_animationFrames objectForKey:sequence];
     
     if (textures)
-        return [SKAction animateWithTextures:textures timePerFrame:.125 resize:YES restore:NO];
+        return [SKAction animateWithTextures:textures timePerFrame:tpf resize:YES restore:NO];
     
     return nil;
 }

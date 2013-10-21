@@ -12,5 +12,6 @@
 
 + (instancetype)createHeroSprite;
 - (void)stop;
+- (void)setContinuousFire:(BOOL)on;
 
 @end
