@@ -85,7 +85,7 @@
     }
     self.position = newPosition;
     if (!CGPointEqualToPoint(self.velocity, newVelocity)) {
-        self.cardinal = getFortyFiveDegreeCardinalFromDegree(getVector(newVelocity));
+        self.cardinal = FortyFiveDegreeCardinalFromDegree(CGPointToAngleDegrees(newVelocity));
         //[self setAnimationSequenceByCardinal:self.cardinal];
     }
     self.velocity = newVelocity;
@@ -101,7 +101,12 @@
     CGPoint direction = CGPointMake(offset.x / length, offset.y / length);
     self.velocity = CGPointMultiplyScalar(direction, self.movementSpeed);
     self.action = walk;
-    [self setAnimationSequenceByCardinal:getFortyFiveDegreeCardinalFromDegree(getVector(self.velocity))];
+    [self setAnimationSequenceByCardinal:FortyFiveDegreeCardinalFromDegree(CGPointToAngleDegrees(self.velocity))];
+}
+
+- (void)moveTowardAngleRadians:(CGFloat)radians
+{
+    [self moveToward:ProjectPoint(self.position, 1., radians)];
 }
 
 - (void)performDeath:(NSMutableArray*)trackedNodes
@@ -123,14 +128,22 @@
 
 #pragma mark - animation
 
+- (void)setImmediateAction:(charachterActions)action
+{
+    if (self.action != action) {
+        self.action = action;
+        [self removeAllActions];
+        [self actionLoop];
+    }
+}
+
 - (void)setAnimationSequenceByCardinal:(fourtyFiveDegreeCardinal)newCardinal
 {
     if (self.cardinal != newCardinal) {
         [self removeAllActions];
         self.cardinal = newCardinal;
         [self actionLoop];
-    } else
-        self.cardinal = newCardinal;
+    }
 }
 
 -(NSString*)getSequenceForCardinal:(fourtyFiveDegreeCardinal)cardinal forAction:(charachterActions)action

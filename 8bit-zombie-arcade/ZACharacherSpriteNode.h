@@ -50,6 +50,10 @@ typedef enum {
 
 //charachter control methods
 - (void)moveToward:(CGPoint)location;
+- (void)moveTowardAngleRadians:(CGFloat)radians;
+
+//charachter animation methods
+- (void)setImmediateAction:(charachterActions)action;
 - (void)performDeath:(NSMutableArray*)trackedNodes;
 
 @end

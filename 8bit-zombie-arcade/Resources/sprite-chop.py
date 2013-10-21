@@ -60,15 +60,15 @@ def renderSequenceSet(img, name, anim_angles, anim_sequences, render_sequences):
 # renderSequenceSet(img, name, anim_angles, anim_sequences, render_sequences)
 
 
-# #### woman
-# #8 angles
-# name = "woman"
-# sprite_sheet = "woman.png"
-# img = Image.open(sprite_sheet)
-# anim_angles = [ "west", "northwest", "north", "northeast", "east", "southeast", "south", "southwest" ]
-# anim_sequences = [ ("stance",4), ("walk",8), ("slam",4), ("bite",2), ("die",6), ("block",4), ("shoot",4) ]
-# ##set of sequences we actually want to render
-# render_sequences = {"stance", "walk", "die"}
-# renderSequenceSet(img, name, anim_angles, anim_sequences, render_sequences)
+#### woman
+#8 angles
+name = "woman"
+sprite_sheet = "woman.png"
+img = Image.open(sprite_sheet)
+anim_angles = [ "west", "northwest", "north", "northeast", "east", "southeast", "south", "southwest" ]
+anim_sequences = [ ("stance",4), ("walk",8), ("slam",4), ("bite",2), ("die",6), ("block",4), ("shoot",4) ]
+##set of sequences we actually want to render
+render_sequences = {"stance", "walk", "die"}
+renderSequenceSet(img, name, anim_angles, anim_sequences, render_sequences)
 
 
