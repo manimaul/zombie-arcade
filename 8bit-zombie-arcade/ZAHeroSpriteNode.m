@@ -8,8 +8,13 @@
 
 #import "ZAHeroSpriteNode.h"
 #import "ZACharachterAnimationFrames.h"
+#import "CGPointF.h"
 
-@implementation ZAHeroSpriteNode
+
+
+@implementation ZAHeroSpriteNode {
+    BOOL continuousFire;
+}
 
 static NSArray* actions = nil;
 
@@ -20,6 +25,7 @@ static NSArray* actions = nil;
     heroSprite.cardinal = west;
     heroSprite.action = stance;
     heroSprite.movementSpeed = 120.;
+    heroSprite.timePerframe = .095;
     return heroSprite;
 }
 
@@ -31,5 +37,55 @@ static NSArray* actions = nil;
     [self setImmediateAction:stance];
 }
 
+- (void)setContinuousFire:(BOOL)on
+{
+    //    continuousFire = on;
+    
+    NSLog(@"Continuous fire is on! %d", on);
+    
+    if (on) {
+        CGFloat newRadian = CGPointToAngleRadians(self.velocity);
+        [self fireBulletTowardAngleRadians:newRadian];
+    }
+}
+
+- (void)fireBulletTowardAngleRadians:(CGFloat)radians
+{
+    SKEmitterNode *bullet = [self shootBullet];
+    
+    if (bullet) {
+        [self.scene addChild:bullet];
+        bullet.particleBirthRate = 5;
+        bullet.position = self.position;
+        CGPoint destination = ProjectPoint(self.position, self.scene.size.width, radians);
+        [bullet runAction:[SKAction sequence:@[[SKAction moveTo:destination duration:1.0],
+                                               
+                                               [SKAction runBlock:^{
+            if (continuousFire) {
+                NSLog(@"Firing");
+                CGFloat newRadian = CGPointToAngleRadians(self.velocity);
+                [self fireBulletTowardAngleRadians:newRadian];
+            }
+        } queue:dispatch_get_main_queue()]
+//                                               [SKAction runBlock:^{
+//            if (continuousFire) {
+//                NSLog(@"Firing");
+//                CGFloat newRadian = CGPointToAngleRadians(self.velocity);
+//                [self fireBulletTowardAngleRadians:newRadian];
+//            }
+//        }
+                                               ,[SKAction removeFromParent]
+                                               ]]];
+    }
+}
+
+- (SKEmitterNode *)shootBullet
+{
+    SKEmitterNode *bullet;
+    NSString *bulletPath = [[NSBundle mainBundle] pathForResource:@"bullet" ofType:@"sks"];
+    bullet = [NSKeyedUnarchiver unarchiveObjectWithFile:bulletPath];
+    
+    return bullet;
+}
 
 @end

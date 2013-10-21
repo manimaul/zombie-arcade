@@ -16,6 +16,6 @@
 +(ZACharachterAnimationFrames *)sharedFrames;
 
 -(void)loadAsyncWithCallback:(void(^)(void))completionBlock;
--(SKAction*)animationForSequence:(NSString*)sequence;
+-(SKAction*)animationForSequence:(NSString*)sequence withTimePerFrame:(CGFloat)tpf;
 
 @end

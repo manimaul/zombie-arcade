@@ -114,7 +114,8 @@
     [self removeAllActions];
     self.velocity = CGPointMake(0., 0.);
     self.action = die;
-    SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action]];
+    //SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action]];
+    SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action] withTimePerFrame:self.timePerframe];
     if (animation) {
         [self runAction:[SKAction sequence:@[animation, [SKAction fadeOutWithDuration:1.25],[SKAction runBlock:^{
             [self removeFromParent];
@@ -201,7 +202,7 @@
         return;
     
     [self boundsCheck];
-    SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action]];
+    SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action] withTimePerFrame:self.timePerframe];
     if (animation) {
         [self runAction:[SKAction sequence:@[animation, [SKAction runBlock:^{
             [self actionLoop];

@@ -40,6 +40,7 @@ typedef enum {
 @property (nonatomic) charachterActions action;
 @property (nonatomic) CGPoint velocity; //x = vector(direction) and y = length (speed in points per second)
 @property (nonatomic) CGFloat movementSpeed;
+@property (nonatomic) CGFloat timePerframe;
 
 -(id)initWithCharachterType:(charachterType)type;
 - (void)setAnimationSequenceByCardinal:(fourtyFiveDegreeCardinal)newCardinal;

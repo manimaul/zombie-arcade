@@ -17,7 +17,8 @@
     ZAZombieSpriteNode *zombieSprite = [[ZAZombieSpriteNode alloc] initWithCharachterType:zombie];
     zombieSprite.cardinal = east;
     zombieSprite.action = walk;
-    zombieSprite.movementSpeed = 90.;
+    zombieSprite.movementSpeed = 80.;
+    zombieSprite.timePerframe = .125;
     return zombieSprite;
 }
 
