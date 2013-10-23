@@ -65,17 +65,16 @@ static NSArray* actions = nil;
 
 - (void)fireBulletTowardAngleRadians:(CGFloat)radians
 {
-    SKEmitterNode *bullet = [self shootBullet];
+    SKNode *bullet = [self shootBullet];
     
     if (bullet) {
         [self.scene addChild:bullet];
-        bullet.particleBirthRate = 5;
+//        bullet.particleBirthRate = 5;
         bullet.position = self.position;
         CGPoint destination = ProjectPoint(self.position, self.scene.size.width, radians);
-        [bullet runAction:[SKAction sequence:@[[SKAction moveTo:destination duration:1.0],
-                                               
-                                               
-                                               
+        [bullet runAction:[SKAction sequence:@[
+                                               [SKAction moveTo:destination duration:1.0],
+                                               [SKAction fadeInWithDuration:0.5],
                                                [SKAction removeFromParent],
 //                                               [SKAction runBlock:^{
 //            if (continuousFire) {
@@ -87,11 +86,11 @@ static NSArray* actions = nil;
     }
 }
 
-- (SKEmitterNode *)shootBullet
+- (SKNode *)shootBullet
 {
-    SKEmitterNode *bullet;
-    NSString *bulletPath = [[NSBundle mainBundle] pathForResource:@"bullet" ofType:@"sks"];
-    bullet = [NSKeyedUnarchiver unarchiveObjectWithFile:bulletPath];
+    SKSpriteNode * bullet = [SKSpriteNode spriteNodeWithImageNamed:@"bullet"];
+//    NSString *bulletPath = [[NSBundle mainBundle] pathForResource:@"bullet2" ofType:@"sks"];
+//    bullet = [NSKeyedUnarchiver unarchiveObjectWithFile:bulletPath];
     
     return bullet;
 }
