@@ -14,6 +14,8 @@
 
 @implementation ZAHeroSpriteNode {
     BOOL continuousFire;
+    BOOL characterStopped;
+    
 }
 
 static NSArray* actions = nil;
@@ -33,57 +35,62 @@ static NSArray* actions = nil;
 
 - (void)stop
 {
+    self.lastVelocity = self.velocity;
     self.velocity = CGPointMake(0., 0.);
     [self setImmediateAction:stance];
+
+}
+
+- (void)setCharacterStopped:(BOOL)on
+{
+    
 }
 
 - (void)setContinuousFire:(BOOL)on
 {
-    //    continuousFire = on;
-    
-    NSLog(@"Continuous fire is on! %d", on);
+//    continuousFire = on;
+    CGPoint velocity;
+    if (self.velocity.x == 0 && self.velocity.y == 0)
+        velocity = self.lastVelocity;
+    else
+        velocity = self.velocity;
     
     if (on) {
-        CGFloat newRadian = CGPointToAngleRadians(self.velocity);
+        CGFloat newRadian = CGPointToAngleRadians(velocity);
         [self fireBulletTowardAngleRadians:newRadian];
+        NSLog(@"Continuous fire is on! %d", on);
     }
+
 }
 
 - (void)fireBulletTowardAngleRadians:(CGFloat)radians
 {
-    SKEmitterNode *bullet = [self shootBullet];
+    SKNode *bullet = [self shootBullet];
     
     if (bullet) {
         [self.scene addChild:bullet];
-        bullet.particleBirthRate = 5;
+//        bullet.particleBirthRate = 5;
         bullet.position = self.position;
         CGPoint destination = ProjectPoint(self.position, self.scene.size.width, radians);
-        [bullet runAction:[SKAction sequence:@[[SKAction moveTo:destination duration:1.0],
-                                               
-                                               [SKAction runBlock:^{
-            if (continuousFire) {
-                NSLog(@"Firing");
-                CGFloat newRadian = CGPointToAngleRadians(self.velocity);
-                [self fireBulletTowardAngleRadians:newRadian];
-            }
-        } queue:dispatch_get_main_queue()]
+        [bullet runAction:[SKAction sequence:@[
+                                               [SKAction moveTo:destination duration:1.0],
+                                               [SKAction fadeInWithDuration:0.5],
+                                               [SKAction removeFromParent],
 //                                               [SKAction runBlock:^{
 //            if (continuousFire) {
 //                NSLog(@"Firing");
-//                CGFloat newRadian = CGPointToAngleRadians(self.velocity);
-//                [self fireBulletTowardAngleRadians:newRadian];
+//                [self shootBullet];
 //            }
-//        }
-                                               ,[SKAction removeFromParent]
+//        } queue:dispatch_get_main_queue()]
                                                ]]];
     }
 }
 
-- (SKEmitterNode *)shootBullet
+- (SKNode *)shootBullet
 {
-    SKEmitterNode *bullet;
-    NSString *bulletPath = [[NSBundle mainBundle] pathForResource:@"bullet" ofType:@"sks"];
-    bullet = [NSKeyedUnarchiver unarchiveObjectWithFile:bulletPath];
+    SKSpriteNode * bullet = [SKSpriteNode spriteNodeWithImageNamed:@"bullet"];
+//    NSString *bulletPath = [[NSBundle mainBundle] pathForResource:@"bullet2" ofType:@"sks"];
+//    bullet = [NSKeyedUnarchiver unarchiveObjectWithFile:bulletPath];
     
     return bullet;
 }

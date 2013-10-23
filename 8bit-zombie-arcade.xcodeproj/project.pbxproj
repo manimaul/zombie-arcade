@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A66B80E21817254C006C756E /* bullet2.sks in Resources */ = {isa = PBXBuildFile; fileRef = A66B80E01817254C006C756E /* bullet2.sks */; };
+		A66B80E31817254C006C756E /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = A66B80E11817254C006C756E /* spark.png */; };
+		A66B80E5181725C6006C756E /* fire.sks in Resources */ = {isa = PBXBuildFile; fileRef = A66B80E4181725C6006C756E /* fire.sks */; };
+		A66B80E718172834006C756E /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = A66B80E618172834006C756E /* bullet.png */; };
 		D03A79B118131839001097B5 /* bullet.sks in Resources */ = {isa = PBXBuildFile; fileRef = D03A79AF18131839001097B5 /* bullet.sks */; };
 		D03A79B218131839001097B5 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = D03A79B018131839001097B5 /* spark.png */; };
 		D085911418139A9000C1CAC5 /* tiles.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D085911318139A9000C1CAC5 /* tiles.atlas */; };
@@ -92,6 +96,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A66B80E01817254C006C756E /* bullet2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = bullet2.sks; sourceTree = "<group>"; };
+		A66B80E11817254C006C756E /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		A66B80E4181725C6006C756E /* fire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fire.sks; sourceTree = "<group>"; };
+		A66B80E618172834006C756E /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet.png; path = "8bit-zombie-arcade/Images.xcassets/bullet.imageset/bullet.png"; sourceTree = "<group>"; };
 		A6A6B52A180FA1D600F9A238 /* ZAEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAEntity.h; sourceTree = "<group>"; };
 		A6A6B52B180FA1D600F9A238 /* ZAEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAEntity.m; sourceTree = "<group>"; };
 		A6A6B52D180FA2F600F9A238 /* ZABulletNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZABulletNode.h; sourceTree = "<group>"; };
@@ -227,8 +235,12 @@
 		D089AC3F180DE00F00BCB105 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A66B80E618172834006C756E /* bullet.png */,
 				D03A79AF18131839001097B5 /* bullet.sks */,
 				D03A79B018131839001097B5 /* spark.png */,
+				A66B80E01817254C006C756E /* bullet2.sks */,
+				A66B80E11817254C006C756E /* spark.png */,
+				A66B80E4181725C6006C756E /* fire.sks */,
 				D085911318139A9000C1CAC5 /* tiles.atlas */,
 				D0F65C731812FFAC0071172D /* zombie */,
 				D0F65C421812FF9F0071172D /* woman */,
@@ -503,6 +515,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A66B80E31817254C006C756E /* spark.png in Resources */,
 				D03A79B118131839001097B5 /* bullet.sks in Resources */,
 				D03A79B218131839001097B5 /* spark.png in Resources */,
 				D0F65C971812FFAC0071172D /* zombie_die_northwest.atlas in Resources */,
@@ -515,6 +528,7 @@
 				D0F65C9B1812FFAC0071172D /* zombie_die_west.atlas in Resources */,
 				D0F65C931812FFAC0071172D /* zombie_attack_west.atlas in Resources */,
 				D0F65C721812FF9F0071172D /* woman_walk_west.atlas in Resources */,
+				A66B80E718172834006C756E /* bullet.png in Resources */,
 				D0F65C6C1812FF9F0071172D /* woman_walk_north.atlas in Resources */,
 				D0F65C5C1812FF9F0071172D /* woman_die_north.atlas in Resources */,
 				D0F65C8E1812FFAC0071172D /* zombie_attack_northeast.atlas in Resources */,
@@ -531,6 +545,7 @@
 				D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */,
 				D0F65C701812FF9F0071172D /* woman_walk_southeast.atlas in Resources */,
 				D0F65C641812FF9F0071172D /* woman_stance_north.atlas in Resources */,
+				A66B80E21817254C006C756E /* bullet2.sks in Resources */,
 				D0F65C5B1812FF9F0071172D /* woman_die_east.atlas in Resources */,
 				D0F65C951812FFAC0071172D /* zombie_die_north.atlas in Resources */,
 				D0F65C621812FF9F0071172D /* woman_die_west.atlas in Resources */,
@@ -546,6 +561,7 @@
 				D0F65C6B1812FF9F0071172D /* woman_walk_east.atlas in Resources */,
 				D0F65C6A1812FF9F0071172D /* woman_stance_west.atlas in Resources */,
 				D0F65C631812FF9F0071172D /* woman_stance_east.atlas in Resources */,
+				A66B80E5181725C6006C756E /* fire.sks in Resources */,
 				D0F65C6F1812FF9F0071172D /* woman_walk_south.atlas in Resources */,
 				D0F65C611812FF9F0071172D /* woman_die_southwest.atlas in Resources */,
 				D0F65C901812FFAC0071172D /* zombie_attack_south.atlas in Resources */,

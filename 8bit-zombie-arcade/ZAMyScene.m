@@ -217,26 +217,4 @@
     //    touchCount--;
 }
 
-- (void)fireBulletTowardAngleRadians:(CGFloat)radians
-{
-    SKEmitterNode *bullet = [self shootBullet];
-    if (bullet) {
-        [self addChild:bullet];
-        bullet.particleBirthRate = 5;
-        bullet.position = heroSpriteNode.position;
-        CGPoint destination = ProjectPoint(heroSpriteNode.position, self.size.width, radians);
-        [bullet runAction:[SKAction sequence:@[[SKAction moveTo:destination duration:1.0],
-                                               [SKAction removeFromParent]]]];
-    }
-}
-
-- (SKEmitterNode *)shootBullet
-{
-    SKEmitterNode *bullet;
-    NSString *bulletPath = [[NSBundle mainBundle] pathForResource:@"bullet" ofType:@"sks"];
-    bullet = [NSKeyedUnarchiver unarchiveObjectWithFile:bulletPath];
-    
-    return bullet;
-}
-
 @end

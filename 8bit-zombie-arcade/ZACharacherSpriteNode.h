@@ -39,6 +39,7 @@ typedef enum {
 @property (nonatomic) fourtyFiveDegreeCardinal cardinal;
 @property (nonatomic) charachterActions action;
 @property (nonatomic) CGPoint velocity; //x = vector(direction) and y = length (speed in points per second)
+@property (nonatomic) CGPoint lastVelocity;
 @property (nonatomic) CGFloat movementSpeed;
 @property (nonatomic) CGFloat timePerframe;
 
