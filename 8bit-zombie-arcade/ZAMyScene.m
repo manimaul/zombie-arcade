@@ -32,6 +32,7 @@
     UITouch *firstTouch;
     UITouch *secondTouch;
     BOOL secondTouchDown;
+    //BOOL haveFirstTouch; //touches.count is unreliable in touchesBegan
     CGPoint firstTouchLocation;
 }
 
@@ -289,6 +290,8 @@
         secondTouch = touch;
         [self.heroSpriteNode setContinuousFire:YES];
         secondTouchDown = YES;
+//        [self fireBulletTowardAngleRadians:CGPointToAngleRadians(heroSpriteNode.velocity)];
+
     }
 }
 
@@ -324,6 +327,17 @@
         [self.heroSpriteNode setContinuousFire:NO];
         secondTouchDown = NO;
     }
+    
+    //    if (touchCount <= 2) {
+    //        //call method to stop continuous weapon fire here
+    //    }
+    //    if (touchCount <= 1) {
+    //        //stop hero motion
+    //        [heroSpriteNode stop];
+    //        controller.hidden = YES;
+    //    }
+    //
+    //    touchCount--;
 }
 
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
@@ -337,8 +351,8 @@
         [self.heroSpriteNode setContinuousFire:NO];
         secondTouchDown = NO;
     }
+    
 }
-
 
 #pragma mark - SKPhysicsContactDelegate
 
@@ -365,5 +379,6 @@
         [zombie moveToward:contact.bodyA.node.position];
     }
 }
+
 
 @end

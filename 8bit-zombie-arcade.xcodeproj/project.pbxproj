@@ -79,6 +79,8 @@
 		D0F65CA11812FFAC0071172D /* zombie_walk_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C891812FFAC0071172D /* zombie_walk_southeast.atlas */; };
 		D0F65CA21812FFAC0071172D /* zombie_walk_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C8A1812FFAC0071172D /* zombie_walk_southwest.atlas */; };
 		D0F65CA31812FFAC0071172D /* zombie_walk_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C8B1812FFAC0071172D /* zombie_walk_west.atlas */; };
+		D0F65CA4181303430071172D /* ZAEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A6B52B180FA1D600F9A238 /* ZAEntity.m */; };
+		D0F65CA5181303480071172D /* ZABulletNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A6B52E180FA2F600F9A238 /* ZABulletNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -505,6 +507,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03A79B118131839001097B5 /* bullet.sks in Resources */,
+				D03A79B218131839001097B5 /* spark.png in Resources */,
 				D0F65C971812FFAC0071172D /* zombie_die_northwest.atlas in Resources */,
 				D0F65C671812FF9F0071172D /* woman_stance_south.atlas in Resources */,
 				D0F65C961812FFAC0071172D /* zombie_die_northeast.atlas in Resources */,
@@ -575,6 +579,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F65CA5181303480071172D /* ZABulletNode.m in Sources */,
+				D0F65CA4181303430071172D /* ZAEntity.m in Sources */,
 				D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */,
 				D089AC3D180DDF9500BCB105 /* ZACharacherSpriteNode.m in Sources */,
 				D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */,

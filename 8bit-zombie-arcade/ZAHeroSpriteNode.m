@@ -18,6 +18,7 @@
 
 static NSArray* actions = nil;
 
+
 + (instancetype)createHeroSprite
 {
     ZAHeroSpriteNode *heroSprite = [[ZAHeroSpriteNode alloc] initWithCharachterType:hero];
