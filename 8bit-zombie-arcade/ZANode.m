@@ -10,4 +10,11 @@
 
 @implementation ZANode
 
+#pragma mark - Physics and Collision
+
+- (void)configurePhysicsBody
+{
+    //overridden in subclass
+}
+
 @end

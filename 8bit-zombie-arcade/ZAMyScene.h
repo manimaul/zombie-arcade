@@ -13,6 +13,9 @@
 
 @interface ZAMyScene : SKScene <SKPhysicsContactDelegate>
 
+@property (nonatomic) NSInteger zombieKills;
+
+-(void)updateHud;
 -(void)heroDiedWithLives:(NSInteger)lives;
 -(void)updateHudWithName:(NSString*)name withValue:(NSInteger)value;
 

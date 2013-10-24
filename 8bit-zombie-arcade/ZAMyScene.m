@@ -14,13 +14,13 @@
 #import "ZACharachterAnimationFrames.h"
 #import "ZACharacherSpriteNode.h"
 #import "ZAButtonSpriteNode.h"
+#import "ZABulletSpriteNode.h"
 
 @interface ZAMyScene()
 
 @property (nonatomic) ZAHeroSpriteNode *heroSpriteNode;
 @property (nonatomic) SKLabelNode *gameOverNode;
 @property (nonatomic) BOOL isGameOver;
-@property (nonatomic) NSInteger zombieKills;
 
 @end
 
@@ -365,6 +365,11 @@
         } else if (contact.bodyA.categoryBitMask == kBulletBitmask) {
             //[zombie takeHit:zombie.attackPower withEnemies:zombieNodes];
         }
+    }
+    if (contact.bodyA.categoryBitMask == kBulletBitmask) {
+       [contact.bodyA.node removeFromParent];
+        ZAZombieSpriteNode *zombie = (ZAZombieSpriteNode*)contact.bodyB.node;
+        [zombie takeHit:self.heroSpriteNode.attackPower withEnemies:zombieNodes];
     }
 }
 

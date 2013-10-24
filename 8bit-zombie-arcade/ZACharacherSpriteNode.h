@@ -68,7 +68,4 @@ static const CGFloat stanceMass = 200.;
 - (void)setImmediateAction:(charachterActions)action;
 - (void)performDeath:(NSMutableArray*)trackedNodes;
 
-//physics
-- (void)configurePhysicsBody;
-
 @end
