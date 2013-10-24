@@ -9,6 +9,7 @@
 #import "ZAZombieSpriteNode.h"
 #import "ZAHeroSpriteNode.h"
 #import "CGPointF.h"
+#import "ZAMyScene.h"
 
 //static NSString* kZombieName = @"zombie";
 
@@ -21,7 +22,7 @@
     zombieSprite.action = walk;
     zombieSprite.movementSpeed = 80.;
     zombieSprite.timePerframe = .125;
-    zombieSprite.hitPoints = 2;
+    zombieSprite.hitPoints = 1;
     zombieSprite.attackPower = 1;
     zombieSprite.zPosition = 2.;
     zombieSprite.meleeSpeed = .75;
@@ -29,6 +30,16 @@
 }
 
 #pragma mark - actions
+
+- (void)performDeath:(NSMutableArray*)trackedNodes
+{
+    [super performDeath:trackedNodes];
+    ZAMyScene *scene = (ZAMyScene*) self.scene;
+    scene.zombieKills++;
+    [scene updateHud]; 
+
+    
+}
 
 - (void)attackHero
 {

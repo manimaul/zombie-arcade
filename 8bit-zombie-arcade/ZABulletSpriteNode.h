@@ -8,6 +8,8 @@
 
 #import "ZANode.h"
 
-@interface ZABulletSpriteNode : SKSpriteNode
+@interface ZABulletSpriteNode : ZANode
+
++ (ZABulletSpriteNode *)createBulletSprite;
 
 @end

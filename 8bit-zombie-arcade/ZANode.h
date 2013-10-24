@@ -16,4 +16,6 @@ static const uint8_t kBulletBitmask = 0b0100;
 
 @interface ZANode : SKSpriteNode
 
+- (void)configurePhysicsBody;
+
 @end

@@ -10,6 +10,7 @@
 #import "ZACharachterAnimationFrames.h"
 #import "CGPointF.h"
 #import "ZAMyScene.h"
+#import "ZABulletSpriteNode.h"
 
 @implementation ZAHeroSpriteNode {
     BOOL continuousFire;
@@ -78,7 +79,7 @@ static NSArray* actions = nil;
 
 - (void)fireBulletTowardAngleRadians:(CGFloat)radians
 {
-    SKNode *bullet = [self shootBullet];
+    ZABulletSpriteNode *bullet = [ZABulletSpriteNode createBulletSprite];
     
     if (bullet) {
         [self.scene addChild:bullet];
@@ -92,12 +93,7 @@ static NSArray* actions = nil;
     }
 }
 
-- (SKNode *)shootBullet
-{
-    SKSpriteNode * bullet = [SKSpriteNode spriteNodeWithImageNamed:@"bullet"];
-    
-    return bullet;
-}
+
 
 - (void)configurePhysicsBody
 {

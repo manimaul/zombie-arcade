@@ -161,7 +161,8 @@
 
 - (void)takeHit:(NSInteger)points withEnemies:(NSMutableArray*)trackedNodes
 {
-    self.hitPoints -= points;
+    self.hitPoints = self.hitPoints - points;
+    NSLog(@"Points are at X %d", points);
     if (self.hitPoints < 0)
         [self performDeath:trackedNodes];
 }
@@ -250,13 +251,6 @@
         //NSLog(@"error: nil animation %@", [self getSequenceForCardinal:self.cardinal forAction:self.action]);
         [self performSelector:@selector(actionLoop) withObject:nil afterDelay:1];
     }
-}
-
-#pragma mark - Physics and Collision
-
-- (void)configurePhysicsBody
-{
-    //overridden in subclass
 }
 
 @end
