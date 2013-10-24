@@ -32,6 +32,7 @@
     if (self) {
         _charachterAtlasPrefix = charachterAtlasPrefix;
         _frames = [ZACharachterAnimationFrames sharedFrames];
+        [self configurePhysicsBody];
         [self actionLoop];
     }
     return self;
@@ -41,6 +42,7 @@
 {
     CGPoint amountToMove = CGPointMultiplyScalar(self.velocity, dt);
     self.position = CGPointAdd(self.position, amountToMove);
+    [self boundsCheck];
 }
 
 -(BOOL)isInBounds
@@ -63,39 +65,65 @@
 
 - (void)boundsCheck
 {
-    CGPoint newPosition = self.position;
-    CGPoint newVelocity = self.velocity;
-    CGPoint bottomLeft = CGPointZero;
-    CGPoint topRight = CGPointMake(self.scene.size.width, self.scene.size.height);
-    if (newPosition.x <= bottomLeft.x) {
-        newPosition.x = bottomLeft.x;
-        newVelocity.x = -newVelocity.x;
+    if (self.action == walk) {
+        CGPoint newPosition = self.position;
+        CGPoint newVelocity = self.velocity;
+        CGPoint bottomLeft = CGPointZero;
+        CGPoint topRight = CGPointMake(self.scene.size.width, self.scene.size.height);
+        if (newPosition.x <= bottomLeft.x) {
+            newPosition.x = bottomLeft.x;
+            newVelocity.x = -newVelocity.x;
+        }
+        if (newPosition.x >= topRight.x) {
+            newPosition.x = topRight.x;
+            newVelocity.x = -newVelocity.x;
+        }
+        if (newPosition.y <= bottomLeft.y) {
+            newPosition.y = bottomLeft.y;
+            newVelocity.y = -newVelocity.y;
+        }
+        if (newPosition.y >= topRight.y) {
+            newPosition.y = topRight.y;
+            newVelocity.y = -newVelocity.y;
+        }
+        self.position = newPosition;
+        if (!CGPointEqualToPoint(self.velocity, newVelocity)) {
+            self.cardinal = FortyFiveDegreeCardinalFromDegree(CGPointToAngleDegrees(newVelocity));
+        }
+        self.velocity = newVelocity;
     }
-    if (newPosition.x >= topRight.x) {
-        newPosition.x = topRight.x;
-        newVelocity.x = -newVelocity.x;
-    }
-    if (newPosition.y <= bottomLeft.y) {
-        newPosition.y = bottomLeft.y;
-        newVelocity.y = -newVelocity.y;
-    }
-    if (newPosition.y >= topRight.y) {
-        newPosition.y = topRight.y;
-        newVelocity.y = -newVelocity.y;
-    }
-    self.position = newPosition;
-    if (!CGPointEqualToPoint(self.velocity, newVelocity)) {
-        self.cardinal = FortyFiveDegreeCardinalFromDegree(CGPointToAngleDegrees(newVelocity));
-        //[self setAnimationSequenceByCardinal:self.cardinal];
-    }
-    self.velocity = newVelocity;
     
+}
+
+- (void) setAction:(charachterActions)action
+{
+    switch (action) {
+        case stance:
+            self.physicsBody.mass = stanceMass;
+            break;
+        case walk:
+            self.physicsBody.mass = walkMass;
+            break;
+        case attack:
+            self.physicsBody.mass = attackMass;
+            break;
+        case die:
+            self.physicsBody.mass = dieMass;
+            break;
+        default:
+            break;
+    }
+    _action = action;
 }
 
 #pragma mark - actions
 
 - (void)moveToward:(CGPoint)location
 {
+    if (self.action == die) {
+        return;
+    }
+    
     CGPoint offset = CGPointSubtract(location, self.position);
     CGFloat length = CGPointLength(offset);
     CGPoint direction = CGPointMake(offset.x / length, offset.y / length);
@@ -109,22 +137,33 @@
     [self moveToward:ProjectPoint(self.position, 1., radians)];
 }
 
+- (void)faceTowards:(CGPoint)location
+{
+    self.cardinal = FortyFiveDegreeCardinalFromDegree(CGPointToAngleDegrees(CGPointSubtract(location, self.position)));
+}
+
 - (void)performDeath:(NSMutableArray*)trackedNodes
 {
     [self removeAllActions];
     self.velocity = CGPointMake(0., 0.);
+    self.physicsBody = nil;
     self.action = die;
     //SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action]];
     SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action] withTimePerFrame:self.timePerframe];
     if (animation) {
-        [self runAction:[SKAction sequence:@[animation, [SKAction fadeOutWithDuration:1.25],[SKAction runBlock:^{
-            [self removeFromParent];
-        }]]]];
+        [self runAction:[SKAction sequence:@[animation, [SKAction fadeOutWithDuration:1.25],[SKAction removeFromParent]]]];
     } else {
         [self removeFromParent];
     }
     if (trackedNodes)
         [trackedNodes removeObject:self];
+}
+
+- (void)takeHit:(NSInteger)points withEnemies:(NSMutableArray*)trackedNodes
+{
+    self.hitPoints -= points;
+    if (self.hitPoints < 0)
+        [self performDeath:trackedNodes];
 }
 
 #pragma mark - animation
@@ -201,16 +240,23 @@
     if (self.action == die)
         return;
     
-    [self boundsCheck];
+    //[self boundsCheck];
     SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action] withTimePerFrame:self.timePerframe];
     if (animation) {
         [self runAction:[SKAction sequence:@[animation, [SKAction runBlock:^{
             [self actionLoop];
         }]]]];
     } else {
-        NSLog(@"error: nil animation %@", [self getSequenceForCardinal:self.cardinal forAction:self.action]);
+        //NSLog(@"error: nil animation %@", [self getSequenceForCardinal:self.cardinal forAction:self.action]);
         [self performSelector:@selector(actionLoop) withObject:nil afterDelay:1];
     }
+}
+
+#pragma mark - Physics and Collision
+
+- (void)configurePhysicsBody
+{
+    //overridden in subclass
 }
 
 @end
