@@ -7,8 +7,13 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "ZAButtonSpriteNode.h"
 
-@interface ZAMyScene : SKScene
+@class ZAHeroSpriteNode;
 
+@interface ZAMyScene : SKScene <SKPhysicsContactDelegate>
+
+-(void)heroDiedWithLives:(NSInteger)lives;
+-(void)updateHudWithName:(NSString*)name withValue:(NSInteger)value;
 
 @end

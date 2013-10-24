@@ -9,15 +9,14 @@
 #import "ZAHeroSpriteNode.h"
 #import "ZACharachterAnimationFrames.h"
 #import "CGPointF.h"
-
-
+#import "ZAMyScene.h"
 
 @implementation ZAHeroSpriteNode {
     BOOL continuousFire;
+    BOOL characterStopped;
 }
 
 static NSArray* actions = nil;
-
 
 + (instancetype)createHeroSprite
 {
@@ -26,66 +25,96 @@ static NSArray* actions = nil;
     heroSprite.action = stance;
     heroSprite.movementSpeed = 120.;
     heroSprite.timePerframe = .095;
+    heroSprite.hitPoints = 5;
+    heroSprite.attackPower = 1;
+    heroSprite.name = kHeroName;
+    heroSprite.zPosition = 1.;
     return heroSprite;
 }
 
 #pragma mark - actions
 
+- (void)takeHit:(NSInteger)points withEnemies:(NSMutableArray*)trackedNodes
+{
+    [super takeHit:points withEnemies:trackedNodes];
+    ZAMyScene *scene = (ZAMyScene*) self.scene;
+    [scene updateHudWithName:@"energy" withValue:self.hitPoints];
+}
+
+- (void)performDeath:(NSMutableArray*)trackedNodes
+{
+    ZAMyScene *scene = (ZAMyScene*) self.scene;
+    [scene heroDiedWithLives:self.lives];
+    [super performDeath:nil];
+}
+
 - (void)stop
 {
+    if (self.action == die)
+        return;
+    
+    self.lastVelocity = self.velocity;
     self.velocity = CGPointMake(0., 0.);
     [self setImmediateAction:stance];
 }
 
 - (void)setContinuousFire:(BOOL)on
 {
-    //    continuousFire = on;
+    if (self.action == die)
+        return;
     
-    NSLog(@"Continuous fire is on! %d", on);
+    CGPoint velocity;
+    if (self.velocity.x == 0 && self.velocity.y == 0)
+        velocity = self.lastVelocity;
+    else
+        velocity = self.velocity;
     
     if (on) {
-        CGFloat newRadian = CGPointToAngleRadians(self.velocity);
+        CGFloat newRadian = CGPointToAngleRadians(velocity);
         [self fireBulletTowardAngleRadians:newRadian];
     }
 }
 
 - (void)fireBulletTowardAngleRadians:(CGFloat)radians
 {
-    SKEmitterNode *bullet = [self shootBullet];
+    SKNode *bullet = [self shootBullet];
     
     if (bullet) {
         [self.scene addChild:bullet];
-        bullet.particleBirthRate = 5;
         bullet.position = self.position;
         CGPoint destination = ProjectPoint(self.position, self.scene.size.width, radians);
-        [bullet runAction:[SKAction sequence:@[[SKAction moveTo:destination duration:1.0],
-                                               
-                                               [SKAction runBlock:^{
-            if (continuousFire) {
-                NSLog(@"Firing");
-                CGFloat newRadian = CGPointToAngleRadians(self.velocity);
-                [self fireBulletTowardAngleRadians:newRadian];
-            }
-        } queue:dispatch_get_main_queue()]
-//                                               [SKAction runBlock:^{
-//            if (continuousFire) {
-//                NSLog(@"Firing");
-//                CGFloat newRadian = CGPointToAngleRadians(self.velocity);
-//                [self fireBulletTowardAngleRadians:newRadian];
-//            }
-//        }
-                                               ,[SKAction removeFromParent]
+        [bullet runAction:[SKAction sequence:@[
+                                               [SKAction moveTo:destination duration:1.0],
+                                               [SKAction fadeInWithDuration:0.5],
+                                               [SKAction removeFromParent]
                                                ]]];
     }
 }
 
-- (SKEmitterNode *)shootBullet
+- (SKNode *)shootBullet
 {
-    SKEmitterNode *bullet;
-    NSString *bulletPath = [[NSBundle mainBundle] pathForResource:@"bullet" ofType:@"sks"];
-    bullet = [NSKeyedUnarchiver unarchiveObjectWithFile:bulletPath];
+    SKSpriteNode * bullet = [SKSpriteNode spriteNodeWithImageNamed:@"bullet"];
     
     return bullet;
+}
+
+- (void)configurePhysicsBody
+{
+    //image is 128x128 but characther is 30x55 or .25x.45
+    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.frame.size.width * .25, self.frame.size.height * .45)];
+    
+    self.physicsBody.affectedByGravity = NO;
+    self.physicsBody.allowsRotation = NO;
+    self.physicsBody.mass = walkMass;
+    
+    // We want to react to the following types of physics bodies
+    self.physicsBody.collisionBitMask = kEnemyBitmask;
+    
+    self.physicsBody.categoryBitMask = kHeroBitmask;
+    
+    // Make sure we get told about these collisions
+    self.physicsBody.contactTestBitMask = kNullBitmask;
+    
 }
 
 @end

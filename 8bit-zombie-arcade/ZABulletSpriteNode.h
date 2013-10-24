@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Will Kamp. All rights reserved.
 //
 
-#import "ZAEntity.h"
+#import "ZANode.h"
 
-@interface ZABulletNode : SKSpriteNode
+@interface ZABulletSpriteNode : SKSpriteNode
 
 @end

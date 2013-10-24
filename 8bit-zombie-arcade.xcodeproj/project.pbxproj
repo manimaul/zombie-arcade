@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D03A79B118131839001097B5 /* bullet.sks in Resources */ = {isa = PBXBuildFile; fileRef = D03A79AF18131839001097B5 /* bullet.sks */; };
-		D03A79B218131839001097B5 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = D03A79B018131839001097B5 /* spark.png */; };
+		A66B80E718172834006C756E /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = A66B80E618172834006C756E /* bullet.png */; };
+		D03416D01819A11E004F3563 /* ZABulletSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D03416CF1819A11E004F3563 /* ZABulletSpriteNode.m */; };
+		D03416D31819A129004F3563 /* ZANode.m in Sources */ = {isa = PBXBuildFile; fileRef = D03416D21819A129004F3563 /* ZANode.m */; };
 		D085911418139A9000C1CAC5 /* tiles.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D085911318139A9000C1CAC5 /* tiles.atlas */; };
 		D089AC3D180DDF9500BCB105 /* ZACharacherSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D089AC3C180DDF9500BCB105 /* ZACharacherSpriteNode.m */; };
 		D0AA006A180A4D5A00CCF93D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA0069180A4D5A00CCF93D /* Foundation.framework */; };
@@ -27,6 +28,7 @@
 		D0AA009A180A4D5A00CCF93D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */; };
 		D0AA009C180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */; };
 		D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */; };
+		D0AD0A6F1818825F00CA98F1 /* ZAButtonSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AD0A6E1818825F00CA98F1 /* ZAButtonSpriteNode.m */; };
 		D0C7B5D7180EFF72007D8F41 /* ZACharachterAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */; };
 		D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */; };
 		D0F65C5B1812FF9F0071172D /* woman_die_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C431812FF9F0071172D /* woman_die_east.atlas */; };
@@ -77,8 +79,6 @@
 		D0F65CA11812FFAC0071172D /* zombie_walk_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C891812FFAC0071172D /* zombie_walk_southeast.atlas */; };
 		D0F65CA21812FFAC0071172D /* zombie_walk_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C8A1812FFAC0071172D /* zombie_walk_southwest.atlas */; };
 		D0F65CA31812FFAC0071172D /* zombie_walk_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C8B1812FFAC0071172D /* zombie_walk_west.atlas */; };
-		D0F65CA4181303430071172D /* ZAEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A6B52B180FA1D600F9A238 /* ZAEntity.m */; };
-		D0F65CA5181303480071172D /* ZABulletNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A6B52E180FA2F600F9A238 /* ZABulletNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,12 +92,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A6A6B52A180FA1D600F9A238 /* ZAEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZAEntity.h; sourceTree = "<group>"; };
-		A6A6B52B180FA1D600F9A238 /* ZAEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZAEntity.m; sourceTree = "<group>"; };
-		A6A6B52D180FA2F600F9A238 /* ZABulletNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZABulletNode.h; sourceTree = "<group>"; };
-		A6A6B52E180FA2F600F9A238 /* ZABulletNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZABulletNode.m; sourceTree = "<group>"; };
-		D03A79AF18131839001097B5 /* bullet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = bullet.sks; path = "8bit-zombie-arcade/Resources/bullet.sks"; sourceTree = "<group>"; };
-		D03A79B018131839001097B5 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spark.png; path = "8bit-zombie-arcade/Resources/spark.png"; sourceTree = "<group>"; };
+		A66B80E618172834006C756E /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet.png; path = "8bit-zombie-arcade/Images.xcassets/bullet.imageset/bullet.png"; sourceTree = "<group>"; };
+		D03416CE1819A11E004F3563 /* ZABulletSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZABulletSpriteNode.h; path = "8bit-zombie-arcade/ZABulletSpriteNode.h"; sourceTree = "<group>"; };
+		D03416CF1819A11E004F3563 /* ZABulletSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZABulletSpriteNode.m; path = "8bit-zombie-arcade/ZABulletSpriteNode.m"; sourceTree = "<group>"; };
+		D03416D11819A129004F3563 /* ZANode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZANode.h; path = "8bit-zombie-arcade/ZANode.h"; sourceTree = "<group>"; };
+		D03416D21819A129004F3563 /* ZANode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZANode.m; path = "8bit-zombie-arcade/ZANode.m"; sourceTree = "<group>"; };
 		D07DED3B1812515F0070E750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "8bit-zombie-arcade/Base.lproj/Ipad.storyboard"; sourceTree = "<group>"; };
 		D07DED3D1812516C0070E750 /* ZAHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZAHelpers.h; path = "8bit-zombie-arcade/ZAHelpers.h"; sourceTree = "<group>"; };
 		D085911318139A9000C1CAC5 /* tiles.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = tiles.atlas; path = "8bit-zombie-arcade/Resources/world/tiles.atlas"; sourceTree = "<group>"; };
@@ -127,6 +126,8 @@
 		D0AA009B180A4D5A00CCF93D /* _bit_zombie_arcadeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _bit_zombie_arcadeTests.m; sourceTree = "<group>"; };
 		D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAZombieSpriteNode.h; path = "8bit-zombie-arcade/ZAZombieSpriteNode.h"; sourceTree = "<group>"; };
 		D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAZombieSpriteNode.m; path = "8bit-zombie-arcade/ZAZombieSpriteNode.m"; sourceTree = "<group>"; };
+		D0AD0A6D1818825F00CA98F1 /* ZAButtonSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAButtonSpriteNode.h; path = "8bit-zombie-arcade/ZAButtonSpriteNode.h"; sourceTree = "<group>"; };
+		D0AD0A6E1818825F00CA98F1 /* ZAButtonSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAButtonSpriteNode.m; path = "8bit-zombie-arcade/ZAButtonSpriteNode.m"; sourceTree = "<group>"; };
 		D0C7B5D1180EE90F007D8F41 /* CGPointF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGPointF.h; path = "8bit-zombie-arcade/CGPointF.h"; sourceTree = "<group>"; };
 		D0C7B5D5180EFF72007D8F41 /* ZACharachterAnimationFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZACharachterAnimationFrames.h; path = "8bit-zombie-arcade/ZACharachterAnimationFrames.h"; sourceTree = "<group>"; };
 		D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZACharachterAnimationFrames.m; path = "8bit-zombie-arcade/ZACharachterAnimationFrames.m"; sourceTree = "<group>"; };
@@ -216,10 +217,12 @@
 				D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */,
 				D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */,
 				D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */,
-				A6A6B52A180FA1D600F9A238 /* ZAEntity.h */,
-				A6A6B52B180FA1D600F9A238 /* ZAEntity.m */,
-				A6A6B52D180FA2F600F9A238 /* ZABulletNode.h */,
-				A6A6B52E180FA2F600F9A238 /* ZABulletNode.m */,
+				D0AD0A6D1818825F00CA98F1 /* ZAButtonSpriteNode.h */,
+				D0AD0A6E1818825F00CA98F1 /* ZAButtonSpriteNode.m */,
+				D03416CE1819A11E004F3563 /* ZABulletSpriteNode.h */,
+				D03416CF1819A11E004F3563 /* ZABulletSpriteNode.m */,
+				D03416D11819A129004F3563 /* ZANode.h */,
+				D03416D21819A129004F3563 /* ZANode.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -227,8 +230,7 @@
 		D089AC3F180DE00F00BCB105 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D03A79AF18131839001097B5 /* bullet.sks */,
-				D03A79B018131839001097B5 /* spark.png */,
+				A66B80E618172834006C756E /* bullet.png */,
 				D085911318139A9000C1CAC5 /* tiles.atlas */,
 				D0F65C731812FFAC0071172D /* zombie */,
 				D0F65C421812FF9F0071172D /* woman */,
@@ -503,8 +505,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D03A79B118131839001097B5 /* bullet.sks in Resources */,
-				D03A79B218131839001097B5 /* spark.png in Resources */,
 				D0F65C971812FFAC0071172D /* zombie_die_northwest.atlas in Resources */,
 				D0F65C671812FF9F0071172D /* woman_stance_south.atlas in Resources */,
 				D0F65C961812FFAC0071172D /* zombie_die_northeast.atlas in Resources */,
@@ -515,6 +515,7 @@
 				D0F65C9B1812FFAC0071172D /* zombie_die_west.atlas in Resources */,
 				D0F65C931812FFAC0071172D /* zombie_attack_west.atlas in Resources */,
 				D0F65C721812FF9F0071172D /* woman_walk_west.atlas in Resources */,
+				A66B80E718172834006C756E /* bullet.png in Resources */,
 				D0F65C6C1812FF9F0071172D /* woman_walk_north.atlas in Resources */,
 				D0F65C5C1812FF9F0071172D /* woman_die_north.atlas in Resources */,
 				D0F65C8E1812FFAC0071172D /* zombie_attack_northeast.atlas in Resources */,
@@ -574,15 +575,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F65CA5181303480071172D /* ZABulletNode.m in Sources */,
-				D0F65CA4181303430071172D /* ZAEntity.m in Sources */,
 				D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */,
 				D089AC3D180DDF9500BCB105 /* ZACharacherSpriteNode.m in Sources */,
 				D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */,
+				D03416D31819A129004F3563 /* ZANode.m in Sources */,
 				D0AA0085180A4D5A00CCF93D /* ZAMyScene.m in Sources */,
+				D0AD0A6F1818825F00CA98F1 /* ZAButtonSpriteNode.m in Sources */,
 				D0AA0078180A4D5A00CCF93D /* main.m in Sources */,
 				D0AA007C180A4D5A00CCF93D /* ZAAppDelegate.m in Sources */,
 				D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */,
+				D03416D01819A11E004F3563 /* ZABulletSpriteNode.m in Sources */,
 				D0C7B5D7180EFF72007D8F41 /* ZACharachterAnimationFrames.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

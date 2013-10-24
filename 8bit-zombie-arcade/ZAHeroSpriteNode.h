@@ -8,10 +8,14 @@
 
 #import "ZACharacherSpriteNode.h"
 
+static NSString* kHeroName = @"hero";
+
 @interface ZAHeroSpriteNode : ZACharacherSpriteNode
 
 + (instancetype)createHeroSprite;
 - (void)stop;
 - (void)setContinuousFire:(BOOL)on;
+
+@property (nonatomic) NSInteger lives;
 
 @end
