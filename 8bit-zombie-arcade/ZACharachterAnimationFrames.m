@@ -7,6 +7,7 @@
 //
 
 #import "ZACharachterAnimationFrames.h"
+#import <SpriteKit/SpriteKit.h>
 
 @interface ZACharachterAnimationFrames ()
 
@@ -33,34 +34,44 @@
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             self.loaded = YES;
             
-            NSDictionary * atlasActions = @{@"woman" : @{@"die": @6, @"stance": @4, @"walk": @8},
+            NSDictionary *atlasActions = @{@"woman" : @{@"die": @6, @"stance": @4, @"walk": @8},
                                             @"zombie": @{@"die": @8, @"walk": @8, @"attack": @4} };
+            [self buildAnimationActionDbWithAtlasActions:atlasActions];
             
-            NSArray *subCardinals = @[@"east", @"north", @"northeast", @"northwest",
-                                      @"south", @"southeast", @"southwest", @"west"];
-            
-            NSMutableDictionary *db = [[NSMutableDictionary alloc] init];
-            
-            //build frame arrays for each and every atlas
-            for (NSString* charachter in [atlasActions keyEnumerator]) {
-                for (NSString *action in [[atlasActions objectForKey:charachter] keyEnumerator]) {
-                    for (NSString *subC in subCardinals) {
-                        NSString *sequence = [NSString stringWithFormat:@"%@_%@_%@", charachter, action, subC];
-                        //NSLog(@"%@_%@_%@", charachter, action, subC);
-                        NSNumber *numFrames = [[atlasActions objectForKey:charachter] objectForKey:action];
-                        NSArray *frames = [self loadFramesFromAtlas:sequence withNumberOfFrames:numFrames.integerValue];
-                        
-                        [db setObject:frames forKey:sequence];
-                    }
-                }
-            }
-            
-            _animationFrames = [NSDictionary dictionaryWithDictionary:db];
+            NSArray *soundFiles = @[@"warcry.caf", @"female_die.caf", @"level_up.caf", @"shoot.caf", @"zombie_die.caf",
+                                    @"zombie_critdie.caf", @"zombie_hit.caf", @"zombie_ment.caf", @"zombie_phys.caf"];
+            [self buildSoundActionDbWithSoundFiles:soundFiles];
             
             //put the completion block back on the mainQueue so UI stuff can happen
             [[NSOperationQueue mainQueue] addOperationWithBlock:completionBlock];
         });
     }
+}
+
+#pragma mark - animations
+
+-(void)buildAnimationActionDbWithAtlasActions:(NSDictionary*)atlasActions
+{
+    NSArray *subCardinals = @[@"east", @"north", @"northeast", @"northwest",
+                              @"south", @"southeast", @"southwest", @"west"];
+    
+    NSMutableDictionary *db = [[NSMutableDictionary alloc] init];
+    
+    //build frame arrays for each and every atlas
+    for (NSString* charachter in [atlasActions keyEnumerator]) {
+        for (NSString *action in [[atlasActions objectForKey:charachter] keyEnumerator]) {
+            for (NSString *subC in subCardinals) {
+                NSString *sequence = [NSString stringWithFormat:@"%@_%@_%@", charachter, action, subC];
+                //NSLog(@"%@_%@_%@", charachter, action, subC);
+                NSNumber *numFrames = [[atlasActions objectForKey:charachter] objectForKey:action];
+                NSArray *frames = [self loadFramesFromAtlas:sequence withNumberOfFrames:numFrames.integerValue];
+                
+                [db setObject:frames forKey:sequence];
+            }
+        }
+    }
+    
+    _animationFrames = [NSDictionary dictionaryWithDictionary:db];
 }
 
 -(SKAction*)animationForSequence:(NSString*)sequence withTimePerFrame:(CGFloat)tpf
@@ -86,6 +97,23 @@
     }
     
     return frames;
+}
+
+#pragma mark - sounds
+
+-(void)buildSoundActionDbWithSoundFiles:(NSArray*)soundFiles
+{
+    NSMutableDictionary *tempSoundSKActions = [[NSMutableDictionary alloc] init];;
+    for (NSString *soundFile in soundFiles) {
+        NSLog(@"%@", soundFile);
+        [tempSoundSKActions setObject:[SKAction playSoundFileNamed:soundFile waitForCompletion:NO] forKey:soundFile];
+    }
+    _sounds = [NSDictionary dictionaryWithDictionary:tempSoundSKActions];
+}
+
+-(SKAction*)getSoundActionForFile:(NSString*)soundFile
+{
+    return [(SKAction*) [self.sounds objectForKey:soundFile] copy];
 }
 
 @end

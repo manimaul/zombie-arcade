@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A66B80E718172834006C756E /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = A66B80E618172834006C756E /* bullet.png */; };
+		D0340CF0181AF08300A34CBA /* warcry.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CE7181AF02200A34CBA /* warcry.caf */; };
+		D0340CF1181AF08600A34CBA /* female_die.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CE8181AF03000A34CBA /* female_die.caf */; };
+		D0340CF2181AF09600A34CBA /* level_up.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CE9181AF05A00A34CBA /* level_up.caf */; };
+		D0340CF3181AF09600A34CBA /* shoot.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CEA181AF05A00A34CBA /* shoot.caf */; };
+		D0340CF4181AF09600A34CBA /* zombie_critdie.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CEB181AF05A00A34CBA /* zombie_critdie.caf */; };
+		D0340CF5181AF09600A34CBA /* zombie_die.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CEC181AF05A00A34CBA /* zombie_die.caf */; };
+		D0340CF6181AF09600A34CBA /* zombie_hit.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CED181AF05A00A34CBA /* zombie_hit.caf */; };
+		D0340CF7181AF09600A34CBA /* zombie_ment.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CEE181AF05A00A34CBA /* zombie_ment.caf */; };
+		D0340CF8181AF09600A34CBA /* zombie_phys.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CEF181AF05A00A34CBA /* zombie_phys.caf */; };
 		D03416D01819A11E004F3563 /* ZABulletSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D03416CF1819A11E004F3563 /* ZABulletSpriteNode.m */; };
 		D03416D31819A129004F3563 /* ZANode.m in Sources */ = {isa = PBXBuildFile; fileRef = D03416D21819A129004F3563 /* ZANode.m */; };
 		D085911418139A9000C1CAC5 /* tiles.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D085911318139A9000C1CAC5 /* tiles.atlas */; };
@@ -79,8 +88,6 @@
 		D0F65CA11812FFAC0071172D /* zombie_walk_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C891812FFAC0071172D /* zombie_walk_southeast.atlas */; };
 		D0F65CA21812FFAC0071172D /* zombie_walk_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C8A1812FFAC0071172D /* zombie_walk_southwest.atlas */; };
 		D0F65CA31812FFAC0071172D /* zombie_walk_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C8B1812FFAC0071172D /* zombie_walk_west.atlas */; };
-		D0F65CA4181303430071172D /* ZAEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A6B52B180FA1D600F9A238 /* ZAEntity.m */; };
-		D0F65CA5181303480071172D /* ZABulletNode.m in Sources */ = {isa = PBXBuildFile; fileRef = A6A6B52E180FA2F600F9A238 /* ZABulletNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +102,15 @@
 
 /* Begin PBXFileReference section */
 		A66B80E618172834006C756E /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet.png; path = "8bit-zombie-arcade/Images.xcassets/bullet.imageset/bullet.png"; sourceTree = "<group>"; };
+		D0340CE7181AF02200A34CBA /* warcry.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = warcry.caf; path = cafs/warcry.caf; sourceTree = "<group>"; };
+		D0340CE8181AF03000A34CBA /* female_die.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = female_die.caf; path = cafs/female_die.caf; sourceTree = "<group>"; };
+		D0340CE9181AF05A00A34CBA /* level_up.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = level_up.caf; path = cafs/level_up.caf; sourceTree = "<group>"; };
+		D0340CEA181AF05A00A34CBA /* shoot.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = shoot.caf; path = cafs/shoot.caf; sourceTree = "<group>"; };
+		D0340CEB181AF05A00A34CBA /* zombie_critdie.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = zombie_critdie.caf; path = cafs/zombie_critdie.caf; sourceTree = "<group>"; };
+		D0340CEC181AF05A00A34CBA /* zombie_die.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = zombie_die.caf; path = cafs/zombie_die.caf; sourceTree = "<group>"; };
+		D0340CED181AF05A00A34CBA /* zombie_hit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = zombie_hit.caf; path = cafs/zombie_hit.caf; sourceTree = "<group>"; };
+		D0340CEE181AF05A00A34CBA /* zombie_ment.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = zombie_ment.caf; path = cafs/zombie_ment.caf; sourceTree = "<group>"; };
+		D0340CEF181AF05A00A34CBA /* zombie_phys.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = zombie_phys.caf; path = cafs/zombie_phys.caf; sourceTree = "<group>"; };
 		D03416CE1819A11E004F3563 /* ZABulletSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZABulletSpriteNode.h; path = "8bit-zombie-arcade/ZABulletSpriteNode.h"; sourceTree = "<group>"; };
 		D03416CF1819A11E004F3563 /* ZABulletSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZABulletSpriteNode.m; path = "8bit-zombie-arcade/ZABulletSpriteNode.m"; sourceTree = "<group>"; };
 		D03416D11819A129004F3563 /* ZANode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZANode.h; path = "8bit-zombie-arcade/ZANode.h"; sourceTree = "<group>"; };
@@ -210,6 +226,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D03416D41819C4D5004F3563 /* soundfx */ = {
+			isa = PBXGroup;
+			children = (
+				D0340CE7181AF02200A34CBA /* warcry.caf */,
+				D0340CE8181AF03000A34CBA /* female_die.caf */,
+				D0340CE9181AF05A00A34CBA /* level_up.caf */,
+				D0340CEA181AF05A00A34CBA /* shoot.caf */,
+				D0340CEB181AF05A00A34CBA /* zombie_critdie.caf */,
+				D0340CEC181AF05A00A34CBA /* zombie_die.caf */,
+				D0340CED181AF05A00A34CBA /* zombie_hit.caf */,
+				D0340CEE181AF05A00A34CBA /* zombie_ment.caf */,
+				D0340CEF181AF05A00A34CBA /* zombie_phys.caf */,
+			);
+			name = soundfx;
+			path = "8bit-zombie-arcade/Resources/soundfx";
+			sourceTree = "<group>";
+		};
 		D089AC3A180DDF5100BCB105 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +265,7 @@
 		D089AC3F180DE00F00BCB105 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D03416D41819C4D5004F3563 /* soundfx */,
 				A66B80E618172834006C756E /* bullet.png */,
 				D085911318139A9000C1CAC5 /* tiles.atlas */,
 				D0F65C731812FFAC0071172D /* zombie */,
@@ -507,8 +541,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D03A79B118131839001097B5 /* bullet.sks in Resources */,
-				D03A79B218131839001097B5 /* spark.png in Resources */,
+				D0340CF0181AF08300A34CBA /* warcry.caf in Resources */,
+				D0340CF1181AF08600A34CBA /* female_die.caf in Resources */,
+				D0340CF2181AF09600A34CBA /* level_up.caf in Resources */,
+				D0340CF3181AF09600A34CBA /* shoot.caf in Resources */,
+				D0340CF4181AF09600A34CBA /* zombie_critdie.caf in Resources */,
+				D0340CF5181AF09600A34CBA /* zombie_die.caf in Resources */,
+				D0340CF6181AF09600A34CBA /* zombie_hit.caf in Resources */,
+				D0340CF7181AF09600A34CBA /* zombie_ment.caf in Resources */,
+				D0340CF8181AF09600A34CBA /* zombie_phys.caf in Resources */,
 				D0F65C971812FFAC0071172D /* zombie_die_northwest.atlas in Resources */,
 				D0F65C671812FF9F0071172D /* woman_stance_south.atlas in Resources */,
 				D0F65C961812FFAC0071172D /* zombie_die_northeast.atlas in Resources */,
@@ -579,8 +620,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F65CA5181303480071172D /* ZABulletNode.m in Sources */,
-				D0F65CA4181303430071172D /* ZAEntity.m in Sources */,
 				D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */,
 				D089AC3D180DDF9500BCB105 /* ZACharacherSpriteNode.m in Sources */,
 				D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */,
