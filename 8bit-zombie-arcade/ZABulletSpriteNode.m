@@ -19,13 +19,6 @@
     return bulletSprite;
 }
 
-//- (SKNode *)shootBullet
-//{
-//    SKSpriteNode * bullet = [SKSpriteNode spriteNodeWithImageNamed:@"bullet"];
-//    
-//    return bullet;
-//}
-
 - (void)configurePhysicsBody
 {
     self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.frame.size.width * 2, self.frame.size.height *2)];

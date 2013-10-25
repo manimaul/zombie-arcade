@@ -19,18 +19,17 @@
 
 static NSArray* actions = nil;
 
-
 + (instancetype)createHeroSprite
 {
-    ZAHeroSpriteNode *heroSprite = [[ZAHeroSpriteNode alloc] initWithCharachterType:hero];
+    ZAHeroSpriteNode *heroSprite = [[ZAHeroSpriteNode alloc] initWithCharachterType:hero withHitPoints:5.];
     heroSprite.cardinal = west;
     heroSprite.action = stance;
     heroSprite.movementSpeed = 120.;
     heroSprite.timePerframe = .095;
-    heroSprite.hitPoints = 5;
     heroSprite.attackPower = 1;
     heroSprite.name = kHeroName;
     heroSprite.zPosition = 1.;
+    [heroSprite runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"level_up.caf"]];
     return heroSprite;
 }
 
@@ -47,6 +46,8 @@ static NSArray* actions = nil;
 {
     ZAMyScene *scene = (ZAMyScene*) self.scene;
     [scene heroDiedWithLives:self.lives];
+    
+    //super called last on purpose here
     [super performDeath:nil];
 }
 
@@ -80,13 +81,13 @@ static NSArray* actions = nil;
 - (void)fireBulletTowardAngleRadians:(CGFloat)radians
 {
     ZABulletSpriteNode *bullet = [ZABulletSpriteNode createBulletSprite];
-    
+    [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"shoot.caf"]];
     if (bullet) {
         [self.scene addChild:bullet];
         bullet.position = self.position;
         CGPoint destination = ProjectPoint(self.position, self.scene.size.width, radians);
         [bullet runAction:[SKAction sequence:@[
-                                               [SKAction moveTo:destination duration:1.0],
+                                               [SKAction moveTo:destination duration:2.0],
                                                [SKAction fadeInWithDuration:0.5],
                                                [SKAction removeFromParent]
                                                ]]];

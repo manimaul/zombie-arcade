@@ -12,10 +12,12 @@
 @interface ZACharachterAnimationFrames : NSObject
 
 @property (nonatomic, strong, readonly) NSDictionary *animationFrames;
+@property (nonatomic, strong, readonly) NSDictionary *sounds;
 
 +(ZACharachterAnimationFrames *)sharedFrames;
 
 -(void)loadAsyncWithCallback:(void(^)(void))completionBlock;
 -(SKAction*)animationForSequence:(NSString*)sequence withTimePerFrame:(CGFloat)tpf;
+-(SKAction*)getSoundActionForFile:(NSString*)soundFile;
 
 @end

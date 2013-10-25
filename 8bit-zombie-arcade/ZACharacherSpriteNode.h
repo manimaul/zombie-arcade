@@ -48,10 +48,10 @@ static const CGFloat stanceMass = 200.;
 @property (nonatomic) CGFloat movementSpeed;
 @property (nonatomic) CGFloat timePerframe;
 @property (nonatomic) CGFloat meleeSpeed;
-@property (nonatomic) NSInteger hitPoints;
+@property (nonatomic) CGFloat hitPoints;
 @property (nonatomic) NSInteger attackPower;
 
-- (id)initWithCharachterType:(charachterType)type;
+-(id)initWithCharachterType:(charachterType)type withHitPoints:(CGFloat)hitPoints;
 - (void)setAnimationSequenceByCardinal:(fourtyFiveDegreeCardinal)newCardinal;
 - (BOOL)isInBounds;
 

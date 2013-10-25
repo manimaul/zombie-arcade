@@ -32,7 +32,6 @@
     UITouch *firstTouch;
     UITouch *secondTouch;
     BOOL secondTouchDown;
-    //BOOL haveFirstTouch; //touches.count is unreliable in touchesBegan
     CGPoint firstTouchLocation;
 }
 
@@ -70,11 +69,20 @@
             [self zombieLoop];
         }];
         
+        //[self runAction:[SKAction repeatActionForever:[SKAction playSoundFileNamed:@"wind_loop.m4a" waitForCompletion:YES]]];
+        
         secondTouchDown = NO;
         self.isGameOver = NO;
         
     }
     return self;
+}
+
+-(void)setZombieKills:(NSInteger)zombieKills {
+    _zombieKills++;
+    
+    if (! (self.zombieKills % 10) )
+        [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"warcry.caf"]];
 }
 
 -(void)buildHud
@@ -101,7 +109,7 @@
     
     SKLabelNode *energy = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
     energy.name = @"energy";
-    energy.text = [NSString stringWithFormat:@"ENERGY: %d", self.heroSpriteNode.hitPoints];
+    energy.text = [NSString stringWithFormat:@"ENERGY: %d",(int) self.heroSpriteNode.hitPoints];
     energy.fontSize = fontSize;
     energy.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
     energy.position = CGPointMake(currX, currY);
@@ -121,7 +129,7 @@
 }
 
 -(void)updateHud
-{
+{    
     [self updateHudWithName:@"kills" withValue:self.zombieKills];
     [self updateHudWithName:@"energy" withValue:self.heroSpriteNode.hitPoints];
     [self updateHudWithName:@"lives" withValue:self.heroSpriteNode.lives];
@@ -157,6 +165,8 @@
 
 -(void)heroDiedWithLives:(NSInteger)lives
 {
+    [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"female_die.caf"]];
+    
     for (ZAZombieSpriteNode *zombie in zombieNodes) {
         [zombie moveToward:[self randomScreenPoint]];
     }
@@ -211,12 +221,13 @@
         [zombieNodes addObject:zombie];
         zombie.attackTarget = self.heroSpriteNode;
         [zombie moveToward:self.heroSpriteNode.position];
+        [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_ment.caf"]];
     }
 }
 
 -(void)zombieLoop
 {
-    if (self.isGameOver || (self.heroSpriteNode.action == die) )
+    if (self.isGameOver)
         return;
     
     [self spawnZombie];
@@ -290,7 +301,6 @@
         secondTouch = touch;
         [self.heroSpriteNode setContinuousFire:YES];
         secondTouchDown = YES;
-//        [self fireBulletTowardAngleRadians:CGPointToAngleRadians(heroSpriteNode.velocity)];
 
     }
 }
@@ -327,17 +337,6 @@
         [self.heroSpriteNode setContinuousFire:NO];
         secondTouchDown = NO;
     }
-    
-    //    if (touchCount <= 2) {
-    //        //call method to stop continuous weapon fire here
-    //    }
-    //    if (touchCount <= 1) {
-    //        //stop hero motion
-    //        [heroSpriteNode stop];
-    //        controller.hidden = YES;
-    //    }
-    //
-    //    touchCount--;
 }
 
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
@@ -358,30 +357,68 @@
 
 - (void)didBeginContact:(SKPhysicsContact *)contact
 {
-    if (contact.bodyB.categoryBitMask == kEnemyBitmask) {
-        ZAZombieSpriteNode *zombie = (ZAZombieSpriteNode*)contact.bodyB.node;
-        if (contact.bodyA.categoryBitMask == kHeroBitmask) {
-            [zombie attackHero];
-        } else if (contact.bodyA.categoryBitMask == kBulletBitmask) {
-            //[zombie takeHit:zombie.attackPower withEnemies:zombieNodes];
-        }
+    ZAHeroSpriteNode *hero;
+    ZAZombieSpriteNode *zombie;
+    ZABulletSpriteNode *bullet;
+    
+    switch (contact.bodyA.categoryBitMask) {
+        case kHeroBitmask:
+            hero = (ZAHeroSpriteNode*) contact.bodyA.node;
+            break;
+        case kEnemyBitmask:
+            zombie = (ZAZombieSpriteNode*) contact.bodyA.node;
+            break;
+        case kBulletBitmask:
+            bullet = (ZABulletSpriteNode*) contact.bodyA.node;
+            break;
     }
-    if (contact.bodyA.categoryBitMask == kBulletBitmask) {
-       [contact.bodyA.node removeFromParent];
-        ZAZombieSpriteNode *zombie = (ZAZombieSpriteNode*)contact.bodyB.node;
+
+    switch (contact.bodyB.categoryBitMask) {
+        case kHeroBitmask:
+            hero = (ZAHeroSpriteNode*) contact.bodyB.node;
+            break;
+        case kEnemyBitmask:
+            zombie = (ZAZombieSpriteNode*) contact.bodyB.node;
+            break;
+        case kBulletBitmask:
+            bullet = (ZABulletSpriteNode*) contact.bodyB.node;
+            break;
+    }
+    
+    if (bullet && zombie) {
         [zombie takeHit:self.heroSpriteNode.attackPower withEnemies:zombieNodes];
+        [bullet removeFromParent];
+    } else if (hero && zombie) {
+        [zombie attackHero];
     }
 }
 
 
 - (void)didEndContact:(SKPhysicsContact *)contact
 {
-    //right now only zombie sprite nodes are registered to be notified of contact (contactTestBitMask)
     ZAZombieSpriteNode *zombie;
-    NSUInteger n = [zombieNodes indexOfObject:contact.bodyB.node];
-    if (n != NSNotFound) {
-        zombie = [zombieNodes objectAtIndex:n];
-        [zombie moveToward:contact.bodyA.node.position];
+    ZAHeroSpriteNode *hero;
+    
+    switch (contact.bodyA.categoryBitMask) {
+        case kHeroBitmask:
+            hero = (ZAHeroSpriteNode*) contact.bodyA.node;
+            break;
+        case kEnemyBitmask:
+            zombie = (ZAZombieSpriteNode*) contact.bodyA.node;
+            break;
+    }
+    
+    switch (contact.bodyB.categoryBitMask) {
+        case kHeroBitmask:
+            hero = (ZAHeroSpriteNode*) contact.bodyB.node;
+            break;
+        case kEnemyBitmask:
+            zombie = (ZAZombieSpriteNode*) contact.bodyB.node;
+            break;
+    }
+    
+    if (zombie && hero) {
+        [zombie moveToward:hero.position];
     }
 }
 

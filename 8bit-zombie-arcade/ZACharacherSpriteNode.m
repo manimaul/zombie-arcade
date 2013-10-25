@@ -10,9 +10,15 @@
 #import "ZAHelpers.h"
 #import "CGPointF.h"
 
+@interface ZACharacherSpriteNode()
+
+@property (nonatomic) CGFloat hitPointInitial;
+
+@end
+
 @implementation ZACharacherSpriteNode
 
--(id)initWithCharachterType:(charachterType)type
+-(id)initWithCharachterType:(charachterType)type withHitPoints:(CGFloat)hitPoints
 {
     NSString *charachterAtlasPrefix;
     switch (type) {
@@ -34,15 +40,86 @@
         _frames = [ZACharachterAnimationFrames sharedFrames];
         [self configurePhysicsBody];
         [self actionLoop];
+        self.hitPointInitial = hitPoints;
+        self.hitPoints = hitPoints;
     }
     return self;
 }
+
+-(NSString*)getSequenceForCardinal:(fourtyFiveDegreeCardinal)cardinal forAction:(charachterActions)action
+{
+    NSString *sequenceKey = [NSString stringWithFormat:@"%@", self.charachterAtlasPrefix];
+    switch (action) {
+        case stance:
+            sequenceKey = [sequenceKey stringByAppendingString:@"_stance"];
+            break;
+        case walk:
+            sequenceKey = [sequenceKey stringByAppendingString:@"_walk"];
+            break;
+        case attack:
+            sequenceKey = [sequenceKey stringByAppendingString:@"_attack"];
+            break;
+        case die:
+            sequenceKey = [sequenceKey stringByAppendingString:@"_die"];
+            break;
+    }
+    
+    switch (cardinal) {
+        case north:
+            sequenceKey = [sequenceKey stringByAppendingString:@"_north"];
+            break;
+        case northeast:
+            sequenceKey = [sequenceKey stringByAppendingString:@"_northeast"];
+            break;
+        case east:
+            sequenceKey = [sequenceKey stringByAppendingString:@"_east"];
+            break;
+        case southeast:
+            sequenceKey = [sequenceKey stringByAppendingString:@"_southeast"];
+            break;
+        case south:
+            sequenceKey = [sequenceKey stringByAppendingString:@"_south"];
+            break;
+        case southwest:
+            sequenceKey = [sequenceKey stringByAppendingString:@"_southwest"];
+            break;
+        case west:
+            sequenceKey = [sequenceKey stringByAppendingString:@"_west"];
+            break;
+        case northwest:
+            sequenceKey = [sequenceKey stringByAppendingString:@"_northwest"];
+            break;
+    }
+    
+    //NSLog(@"%@", sequenceKey);
+    return sequenceKey;
+}
+
+
+#pragma mark - update loop
 
 - (void)updateForDeltaTime:(NSTimeInterval)dt
 {
     CGPoint amountToMove = CGPointMultiplyScalar(self.velocity, dt);
     self.position = CGPointAdd(self.position, amountToMove);
     [self boundsCheck];
+}
+
+-(void)actionLoop
+{
+    if (self.action == die)
+        return;
+    
+    //[self boundsCheck];
+    SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action] withTimePerFrame:self.timePerframe];
+    if (animation) {
+        [self runAction:[SKAction sequence:@[animation, [SKAction runBlock:^{
+            [self actionLoop];
+        }]]]];
+    } else {
+        //NSLog(@"error: nil animation %@", [self getSequenceForCardinal:self.cardinal forAction:self.action]);
+        [self performSelector:@selector(actionLoop) withObject:nil afterDelay:1];
+    }
 }
 
 -(BOOL)isInBounds
@@ -95,8 +172,13 @@
     
 }
 
+#pragma mark - actions
+
 - (void) setAction:(charachterActions)action
 {
+    if (self.action == die)
+        return;
+    
     switch (action) {
         case stance:
             self.physicsBody.mass = stanceMass;
@@ -116,13 +198,10 @@
     _action = action;
 }
 
-#pragma mark - actions
-
 - (void)moveToward:(CGPoint)location
 {
-    if (self.action == die) {
+    if (self.action == die)
         return;
-    }
     
     CGPoint offset = CGPointSubtract(location, self.position);
     CGFloat length = CGPointLength(offset);
@@ -144,6 +223,9 @@
 
 - (void)performDeath:(NSMutableArray*)trackedNodes
 {
+    if (self.action == die)
+        return;
+    
     [self removeAllActions];
     self.velocity = CGPointMake(0., 0.);
     self.physicsBody = nil;
@@ -161,16 +243,33 @@
 
 - (void)takeHit:(NSInteger)points withEnemies:(NSMutableArray*)trackedNodes
 {
-    self.hitPoints = self.hitPoints - points;
-    NSLog(@"Points are at X %d", points);
-    if (self.hitPoints < 0)
+    
+    if (self.action == die)
+        return;
+    
+    self.hitPoints--;
+    
+    CGFloat amt;
+    if (self.hitPoints > 0)
+        amt = 1 - (self.hitPoints / self.hitPointInitial);
+    else
+        amt = 1.;
+    
+    [self runAction:[SKAction colorizeWithColor:[SKColor redColor] colorBlendFactor:amt duration:0.]];
+    
+    
+    if (self.hitPoints <= 0) {
         [self performDeath:trackedNodes];
+    }
 }
 
 #pragma mark - animation
 
 - (void)setImmediateAction:(charachterActions)action
 {
+    if (self.action == die)
+        return;
+    
     if (self.action != action) {
         self.action = action;
         [self removeAllActions];
@@ -180,77 +279,13 @@
 
 - (void)setAnimationSequenceByCardinal:(fourtyFiveDegreeCardinal)newCardinal
 {
+    if (self.action == die)
+        return;
+    
     if (self.cardinal != newCardinal) {
         [self removeAllActions];
         self.cardinal = newCardinal;
         [self actionLoop];
     }
 }
-
--(NSString*)getSequenceForCardinal:(fourtyFiveDegreeCardinal)cardinal forAction:(charachterActions)action
-{
-    NSString *sequenceKey = [NSString stringWithFormat:@"%@", self.charachterAtlasPrefix];
-    switch (action) {
-        case stance:
-            sequenceKey = [sequenceKey stringByAppendingString:@"_stance"];
-            break;
-        case walk:
-            sequenceKey = [sequenceKey stringByAppendingString:@"_walk"];
-            break;
-        case attack:
-            sequenceKey = [sequenceKey stringByAppendingString:@"_attack"];
-            break;
-        case die:
-            sequenceKey = [sequenceKey stringByAppendingString:@"_die"];
-            break;
-    }
-    
-    switch (cardinal) {
-        case north:
-            sequenceKey = [sequenceKey stringByAppendingString:@"_north"];
-            break;
-        case northeast:
-            sequenceKey = [sequenceKey stringByAppendingString:@"_northeast"];
-            break;
-        case east:
-            sequenceKey = [sequenceKey stringByAppendingString:@"_east"];
-            break;
-        case southeast:
-            sequenceKey = [sequenceKey stringByAppendingString:@"_southeast"];
-            break;
-        case south:
-            sequenceKey = [sequenceKey stringByAppendingString:@"_south"];
-            break;
-        case southwest:
-            sequenceKey = [sequenceKey stringByAppendingString:@"_southwest"];
-            break;
-        case west:
-            sequenceKey = [sequenceKey stringByAppendingString:@"_west"];
-            break;
-        case northwest:
-            sequenceKey = [sequenceKey stringByAppendingString:@"_northwest"];
-            break;
-    }
-    
-    //NSLog(@"%@", sequenceKey);
-    return sequenceKey;
-}
-
--(void)actionLoop
-{
-    if (self.action == die)
-        return;
-    
-    //[self boundsCheck];
-    SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action] withTimePerFrame:self.timePerframe];
-    if (animation) {
-        [self runAction:[SKAction sequence:@[animation, [SKAction runBlock:^{
-            [self actionLoop];
-        }]]]];
-    } else {
-        //NSLog(@"error: nil animation %@", [self getSequenceForCardinal:self.cardinal forAction:self.action]);
-        [self performSelector:@selector(actionLoop) withObject:nil afterDelay:1];
-    }
-}
-
 @end

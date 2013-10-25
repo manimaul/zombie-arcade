@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Will Kamp. All rights reserved.
 //
 
+#import "ZACharachterAnimationFrames.h"
 #import "ZAZombieSpriteNode.h"
 #import "ZAHeroSpriteNode.h"
 #import "CGPointF.h"
@@ -17,12 +18,11 @@
 
 + (instancetype)createZombieSprite
 {
-    ZAZombieSpriteNode *zombieSprite = [[ZAZombieSpriteNode alloc] initWithCharachterType:zombie];
+    ZAZombieSpriteNode *zombieSprite = [[ZAZombieSpriteNode alloc] initWithCharachterType:zombie withHitPoints:2.];
     zombieSprite.cardinal = east;
     zombieSprite.action = walk;
     zombieSprite.movementSpeed = 80.;
     zombieSprite.timePerframe = .125;
-    zombieSprite.hitPoints = 1;
     zombieSprite.attackPower = 1;
     zombieSprite.zPosition = 2.;
     zombieSprite.meleeSpeed = .75;
@@ -31,18 +31,29 @@
 
 #pragma mark - actions
 
+- (void)takeHit:(NSInteger)points withEnemies:(NSMutableArray *)trackedNodes
+{
+    [super takeHit:points withEnemies:trackedNodes];
+    [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_hit.caf"]];
+}
+
 - (void)performDeath:(NSMutableArray*)trackedNodes
 {
-    [super performDeath:trackedNodes];
+    [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_critdie.caf"]];
     ZAMyScene *scene = (ZAMyScene*) self.scene;
     scene.zombieKills++;
-    [scene updateHud]; 
-
+    [scene updateHud];
     
+    //super called last on purpose here
+    [super performDeath:trackedNodes];
 }
 
 - (void)attackHero
 {
+    if (self.action == die)
+        return;
+    
+    [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_phys.caf"]];
     [self faceTowards:self.attackTarget.position];
     
     if (self.action != attack) {
@@ -74,7 +85,7 @@
     self.physicsBody.mass = walkMass;
     
     // We want to react to the following types of physics bodies
-    self.physicsBody.collisionBitMask = kHeroBitmask | kEnemyBitmask | kBulletBitmask; //7
+    self.physicsBody.collisionBitMask = kHeroBitmask | kEnemyBitmask | kBulletBitmask;
     
     self.physicsBody.categoryBitMask = kEnemyBitmask;
     
