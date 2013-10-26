@@ -7,7 +7,10 @@
 //
 
 #import "ZAMyScene.h"
+#import "ZAEnemySpriteNode.h"
 #import "ZAZombieSpriteNode.h"
+#import "ZASkeletonSpiteNode.h"
+#import "ZAGoblinSpriteNode.h"
 #import "ZAHeroSpriteNode.h"
 #import "CGPointF.h"
 #import "ZAHelpers.h"
@@ -27,7 +30,7 @@
 @implementation ZAMyScene {
     NSTimeInterval lastUpdateTime;
     NSTimeInterval deltaTime;
-    NSMutableArray *zombieNodes;
+    NSMutableArray *enemyNodes;
     SKSpriteNode *controller;
     UITouch *firstTouch;
     UITouch *secondTouch;
@@ -59,7 +62,7 @@
         controller.hidden = YES;
         [self addChild:controller];
         
-        zombieNodes = [NSMutableArray arrayWithCapacity:kMaxZombies];
+        enemyNodes = [NSMutableArray arrayWithCapacity:kMaxEnemies];
         
         ZACharachterAnimationFrames *frames = [ZACharachterAnimationFrames sharedFrames];
         [frames loadAsyncWithCallback:^{
@@ -79,9 +82,9 @@
 }
 
 -(void)setZombieKills:(NSInteger)zombieKills {
-    _zombieKills++;
+    _zombieKills = zombieKills;
     
-    if (! (self.zombieKills % 10) )
+    if ( !(self.zombieKills % 10) && self.zombieKills > 0 )
         [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"warcry.caf"]];
 }
 
@@ -142,8 +145,8 @@
     self.heroSpriteNode.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     [self updateHud];
     [self addChild:self.heroSpriteNode];
-    for (ZAZombieSpriteNode *zombie in zombieNodes) {
-        zombie.attackTarget = self.heroSpriteNode;
+    for (ZAEnemySpriteNode *enemy in enemyNodes) {
+        enemy.attackTarget = self.heroSpriteNode;
         //[zombie moveToward:self.heroSpriteNode.position];
     }
 }
@@ -167,8 +170,8 @@
 {
     [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"female_die.caf"]];
     
-    for (ZAZombieSpriteNode *zombie in zombieNodes) {
-        [zombie moveToward:[self randomScreenPoint]];
+    for (ZAEnemySpriteNode *enemy in enemyNodes) {
+        [enemy moveToward:[self randomScreenPoint]];
     }
     
     if (lives > 1) {
@@ -184,7 +187,7 @@
     [self.gameOverNode removeFromParent];
     self.isGameOver = NO;
     [self spawnHeroWithLives:@3];
-    self.zombieKills = 0;
+    [self setZombieKills:0];
     [self updateHud];
     [self zombieLoop];
 }
@@ -204,24 +207,47 @@
         self.isGameOver = YES;
     }]]]];
     
-    [zombieNodes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        ZAZombieSpriteNode *zombie = obj;
-        [zombie removeFromParent];
+    [enemyNodes enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        ZAEnemySpriteNode *enemy = obj;
+        [enemy removeFromParent];
     }];
-    [zombieNodes removeAllObjects];
+    [enemyNodes removeAllObjects];
 }
 
 -(void)spawnZombie
 {
-    if ( ([zombieNodes count] < kMaxZombies)  && !self.isGameOver && (self.heroSpriteNode.action != die) ) {
-        ZAZombieSpriteNode *zombie = [ZAZombieSpriteNode createZombieSprite];
-        zombie.position = CGPointMake(64., 64.);
+    if ( ([enemyNodes count] < kMaxEnemies)  && !self.isGameOver && (self.heroSpriteNode.action != die) ) {
+        ZAEnemySpriteNode *enemy;
         
-        [self addChild:zombie];
-        [zombieNodes addObject:zombie];
-        zombie.attackTarget = self.heroSpriteNode;
-        [zombie moveToward:self.heroSpriteNode.position];
-        [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_ment.caf"]];
+        NSInteger lowerBound = zombie;
+        NSInteger upperBound = goblin + 1;
+        NSInteger randBetween = lowerBound + arc4random() % (upperBound - lowerBound);
+        switch (randBetween) {
+            case zombie:
+                enemy = [ZAZombieSpriteNode createSprite];
+                [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_ment.caf"]];
+                break;
+            case skeleton:
+                enemy = [ZASkeletonSpiteNode createSprite];
+                [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"skeleton_ment.caf"]];
+                break;
+            case goblin:
+                enemy = [ZAGoblinSpriteNode createSprite];
+                [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"goblin_ment.caf"]];
+                break;
+                
+        }
+//        if (arc4random() % 2) {
+//            enemy = [ZAZombieSpriteNode createSprite];
+//        } else {
+//            enemy = [ZASkeletonSpiteNode createSprite];
+//        }
+        enemy.position = CGPointMake(64., 64.);
+        
+        [self addChild:enemy];
+        [enemyNodes addObject:enemy];
+        enemy.attackTarget = self.heroSpriteNode;
+        [enemy moveToward:self.heroSpriteNode.position];
     }
 }
 
@@ -232,13 +258,13 @@
     
     [self spawnZombie];
     
-    if (zombieNodes.count && self.heroSpriteNode.isInBounds) {
+    if (enemyNodes.count && self.heroSpriteNode.isInBounds) {
         
-        ZAZombieSpriteNode *randomZombie = [zombieNodes objectAtIndex:(arc4random() % zombieNodes.count)];
-        if (randomZombie.action == walk && randomZombie.isInBounds) {
-            CGPoint vector = CGPointSubtract(randomZombie.attackTarget.position, randomZombie.position);
+        ZAEnemySpriteNode *randomEnemy = [enemyNodes objectAtIndex:(arc4random() % enemyNodes.count)];
+        if (randomEnemy.action == walk && randomEnemy.isInBounds) {
+            CGPoint vector = CGPointSubtract(randomEnemy.attackTarget.position, randomEnemy.position);
             CGFloat distFromHero = CGPointLength(vector);
-            CGFloat maxDist = CGPointLength(CGPointMake(0., randomZombie.scene.size.height));
+            CGFloat maxDist = CGPointLength(CGPointMake(0., randomEnemy.scene.size.height));
             CGFloat accuracy = distFromHero / maxDist;
             
             CGFloat deviance = 22.;
@@ -247,7 +273,7 @@
             
             deviance = deviance * accuracy + CGPointToAngleDegrees(vector);
             
-            [randomZombie moveTowardAngleRadians:DegreesToRadians(deviance)];
+            [randomEnemy moveTowardAngleRadians:DegreesToRadians(deviance)];
         }
     }
     
@@ -265,8 +291,8 @@
     lastUpdateTime = currentTime;
     [self.heroSpriteNode updateForDeltaTime:deltaTime];
     
-    for (ZAZombieSpriteNode *zombie in zombieNodes) {
-        [zombie updateForDeltaTime:deltaTime];
+    for (ZAEnemySpriteNode *enemy in enemyNodes) {
+        [enemy updateForDeltaTime:deltaTime];
     }
 }
 
@@ -358,7 +384,7 @@
 - (void)didBeginContact:(SKPhysicsContact *)contact
 {
     ZAHeroSpriteNode *hero;
-    ZAZombieSpriteNode *zombie;
+    ZAEnemySpriteNode *enemy;
     ZABulletSpriteNode *bullet;
     
     switch (contact.bodyA.categoryBitMask) {
@@ -366,7 +392,7 @@
             hero = (ZAHeroSpriteNode*) contact.bodyA.node;
             break;
         case kEnemyBitmask:
-            zombie = (ZAZombieSpriteNode*) contact.bodyA.node;
+            enemy = (ZAEnemySpriteNode*) contact.bodyA.node;
             break;
         case kBulletBitmask:
             bullet = (ZABulletSpriteNode*) contact.bodyA.node;
@@ -378,7 +404,7 @@
             hero = (ZAHeroSpriteNode*) contact.bodyB.node;
             break;
         case kEnemyBitmask:
-            zombie = (ZAZombieSpriteNode*) contact.bodyB.node;
+            enemy = (ZAEnemySpriteNode*) contact.bodyB.node;
             break;
         case kBulletBitmask:
             bullet = (ZABulletSpriteNode*) contact.bodyB.node;
@@ -386,10 +412,10 @@
     }
     
     if (bullet && zombie) {
-        [zombie takeHit:self.heroSpriteNode.attackPower withEnemies:zombieNodes];
+        [enemy takeHit:self.heroSpriteNode.attackPower withEnemies:enemyNodes];
         [bullet removeFromParent];
     } else if (hero && zombie) {
-        [zombie attackHero];
+        [enemy attackHero];
     }
 }
 

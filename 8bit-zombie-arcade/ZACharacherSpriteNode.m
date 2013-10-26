@@ -28,6 +28,12 @@
         case zombie:
             charachterAtlasPrefix = @"zombie";
             break;
+        case skeleton:
+            charachterAtlasPrefix = @"skeleton";
+            break;
+        case goblin:
+            charachterAtlasPrefix = @"goblin";
+            break;
         default:
             charachterAtlasPrefix = @"zombie";
             break;

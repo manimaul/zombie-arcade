@@ -29,7 +29,9 @@ typedef enum {
 
 typedef enum {
     hero,
-    zombie
+    zombie,
+    skeleton,
+    goblin
 } charachterType;
 
 static const CGFloat walkMass = 10.;

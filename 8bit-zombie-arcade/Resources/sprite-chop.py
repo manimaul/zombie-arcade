@@ -60,15 +60,48 @@ def renderSequenceSet(img, name, anim_angles, anim_sequences, render_sequences):
 # renderSequenceSet(img, name, anim_angles, anim_sequences, render_sequences)
 
 
-#### woman
+# #### woman
+# #8 angles
+# name = "woman"
+# sprite_sheet = "woman.png"
+# img = Image.open(sprite_sheet)
+# anim_angles = [ "west", "northwest", "north", "northeast", "east", "southeast", "south", "southwest" ]
+# anim_sequences = [ ("stance",4), ("walk",8), ("slam",4), ("bite",2), ("die",6), ("block",4), ("shoot",4) ]
+# ##set of sequences we actually want to render
+# render_sequences = {"stance", "walk", "die"}
+# renderSequenceSet(img, name, anim_angles, anim_sequences, render_sequences)
+
+#### skeleton
 #8 angles
-name = "woman"
-sprite_sheet = "woman.png"
+name = "skeleton"
+sprite_sheet = "skeleton.png"
 img = Image.open(sprite_sheet)
 anim_angles = [ "west", "northwest", "north", "northeast", "east", "southeast", "south", "southwest" ]
-anim_sequences = [ ("stance",4), ("walk",8), ("slam",4), ("bite",2), ("die",6), ("block",4), ("shoot",4) ]
+anim_sequences = [ ("stance",4), ("walk",8), ("attack",4), ("point",4), ("die",8), ("shoot",4) ]
 ##set of sequences we actually want to render
-render_sequences = {"stance", "walk", "die"}
+render_sequences = {"walk", "attack", "die"}
+renderSequenceSet(img, name, anim_angles, anim_sequences, render_sequences)
+
+# #### test
+# #8 angles
+# name = "goblin"
+# sprite_sheet = "goblin.png"
+# img = Image.open(sprite_sheet)
+# anim_angles = [ "west"]
+# anim_sequences = [ ("test",48)]
+# ##set of sequences we actually want to render
+# render_sequences = {"test"}
+# renderSequenceSet(img, name, anim_angles, anim_sequences, render_sequences)
+
+#### goblin
+#8 angles
+name = "goblin"
+sprite_sheet = "goblin.png"
+img = Image.open(sprite_sheet)
+anim_angles = [ "west", "northwest", "north", "northeast", "east", "southeast", "south", "southwest" ]
+anim_sequences = [ ("stance",4), ("jump",8), ("walk",8), ("attack-alt",4), ("attack",4), ("hit",5), ("block",2), ("fall",6), ("die", 8) ]
+##set of sequences we actually want to render
+render_sequences = {"walk", "attack", "die"}
 renderSequenceSet(img, name, anim_angles, anim_sequences, render_sequences)
 
 
