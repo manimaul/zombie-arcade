@@ -29,7 +29,7 @@ static NSArray* actions = nil;
     heroSprite.attackPower = 1;
     heroSprite.name = kHeroName;
     heroSprite.zPosition = 1.;
-    [heroSprite runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"level_up.caf"]];
+    [heroSprite.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"level_up.caf"]];
     return heroSprite;
 }
 
@@ -81,7 +81,7 @@ static NSArray* actions = nil;
 - (void)fireBulletTowardAngleRadians:(CGFloat)radians
 {
     ZABulletSpriteNode *bullet = [ZABulletSpriteNode createBulletSprite];
-    [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"shoot.caf"]];
+    [self.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"shoot.caf"]];
     if (bullet) {
         [self.scene addChild:bullet];
         bullet.position = self.position;

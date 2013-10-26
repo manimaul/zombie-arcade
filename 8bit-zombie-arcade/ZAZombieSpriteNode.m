@@ -12,37 +12,33 @@
 #import "CGPointF.h"
 #import "ZAMyScene.h"
 
-//static NSString* kZombieName = @"zombie";
-
 @implementation ZAZombieSpriteNode
 
-+ (instancetype)createZombieSprite
++ (instancetype)createSprite
 {
-    ZAZombieSpriteNode *zombieSprite = [[ZAZombieSpriteNode alloc] initWithCharachterType:zombie withHitPoints:2.];
-    zombieSprite.cardinal = east;
-    zombieSprite.action = walk;
-    zombieSprite.movementSpeed = 80.;
-    zombieSprite.timePerframe = .125;
-    zombieSprite.attackPower = 1;
-    zombieSprite.zPosition = 2.;
-    zombieSprite.meleeSpeed = .75;
-    return zombieSprite;
+    ZAZombieSpriteNode *s = [[ZAZombieSpriteNode alloc] initWithCharachterType:zombie withHitPoints:2.];
+    s.cardinal = east;
+    s.action = walk;
+    s.movementSpeed = 80.;
+    s.timePerframe = .125;
+    s.attackPower = 1;
+    s.zPosition = 2.;
+    s.meleeSpeed = .75;
+//    [s.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_ment.caf"]];
+    return s;
 }
 
 #pragma mark - actions
 
 - (void)takeHit:(NSInteger)points withEnemies:(NSMutableArray *)trackedNodes
 {
+    [self.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_hit.caf"]];
     [super takeHit:points withEnemies:trackedNodes];
-    [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_hit.caf"]];
 }
 
 - (void)performDeath:(NSMutableArray*)trackedNodes
 {
-    [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_critdie.caf"]];
-    ZAMyScene *scene = (ZAMyScene*) self.scene;
-    scene.zombieKills++;
-    [scene updateHud];
+    [self.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_critdie.caf"]];
     
     //super called last on purpose here
     [super performDeath:trackedNodes];
@@ -53,25 +49,8 @@
     if (self.action == die)
         return;
     
-    [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_phys.caf"]];
-    [self faceTowards:self.attackTarget.position];
-    
-    if (self.action != attack) {
-        [self setImmediateAction:attack];
-        self.velocity = CGPointMake(0., 0.);
-        self.physicsBody.mass = attackMass;
-    }
-    
-    //if hero is in our range, extract hit points
-    if ([self.physicsBody.allContactedBodies indexOfObject:self.attackTarget.physicsBody] != NSNotFound) {
-        //NSLog(@"zombie attacking hero - in range... extracting hp");
-        [self.attackTarget takeHit:self.attackPower withEnemies:nil];
-        
-        if (self.attackTarget.hitPoints <= 0 || !self.attackTarget)
-            [self setImmediateAction:walk];
-        else
-            [self performSelector:@selector(attackHero) withObject:nil afterDelay:self.meleeSpeed];
-    }
+    [self.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_phys.caf"]];
+    [super attackHero];
     
 }
 

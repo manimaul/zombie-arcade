@@ -7,17 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "ZACharacherSpriteNode.h"
+#import "ZAEnemySpriteNode.h"
 
 @class ZAHeroSpriteNode;
 
-static const NSInteger kMaxZombies = 5;
+@interface ZAZombieSpriteNode : ZAEnemySpriteNode
 
-@interface ZAZombieSpriteNode : ZACharacherSpriteNode
-
-@property (nonatomic, weak) ZACharacherSpriteNode *attackTarget;
-
-+ (instancetype)createZombieSprite;
-- (void)attackHero;
++ (instancetype)createSprite;
 
 @end
