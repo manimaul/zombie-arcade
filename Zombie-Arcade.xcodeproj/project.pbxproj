@@ -1,0 +1,1203 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A66B80E718172834006C756E /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = A66B80E618172834006C756E /* bullet.png */; };
+		D0340CF0181AF08300A34CBA /* warcry.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CE7181AF02200A34CBA /* warcry.caf */; };
+		D0340CF1181AF08600A34CBA /* female_die.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CE8181AF03000A34CBA /* female_die.caf */; };
+		D0340CF2181AF09600A34CBA /* level_up.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CE9181AF05A00A34CBA /* level_up.caf */; };
+		D0340CF3181AF09600A34CBA /* shoot.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CEA181AF05A00A34CBA /* shoot.caf */; };
+		D0340CF4181AF09600A34CBA /* zombie_critdie.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CEB181AF05A00A34CBA /* zombie_critdie.caf */; };
+		D0340CF5181AF09600A34CBA /* zombie_die.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CEC181AF05A00A34CBA /* zombie_die.caf */; };
+		D0340CF6181AF09600A34CBA /* zombie_hit.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CED181AF05A00A34CBA /* zombie_hit.caf */; };
+		D0340CF7181AF09600A34CBA /* zombie_ment.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CEE181AF05A00A34CBA /* zombie_ment.caf */; };
+		D0340CF8181AF09600A34CBA /* zombie_phys.caf in Resources */ = {isa = PBXBuildFile; fileRef = D0340CEF181AF05A00A34CBA /* zombie_phys.caf */; };
+		D03416D01819A11E004F3563 /* ZABulletSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D03416CF1819A11E004F3563 /* ZABulletSpriteNode.m */; };
+		D03416D31819A129004F3563 /* ZANode.m in Sources */ = {isa = PBXBuildFile; fileRef = D03416D21819A129004F3563 /* ZANode.m */; };
+		D07E9376181B951D0051197E /* Ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07E9372181B951D0051197E /* Ipad.storyboard */; };
+		D07E9377181B951D0051197E /* Iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07E9374181B951D0051197E /* Iphone.storyboard */; };
+		D07E9379181B96620051197E /* zombie-arcade-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D07E9378181B96620051197E /* zombie-arcade-Info.plist */; };
+		D085911418139A9000C1CAC5 /* tiles.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D085911318139A9000C1CAC5 /* tiles.atlas */; };
+		D089AC3D180DDF9500BCB105 /* ZACharacherSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D089AC3C180DDF9500BCB105 /* ZACharacherSpriteNode.m */; };
+		D098E6B3181B1A5800940135 /* skeleton_attack_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E693181B1A5800940135 /* skeleton_attack_east.atlas */; };
+		D098E6B4181B1A5800940135 /* skeleton_attack_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E694181B1A5800940135 /* skeleton_attack_north.atlas */; };
+		D098E6B5181B1A5800940135 /* skeleton_attack_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E695181B1A5800940135 /* skeleton_attack_northeast.atlas */; };
+		D098E6B6181B1A5800940135 /* skeleton_attack_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E696181B1A5800940135 /* skeleton_attack_northwest.atlas */; };
+		D098E6B7181B1A5800940135 /* skeleton_attack_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E697181B1A5800940135 /* skeleton_attack_south.atlas */; };
+		D098E6B8181B1A5800940135 /* skeleton_attack_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E698181B1A5800940135 /* skeleton_attack_southeast.atlas */; };
+		D098E6B9181B1A5800940135 /* skeleton_attack_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E699181B1A5800940135 /* skeleton_attack_southwest.atlas */; };
+		D098E6BA181B1A5800940135 /* skeleton_attack_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E69A181B1A5800940135 /* skeleton_attack_west.atlas */; };
+		D098E6BB181B1A5800940135 /* skeleton_die_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E69B181B1A5800940135 /* skeleton_die_east.atlas */; };
+		D098E6BC181B1A5800940135 /* skeleton_die_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E69C181B1A5800940135 /* skeleton_die_north.atlas */; };
+		D098E6BD181B1A5800940135 /* skeleton_die_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E69D181B1A5800940135 /* skeleton_die_northeast.atlas */; };
+		D098E6BE181B1A5800940135 /* skeleton_die_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E69E181B1A5800940135 /* skeleton_die_northwest.atlas */; };
+		D098E6BF181B1A5800940135 /* skeleton_die_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E69F181B1A5800940135 /* skeleton_die_south.atlas */; };
+		D098E6C0181B1A5800940135 /* skeleton_die_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6A0181B1A5800940135 /* skeleton_die_southeast.atlas */; };
+		D098E6C1181B1A5800940135 /* skeleton_die_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6A1181B1A5800940135 /* skeleton_die_southwest.atlas */; };
+		D098E6C2181B1A5800940135 /* skeleton_die_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6A2181B1A5800940135 /* skeleton_die_west.atlas */; };
+		D098E6CB181B1A5800940135 /* skeleton_walk_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6AB181B1A5800940135 /* skeleton_walk_east.atlas */; };
+		D098E6CC181B1A5800940135 /* skeleton_walk_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6AC181B1A5800940135 /* skeleton_walk_north.atlas */; };
+		D098E6CD181B1A5800940135 /* skeleton_walk_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6AD181B1A5800940135 /* skeleton_walk_northeast.atlas */; };
+		D098E6CE181B1A5800940135 /* skeleton_walk_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6AE181B1A5800940135 /* skeleton_walk_northwest.atlas */; };
+		D098E6CF181B1A5800940135 /* skeleton_walk_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6AF181B1A5800940135 /* skeleton_walk_south.atlas */; };
+		D098E6D0181B1A5800940135 /* skeleton_walk_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6B0181B1A5800940135 /* skeleton_walk_southeast.atlas */; };
+		D098E6D1181B1A5800940135 /* skeleton_walk_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6B1181B1A5800940135 /* skeleton_walk_southwest.atlas */; };
+		D098E6D2181B1A5800940135 /* skeleton_walk_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6B2181B1A5800940135 /* skeleton_walk_west.atlas */; };
+		D098E6DD181B1C5600940135 /* ZAEnemySpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D098E6DC181B1C5600940135 /* ZAEnemySpriteNode.m */; };
+		D098E6DE181B1F8100940135 /* skeleton_critdie.caf in Resources */ = {isa = PBXBuildFile; fileRef = D098E6D3181B1B2D00940135 /* skeleton_critdie.caf */; };
+		D098E6DF181B1F8100940135 /* skeleton_die.caf in Resources */ = {isa = PBXBuildFile; fileRef = D098E6D4181B1B2D00940135 /* skeleton_die.caf */; };
+		D098E6E0181B1F8100940135 /* skeleton_hit.caf in Resources */ = {isa = PBXBuildFile; fileRef = D098E6D5181B1B2D00940135 /* skeleton_hit.caf */; };
+		D098E6E1181B1F8100940135 /* skeleton_ment.caf in Resources */ = {isa = PBXBuildFile; fileRef = D098E6D6181B1B2D00940135 /* skeleton_ment.caf */; };
+		D098E6E2181B1F8100940135 /* skeleton_phys.caf in Resources */ = {isa = PBXBuildFile; fileRef = D098E6D7181B1B2D00940135 /* skeleton_phys.caf */; };
+		D098E6E6181B201700940135 /* ZASkeletonSpiteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D098E6E5181B201700940135 /* ZASkeletonSpiteNode.m */; };
+		D098E6E9181B407100940135 /* ZAGoblinSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D098E6E8181B407100940135 /* ZAGoblinSpriteNode.m */; };
+		D098E703181B425E00940135 /* goblin_attack_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6EB181B425E00940135 /* goblin_attack_east.atlas */; };
+		D098E704181B425E00940135 /* goblin_attack_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6EC181B425E00940135 /* goblin_attack_north.atlas */; };
+		D098E705181B425E00940135 /* goblin_attack_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6ED181B425E00940135 /* goblin_attack_northeast.atlas */; };
+		D098E706181B425E00940135 /* goblin_attack_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6EE181B425E00940135 /* goblin_attack_northwest.atlas */; };
+		D098E707181B425E00940135 /* goblin_attack_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6EF181B425E00940135 /* goblin_attack_south.atlas */; };
+		D098E708181B425E00940135 /* goblin_attack_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6F0181B425E00940135 /* goblin_attack_southeast.atlas */; };
+		D098E709181B425E00940135 /* goblin_attack_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6F1181B425E00940135 /* goblin_attack_southwest.atlas */; };
+		D098E70A181B425E00940135 /* goblin_attack_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6F2181B425E00940135 /* goblin_attack_west.atlas */; };
+		D098E70B181B425E00940135 /* goblin_die_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6F3181B425E00940135 /* goblin_die_east.atlas */; };
+		D098E70C181B425E00940135 /* goblin_die_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6F4181B425E00940135 /* goblin_die_north.atlas */; };
+		D098E70D181B425E00940135 /* goblin_die_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6F5181B425E00940135 /* goblin_die_northeast.atlas */; };
+		D098E70E181B425E00940135 /* goblin_die_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6F6181B425E00940135 /* goblin_die_northwest.atlas */; };
+		D098E70F181B425E00940135 /* goblin_die_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6F7181B425E00940135 /* goblin_die_south.atlas */; };
+		D098E710181B425E00940135 /* goblin_die_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6F8181B425E00940135 /* goblin_die_southeast.atlas */; };
+		D098E711181B425E00940135 /* goblin_die_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6F9181B425E00940135 /* goblin_die_southwest.atlas */; };
+		D098E712181B425E00940135 /* goblin_die_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6FA181B425E00940135 /* goblin_die_west.atlas */; };
+		D098E713181B425E00940135 /* goblin_walk_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6FB181B425E00940135 /* goblin_walk_east.atlas */; };
+		D098E714181B425E00940135 /* goblin_walk_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6FC181B425E00940135 /* goblin_walk_north.atlas */; };
+		D098E715181B425E00940135 /* goblin_walk_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6FD181B425E00940135 /* goblin_walk_northeast.atlas */; };
+		D098E716181B425E00940135 /* goblin_walk_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6FE181B425E00940135 /* goblin_walk_northwest.atlas */; };
+		D098E717181B425E00940135 /* goblin_walk_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E6FF181B425E00940135 /* goblin_walk_south.atlas */; };
+		D098E718181B425E00940135 /* goblin_walk_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E700181B425E00940135 /* goblin_walk_southeast.atlas */; };
+		D098E719181B425E00940135 /* goblin_walk_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E701181B425E00940135 /* goblin_walk_southwest.atlas */; };
+		D098E71A181B425E00940135 /* goblin_walk_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D098E702181B425E00940135 /* goblin_walk_west.atlas */; };
+		D098E720181B461900940135 /* goblin_critdie.caf in Resources */ = {isa = PBXBuildFile; fileRef = D098E71B181B45EF00940135 /* goblin_critdie.caf */; };
+		D098E721181B461900940135 /* goblin_die.caf in Resources */ = {isa = PBXBuildFile; fileRef = D098E71C181B45EF00940135 /* goblin_die.caf */; };
+		D098E722181B461900940135 /* goblin_hit.caf in Resources */ = {isa = PBXBuildFile; fileRef = D098E71D181B45EF00940135 /* goblin_hit.caf */; };
+		D098E723181B461900940135 /* goblin_ment.caf in Resources */ = {isa = PBXBuildFile; fileRef = D098E71E181B45EF00940135 /* goblin_ment.caf */; };
+		D098E724181B461900940135 /* goblin_phys.caf in Resources */ = {isa = PBXBuildFile; fileRef = D098E71F181B45EF00940135 /* goblin_phys.caf */; };
+		D0AA006A180A4D5A00CCF93D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA0069180A4D5A00CCF93D /* Foundation.framework */; };
+		D0AA006C180A4D5A00CCF93D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */; };
+		D0AA006E180A4D5A00CCF93D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006D180A4D5A00CCF93D /* UIKit.framework */; };
+		D0AA0070180A4D5A00CCF93D /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006F180A4D5A00CCF93D /* SpriteKit.framework */; };
+		D0AA0076180A4D5A00CCF93D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0074180A4D5A00CCF93D /* InfoPlist.strings */; };
+		D0AA0078180A4D5A00CCF93D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA0077180A4D5A00CCF93D /* main.m */; };
+		D0AA007C180A4D5A00CCF93D /* ZAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA007B180A4D5A00CCF93D /* ZAAppDelegate.m */; };
+		D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA0081180A4D5A00CCF93D /* ZAViewController.m */; };
+		D0AA0085180A4D5A00CCF93D /* ZAMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */; };
+		D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0088180A4D5A00CCF93D /* Images.xcassets */; };
+		D0AA0090180A4D5A00CCF93D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA008F180A4D5A00CCF93D /* XCTest.framework */; };
+		D0AA0091180A4D5A00CCF93D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA0069180A4D5A00CCF93D /* Foundation.framework */; };
+		D0AA0092180A4D5A00CCF93D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AA006D180A4D5A00CCF93D /* UIKit.framework */; };
+		D0AA009A180A4D5A00CCF93D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */; };
+		D0AA009C180A4D5A00CCF93D /* zombie_arcadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA009B180A4D5A00CCF93D /* zombie_arcadeTests.m */; };
+		D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */; };
+		D0AD0A6F1818825F00CA98F1 /* ZAButtonSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AD0A6E1818825F00CA98F1 /* ZAButtonSpriteNode.m */; };
+		D0C7B5D7180EFF72007D8F41 /* ZACharachterAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */; };
+		D0DA04B5181B87BB00DC5419 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DA04AF181B87BB00DC5419 /* libTestFlight.a */; };
+		D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */; };
+		D0F65C5B1812FF9F0071172D /* woman_die_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C431812FF9F0071172D /* woman_die_east.atlas */; };
+		D0F65C5C1812FF9F0071172D /* woman_die_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C441812FF9F0071172D /* woman_die_north.atlas */; };
+		D0F65C5D1812FF9F0071172D /* woman_die_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C451812FF9F0071172D /* woman_die_northeast.atlas */; };
+		D0F65C5E1812FF9F0071172D /* woman_die_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C461812FF9F0071172D /* woman_die_northwest.atlas */; };
+		D0F65C5F1812FF9F0071172D /* woman_die_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C471812FF9F0071172D /* woman_die_south.atlas */; };
+		D0F65C601812FF9F0071172D /* woman_die_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C481812FF9F0071172D /* woman_die_southeast.atlas */; };
+		D0F65C611812FF9F0071172D /* woman_die_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C491812FF9F0071172D /* woman_die_southwest.atlas */; };
+		D0F65C621812FF9F0071172D /* woman_die_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C4A1812FF9F0071172D /* woman_die_west.atlas */; };
+		D0F65C631812FF9F0071172D /* woman_stance_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C4B1812FF9F0071172D /* woman_stance_east.atlas */; };
+		D0F65C641812FF9F0071172D /* woman_stance_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C4C1812FF9F0071172D /* woman_stance_north.atlas */; };
+		D0F65C651812FF9F0071172D /* woman_stance_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C4D1812FF9F0071172D /* woman_stance_northeast.atlas */; };
+		D0F65C661812FF9F0071172D /* woman_stance_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C4E1812FF9F0071172D /* woman_stance_northwest.atlas */; };
+		D0F65C671812FF9F0071172D /* woman_stance_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C4F1812FF9F0071172D /* woman_stance_south.atlas */; };
+		D0F65C681812FF9F0071172D /* woman_stance_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C501812FF9F0071172D /* woman_stance_southeast.atlas */; };
+		D0F65C691812FF9F0071172D /* woman_stance_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C511812FF9F0071172D /* woman_stance_southwest.atlas */; };
+		D0F65C6A1812FF9F0071172D /* woman_stance_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C521812FF9F0071172D /* woman_stance_west.atlas */; };
+		D0F65C6B1812FF9F0071172D /* woman_walk_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C531812FF9F0071172D /* woman_walk_east.atlas */; };
+		D0F65C6C1812FF9F0071172D /* woman_walk_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C541812FF9F0071172D /* woman_walk_north.atlas */; };
+		D0F65C6D1812FF9F0071172D /* woman_walk_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C551812FF9F0071172D /* woman_walk_northeast.atlas */; };
+		D0F65C6E1812FF9F0071172D /* woman_walk_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C561812FF9F0071172D /* woman_walk_northwest.atlas */; };
+		D0F65C6F1812FF9F0071172D /* woman_walk_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C571812FF9F0071172D /* woman_walk_south.atlas */; };
+		D0F65C701812FF9F0071172D /* woman_walk_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C581812FF9F0071172D /* woman_walk_southeast.atlas */; };
+		D0F65C711812FF9F0071172D /* woman_walk_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C591812FF9F0071172D /* woman_walk_southwest.atlas */; };
+		D0F65C721812FF9F0071172D /* woman_walk_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C5A1812FF9F0071172D /* woman_walk_west.atlas */; };
+		D0F65C8C1812FFAC0071172D /* zombie_attack_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C741812FFAC0071172D /* zombie_attack_east.atlas */; };
+		D0F65C8D1812FFAC0071172D /* zombie_attack_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C751812FFAC0071172D /* zombie_attack_north.atlas */; };
+		D0F65C8E1812FFAC0071172D /* zombie_attack_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C761812FFAC0071172D /* zombie_attack_northeast.atlas */; };
+		D0F65C8F1812FFAC0071172D /* zombie_attack_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C771812FFAC0071172D /* zombie_attack_northwest.atlas */; };
+		D0F65C901812FFAC0071172D /* zombie_attack_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C781812FFAC0071172D /* zombie_attack_south.atlas */; };
+		D0F65C911812FFAC0071172D /* zombie_attack_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C791812FFAC0071172D /* zombie_attack_southeast.atlas */; };
+		D0F65C921812FFAC0071172D /* zombie_attack_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C7A1812FFAC0071172D /* zombie_attack_southwest.atlas */; };
+		D0F65C931812FFAC0071172D /* zombie_attack_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C7B1812FFAC0071172D /* zombie_attack_west.atlas */; };
+		D0F65C941812FFAC0071172D /* zombie_die_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C7C1812FFAC0071172D /* zombie_die_east.atlas */; };
+		D0F65C951812FFAC0071172D /* zombie_die_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C7D1812FFAC0071172D /* zombie_die_north.atlas */; };
+		D0F65C961812FFAC0071172D /* zombie_die_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C7E1812FFAC0071172D /* zombie_die_northeast.atlas */; };
+		D0F65C971812FFAC0071172D /* zombie_die_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C7F1812FFAC0071172D /* zombie_die_northwest.atlas */; };
+		D0F65C981812FFAC0071172D /* zombie_die_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C801812FFAC0071172D /* zombie_die_south.atlas */; };
+		D0F65C991812FFAC0071172D /* zombie_die_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C811812FFAC0071172D /* zombie_die_southeast.atlas */; };
+		D0F65C9A1812FFAC0071172D /* zombie_die_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C821812FFAC0071172D /* zombie_die_southwest.atlas */; };
+		D0F65C9B1812FFAC0071172D /* zombie_die_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C831812FFAC0071172D /* zombie_die_west.atlas */; };
+		D0F65C9C1812FFAC0071172D /* zombie_walk_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C841812FFAC0071172D /* zombie_walk_east.atlas */; };
+		D0F65C9D1812FFAC0071172D /* zombie_walk_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C851812FFAC0071172D /* zombie_walk_north.atlas */; };
+		D0F65C9E1812FFAC0071172D /* zombie_walk_northeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C861812FFAC0071172D /* zombie_walk_northeast.atlas */; };
+		D0F65C9F1812FFAC0071172D /* zombie_walk_northwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C871812FFAC0071172D /* zombie_walk_northwest.atlas */; };
+		D0F65CA01812FFAC0071172D /* zombie_walk_south.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C881812FFAC0071172D /* zombie_walk_south.atlas */; };
+		D0F65CA11812FFAC0071172D /* zombie_walk_southeast.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C891812FFAC0071172D /* zombie_walk_southeast.atlas */; };
+		D0F65CA21812FFAC0071172D /* zombie_walk_southwest.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C8A1812FFAC0071172D /* zombie_walk_southwest.atlas */; };
+		D0F65CA31812FFAC0071172D /* zombie_walk_west.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C8B1812FFAC0071172D /* zombie_walk_west.atlas */; };
+		D0F7108C181B850300A36015 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F7108B181B850300A36015 /* libz.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0AA0093180A4D5A00CCF93D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0AA005E180A4D5A00CCF93D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0AA0065180A4D5A00CCF93D;
+			remoteInfo = "zombie-arcade";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A66B80E618172834006C756E /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet.png; path = "zombie-arcade/Images.xcassets/bullet.imageset/bullet.png"; sourceTree = "<group>"; };
+		D0340CE7181AF02200A34CBA /* warcry.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = warcry.caf; path = cafs/warcry.caf; sourceTree = "<group>"; };
+		D0340CE8181AF03000A34CBA /* female_die.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = female_die.caf; path = cafs/female_die.caf; sourceTree = "<group>"; };
+		D0340CE9181AF05A00A34CBA /* level_up.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = level_up.caf; path = cafs/level_up.caf; sourceTree = "<group>"; };
+		D0340CEA181AF05A00A34CBA /* shoot.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = shoot.caf; path = cafs/shoot.caf; sourceTree = "<group>"; };
+		D0340CEB181AF05A00A34CBA /* zombie_critdie.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = zombie_critdie.caf; path = cafs/zombie_critdie.caf; sourceTree = "<group>"; };
+		D0340CEC181AF05A00A34CBA /* zombie_die.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = zombie_die.caf; path = cafs/zombie_die.caf; sourceTree = "<group>"; };
+		D0340CED181AF05A00A34CBA /* zombie_hit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = zombie_hit.caf; path = cafs/zombie_hit.caf; sourceTree = "<group>"; };
+		D0340CEE181AF05A00A34CBA /* zombie_ment.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = zombie_ment.caf; path = cafs/zombie_ment.caf; sourceTree = "<group>"; };
+		D0340CEF181AF05A00A34CBA /* zombie_phys.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = zombie_phys.caf; path = cafs/zombie_phys.caf; sourceTree = "<group>"; };
+		D03416CE1819A11E004F3563 /* ZABulletSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZABulletSpriteNode.h; path = "zombie-arcade/ZABulletSpriteNode.h"; sourceTree = "<group>"; };
+		D03416CF1819A11E004F3563 /* ZABulletSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZABulletSpriteNode.m; path = "zombie-arcade/ZABulletSpriteNode.m"; sourceTree = "<group>"; };
+		D03416D11819A129004F3563 /* ZANode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZANode.h; path = "zombie-arcade/ZANode.h"; sourceTree = "<group>"; };
+		D03416D21819A129004F3563 /* ZANode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZANode.m; path = "zombie-arcade/ZANode.m"; sourceTree = "<group>"; };
+		D07DED3D1812516C0070E750 /* ZAHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZAHelpers.h; path = "zombie-arcade/ZAHelpers.h"; sourceTree = "<group>"; };
+		D07E9373181B951D0051197E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "zombie-arcade/Base.lproj/Ipad.storyboard"; sourceTree = "<group>"; };
+		D07E9375181B951D0051197E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "zombie-arcade/Base.lproj/Iphone.storyboard"; sourceTree = "<group>"; };
+		D07E9378181B96620051197E /* zombie-arcade-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "zombie-arcade-Info.plist"; sourceTree = "<group>"; };
+		D085911318139A9000C1CAC5 /* tiles.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = tiles.atlas; path = "zombie-arcade/Resources/world/tiles.atlas"; sourceTree = "<group>"; };
+		D089AC3B180DDF9500BCB105 /* ZACharacherSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZACharacherSpriteNode.h; path = "zombie-arcade/ZACharacherSpriteNode.h"; sourceTree = "<group>"; };
+		D089AC3C180DDF9500BCB105 /* ZACharacherSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZACharacherSpriteNode.m; path = "zombie-arcade/ZACharacherSpriteNode.m"; sourceTree = "<group>"; };
+		D098E693181B1A5800940135 /* skeleton_attack_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_attack_east.atlas; sourceTree = "<group>"; };
+		D098E694181B1A5800940135 /* skeleton_attack_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_attack_north.atlas; sourceTree = "<group>"; };
+		D098E695181B1A5800940135 /* skeleton_attack_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_attack_northeast.atlas; sourceTree = "<group>"; };
+		D098E696181B1A5800940135 /* skeleton_attack_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_attack_northwest.atlas; sourceTree = "<group>"; };
+		D098E697181B1A5800940135 /* skeleton_attack_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_attack_south.atlas; sourceTree = "<group>"; };
+		D098E698181B1A5800940135 /* skeleton_attack_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_attack_southeast.atlas; sourceTree = "<group>"; };
+		D098E699181B1A5800940135 /* skeleton_attack_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_attack_southwest.atlas; sourceTree = "<group>"; };
+		D098E69A181B1A5800940135 /* skeleton_attack_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_attack_west.atlas; sourceTree = "<group>"; };
+		D098E69B181B1A5800940135 /* skeleton_die_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_die_east.atlas; sourceTree = "<group>"; };
+		D098E69C181B1A5800940135 /* skeleton_die_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_die_north.atlas; sourceTree = "<group>"; };
+		D098E69D181B1A5800940135 /* skeleton_die_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_die_northeast.atlas; sourceTree = "<group>"; };
+		D098E69E181B1A5800940135 /* skeleton_die_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_die_northwest.atlas; sourceTree = "<group>"; };
+		D098E69F181B1A5800940135 /* skeleton_die_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_die_south.atlas; sourceTree = "<group>"; };
+		D098E6A0181B1A5800940135 /* skeleton_die_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_die_southeast.atlas; sourceTree = "<group>"; };
+		D098E6A1181B1A5800940135 /* skeleton_die_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_die_southwest.atlas; sourceTree = "<group>"; };
+		D098E6A2181B1A5800940135 /* skeleton_die_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_die_west.atlas; sourceTree = "<group>"; };
+		D098E6A3181B1A5800940135 /* skeleton_stance_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_east.atlas; sourceTree = "<group>"; };
+		D098E6A4181B1A5800940135 /* skeleton_stance_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_north.atlas; sourceTree = "<group>"; };
+		D098E6A5181B1A5800940135 /* skeleton_stance_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_northeast.atlas; sourceTree = "<group>"; };
+		D098E6A6181B1A5800940135 /* skeleton_stance_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_northwest.atlas; sourceTree = "<group>"; };
+		D098E6A7181B1A5800940135 /* skeleton_stance_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_south.atlas; sourceTree = "<group>"; };
+		D098E6A8181B1A5800940135 /* skeleton_stance_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_southeast.atlas; sourceTree = "<group>"; };
+		D098E6A9181B1A5800940135 /* skeleton_stance_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_southwest.atlas; sourceTree = "<group>"; };
+		D098E6AA181B1A5800940135 /* skeleton_stance_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_west.atlas; sourceTree = "<group>"; };
+		D098E6AB181B1A5800940135 /* skeleton_walk_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_walk_east.atlas; sourceTree = "<group>"; };
+		D098E6AC181B1A5800940135 /* skeleton_walk_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_walk_north.atlas; sourceTree = "<group>"; };
+		D098E6AD181B1A5800940135 /* skeleton_walk_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_walk_northeast.atlas; sourceTree = "<group>"; };
+		D098E6AE181B1A5800940135 /* skeleton_walk_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_walk_northwest.atlas; sourceTree = "<group>"; };
+		D098E6AF181B1A5800940135 /* skeleton_walk_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_walk_south.atlas; sourceTree = "<group>"; };
+		D098E6B0181B1A5800940135 /* skeleton_walk_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_walk_southeast.atlas; sourceTree = "<group>"; };
+		D098E6B1181B1A5800940135 /* skeleton_walk_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_walk_southwest.atlas; sourceTree = "<group>"; };
+		D098E6B2181B1A5800940135 /* skeleton_walk_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_walk_west.atlas; sourceTree = "<group>"; };
+		D098E6D3181B1B2D00940135 /* skeleton_critdie.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = skeleton_critdie.caf; path = cafs/skeleton_critdie.caf; sourceTree = "<group>"; };
+		D098E6D4181B1B2D00940135 /* skeleton_die.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = skeleton_die.caf; path = cafs/skeleton_die.caf; sourceTree = "<group>"; };
+		D098E6D5181B1B2D00940135 /* skeleton_hit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = skeleton_hit.caf; path = cafs/skeleton_hit.caf; sourceTree = "<group>"; };
+		D098E6D6181B1B2D00940135 /* skeleton_ment.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = skeleton_ment.caf; path = cafs/skeleton_ment.caf; sourceTree = "<group>"; };
+		D098E6D7181B1B2D00940135 /* skeleton_phys.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = skeleton_phys.caf; path = cafs/skeleton_phys.caf; sourceTree = "<group>"; };
+		D098E6DB181B1C5600940135 /* ZAEnemySpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAEnemySpriteNode.h; path = "zombie-arcade/ZAEnemySpriteNode.h"; sourceTree = "<group>"; };
+		D098E6DC181B1C5600940135 /* ZAEnemySpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAEnemySpriteNode.m; path = "zombie-arcade/ZAEnemySpriteNode.m"; sourceTree = "<group>"; };
+		D098E6E4181B201700940135 /* ZASkeletonSpiteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZASkeletonSpiteNode.h; path = "zombie-arcade/ZASkeletonSpiteNode.h"; sourceTree = "<group>"; };
+		D098E6E5181B201700940135 /* ZASkeletonSpiteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZASkeletonSpiteNode.m; path = "zombie-arcade/ZASkeletonSpiteNode.m"; sourceTree = "<group>"; };
+		D098E6E7181B407100940135 /* ZAGoblinSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAGoblinSpriteNode.h; path = "zombie-arcade/ZAGoblinSpriteNode.h"; sourceTree = "<group>"; };
+		D098E6E8181B407100940135 /* ZAGoblinSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAGoblinSpriteNode.m; path = "zombie-arcade/ZAGoblinSpriteNode.m"; sourceTree = "<group>"; };
+		D098E6EB181B425E00940135 /* goblin_attack_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_attack_east.atlas; sourceTree = "<group>"; };
+		D098E6EC181B425E00940135 /* goblin_attack_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_attack_north.atlas; sourceTree = "<group>"; };
+		D098E6ED181B425E00940135 /* goblin_attack_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_attack_northeast.atlas; sourceTree = "<group>"; };
+		D098E6EE181B425E00940135 /* goblin_attack_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_attack_northwest.atlas; sourceTree = "<group>"; };
+		D098E6EF181B425E00940135 /* goblin_attack_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_attack_south.atlas; sourceTree = "<group>"; };
+		D098E6F0181B425E00940135 /* goblin_attack_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_attack_southeast.atlas; sourceTree = "<group>"; };
+		D098E6F1181B425E00940135 /* goblin_attack_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_attack_southwest.atlas; sourceTree = "<group>"; };
+		D098E6F2181B425E00940135 /* goblin_attack_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_attack_west.atlas; sourceTree = "<group>"; };
+		D098E6F3181B425E00940135 /* goblin_die_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_die_east.atlas; sourceTree = "<group>"; };
+		D098E6F4181B425E00940135 /* goblin_die_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_die_north.atlas; sourceTree = "<group>"; };
+		D098E6F5181B425E00940135 /* goblin_die_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_die_northeast.atlas; sourceTree = "<group>"; };
+		D098E6F6181B425E00940135 /* goblin_die_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_die_northwest.atlas; sourceTree = "<group>"; };
+		D098E6F7181B425E00940135 /* goblin_die_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_die_south.atlas; sourceTree = "<group>"; };
+		D098E6F8181B425E00940135 /* goblin_die_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_die_southeast.atlas; sourceTree = "<group>"; };
+		D098E6F9181B425E00940135 /* goblin_die_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_die_southwest.atlas; sourceTree = "<group>"; };
+		D098E6FA181B425E00940135 /* goblin_die_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_die_west.atlas; sourceTree = "<group>"; };
+		D098E6FB181B425E00940135 /* goblin_walk_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_walk_east.atlas; sourceTree = "<group>"; };
+		D098E6FC181B425E00940135 /* goblin_walk_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_walk_north.atlas; sourceTree = "<group>"; };
+		D098E6FD181B425E00940135 /* goblin_walk_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_walk_northeast.atlas; sourceTree = "<group>"; };
+		D098E6FE181B425E00940135 /* goblin_walk_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_walk_northwest.atlas; sourceTree = "<group>"; };
+		D098E6FF181B425E00940135 /* goblin_walk_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_walk_south.atlas; sourceTree = "<group>"; };
+		D098E700181B425E00940135 /* goblin_walk_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_walk_southeast.atlas; sourceTree = "<group>"; };
+		D098E701181B425E00940135 /* goblin_walk_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_walk_southwest.atlas; sourceTree = "<group>"; };
+		D098E702181B425E00940135 /* goblin_walk_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = goblin_walk_west.atlas; sourceTree = "<group>"; };
+		D098E71B181B45EF00940135 /* goblin_critdie.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = goblin_critdie.caf; path = cafs/goblin_critdie.caf; sourceTree = "<group>"; };
+		D098E71C181B45EF00940135 /* goblin_die.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = goblin_die.caf; path = cafs/goblin_die.caf; sourceTree = "<group>"; };
+		D098E71D181B45EF00940135 /* goblin_hit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = goblin_hit.caf; path = cafs/goblin_hit.caf; sourceTree = "<group>"; };
+		D098E71E181B45EF00940135 /* goblin_ment.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = goblin_ment.caf; path = cafs/goblin_ment.caf; sourceTree = "<group>"; };
+		D098E71F181B45EF00940135 /* goblin_phys.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = goblin_phys.caf; path = cafs/goblin_phys.caf; sourceTree = "<group>"; };
+		D0AA0066180A4D5A00CCF93D /* zombie-arcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zombie-arcade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0AA0069180A4D5A00CCF93D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0AA006D180A4D5A00CCF93D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0AA006F180A4D5A00CCF93D /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		D0AA0075180A4D5A00CCF93D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0AA0077180A4D5A00CCF93D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0AA0079180A4D5A00CCF93D /* zombie-arcade-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zombie-arcade-Prefix.pch"; sourceTree = "<group>"; };
+		D0AA007A180A4D5A00CCF93D /* ZAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZAAppDelegate.h; sourceTree = "<group>"; };
+		D0AA007B180A4D5A00CCF93D /* ZAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZAAppDelegate.m; sourceTree = "<group>"; };
+		D0AA0080180A4D5A00CCF93D /* ZAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZAViewController.h; path = "zombie-arcade/ZAViewController.h"; sourceTree = "<group>"; };
+		D0AA0081180A4D5A00CCF93D /* ZAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZAViewController.m; path = "zombie-arcade/ZAViewController.m"; sourceTree = "<group>"; };
+		D0AA0083180A4D5A00CCF93D /* ZAMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZAMyScene.h; path = "zombie-arcade/ZAMyScene.h"; sourceTree = "<group>"; };
+		D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZAMyScene.m; path = "zombie-arcade/ZAMyScene.m"; sourceTree = "<group>"; };
+		D0AA0088180A4D5A00CCF93D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "zombie-arcade/Images.xcassets"; sourceTree = "<group>"; };
+		D0AA008E180A4D5A00CCF93D /* zombie-arcadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zombie-arcadeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0AA008F180A4D5A00CCF93D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D0AA0097180A4D5A00CCF93D /* zombie-arcadeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "zombie-arcadeTests-Info.plist"; sourceTree = "<group>"; };
+		D0AA0099180A4D5A00CCF93D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0AA009B180A4D5A00CCF93D /* zombie_arcadeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zombie_arcadeTests.m; sourceTree = "<group>"; };
+		D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAZombieSpriteNode.h; path = "zombie-arcade/ZAZombieSpriteNode.h"; sourceTree = "<group>"; };
+		D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAZombieSpriteNode.m; path = "zombie-arcade/ZAZombieSpriteNode.m"; sourceTree = "<group>"; };
+		D0AD0A6D1818825F00CA98F1 /* ZAButtonSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAButtonSpriteNode.h; path = "zombie-arcade/ZAButtonSpriteNode.h"; sourceTree = "<group>"; };
+		D0AD0A6E1818825F00CA98F1 /* ZAButtonSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAButtonSpriteNode.m; path = "zombie-arcade/ZAButtonSpriteNode.m"; sourceTree = "<group>"; };
+		D0C7B5D1180EE90F007D8F41 /* CGPointF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGPointF.h; path = "zombie-arcade/CGPointF.h"; sourceTree = "<group>"; };
+		D0C7B5D5180EFF72007D8F41 /* ZACharachterAnimationFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZACharachterAnimationFrames.h; path = "zombie-arcade/ZACharachterAnimationFrames.h"; sourceTree = "<group>"; };
+		D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZACharachterAnimationFrames.m; path = "zombie-arcade/ZACharachterAnimationFrames.m"; sourceTree = "<group>"; };
+		D0DA04AF181B87BB00DC5419 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		D0DA04B0181B87BB00DC5419 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		D0DA04B1181B87BB00DC5419 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		D0DA04B2181B87BB00DC5419 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		D0DA04B3181B87BB00DC5419 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		D0DA04B4181B87BB00DC5419 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		D0DD0224180CC04900EAFABB /* ZAHeroSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAHeroSpriteNode.h; path = "zombie-arcade/ZAHeroSpriteNode.h"; sourceTree = "<group>"; };
+		D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAHeroSpriteNode.m; path = "zombie-arcade/ZAHeroSpriteNode.m"; sourceTree = "<group>"; };
+		D0F65C431812FF9F0071172D /* woman_die_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_east.atlas; sourceTree = "<group>"; };
+		D0F65C441812FF9F0071172D /* woman_die_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_north.atlas; sourceTree = "<group>"; };
+		D0F65C451812FF9F0071172D /* woman_die_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_northeast.atlas; sourceTree = "<group>"; };
+		D0F65C461812FF9F0071172D /* woman_die_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_northwest.atlas; sourceTree = "<group>"; };
+		D0F65C471812FF9F0071172D /* woman_die_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_south.atlas; sourceTree = "<group>"; };
+		D0F65C481812FF9F0071172D /* woman_die_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_southeast.atlas; sourceTree = "<group>"; };
+		D0F65C491812FF9F0071172D /* woman_die_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_southwest.atlas; sourceTree = "<group>"; };
+		D0F65C4A1812FF9F0071172D /* woman_die_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_die_west.atlas; sourceTree = "<group>"; };
+		D0F65C4B1812FF9F0071172D /* woman_stance_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_east.atlas; sourceTree = "<group>"; };
+		D0F65C4C1812FF9F0071172D /* woman_stance_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_north.atlas; sourceTree = "<group>"; };
+		D0F65C4D1812FF9F0071172D /* woman_stance_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_northeast.atlas; sourceTree = "<group>"; };
+		D0F65C4E1812FF9F0071172D /* woman_stance_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_northwest.atlas; sourceTree = "<group>"; };
+		D0F65C4F1812FF9F0071172D /* woman_stance_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_south.atlas; sourceTree = "<group>"; };
+		D0F65C501812FF9F0071172D /* woman_stance_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_southeast.atlas; sourceTree = "<group>"; };
+		D0F65C511812FF9F0071172D /* woman_stance_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_southwest.atlas; sourceTree = "<group>"; };
+		D0F65C521812FF9F0071172D /* woman_stance_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_stance_west.atlas; sourceTree = "<group>"; };
+		D0F65C531812FF9F0071172D /* woman_walk_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_east.atlas; sourceTree = "<group>"; };
+		D0F65C541812FF9F0071172D /* woman_walk_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_north.atlas; sourceTree = "<group>"; };
+		D0F65C551812FF9F0071172D /* woman_walk_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_northeast.atlas; sourceTree = "<group>"; };
+		D0F65C561812FF9F0071172D /* woman_walk_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_northwest.atlas; sourceTree = "<group>"; };
+		D0F65C571812FF9F0071172D /* woman_walk_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_south.atlas; sourceTree = "<group>"; };
+		D0F65C581812FF9F0071172D /* woman_walk_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_southeast.atlas; sourceTree = "<group>"; };
+		D0F65C591812FF9F0071172D /* woman_walk_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_southwest.atlas; sourceTree = "<group>"; };
+		D0F65C5A1812FF9F0071172D /* woman_walk_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = woman_walk_west.atlas; sourceTree = "<group>"; };
+		D0F65C741812FFAC0071172D /* zombie_attack_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_east.atlas; sourceTree = "<group>"; };
+		D0F65C751812FFAC0071172D /* zombie_attack_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_north.atlas; sourceTree = "<group>"; };
+		D0F65C761812FFAC0071172D /* zombie_attack_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_northeast.atlas; sourceTree = "<group>"; };
+		D0F65C771812FFAC0071172D /* zombie_attack_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_northwest.atlas; sourceTree = "<group>"; };
+		D0F65C781812FFAC0071172D /* zombie_attack_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_south.atlas; sourceTree = "<group>"; };
+		D0F65C791812FFAC0071172D /* zombie_attack_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_southeast.atlas; sourceTree = "<group>"; };
+		D0F65C7A1812FFAC0071172D /* zombie_attack_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_southwest.atlas; sourceTree = "<group>"; };
+		D0F65C7B1812FFAC0071172D /* zombie_attack_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_attack_west.atlas; sourceTree = "<group>"; };
+		D0F65C7C1812FFAC0071172D /* zombie_die_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_east.atlas; sourceTree = "<group>"; };
+		D0F65C7D1812FFAC0071172D /* zombie_die_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_north.atlas; sourceTree = "<group>"; };
+		D0F65C7E1812FFAC0071172D /* zombie_die_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_northeast.atlas; sourceTree = "<group>"; };
+		D0F65C7F1812FFAC0071172D /* zombie_die_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_northwest.atlas; sourceTree = "<group>"; };
+		D0F65C801812FFAC0071172D /* zombie_die_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_south.atlas; sourceTree = "<group>"; };
+		D0F65C811812FFAC0071172D /* zombie_die_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_southeast.atlas; sourceTree = "<group>"; };
+		D0F65C821812FFAC0071172D /* zombie_die_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_southwest.atlas; sourceTree = "<group>"; };
+		D0F65C831812FFAC0071172D /* zombie_die_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_die_west.atlas; sourceTree = "<group>"; };
+		D0F65C841812FFAC0071172D /* zombie_walk_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_east.atlas; sourceTree = "<group>"; };
+		D0F65C851812FFAC0071172D /* zombie_walk_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_north.atlas; sourceTree = "<group>"; };
+		D0F65C861812FFAC0071172D /* zombie_walk_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_northeast.atlas; sourceTree = "<group>"; };
+		D0F65C871812FFAC0071172D /* zombie_walk_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_northwest.atlas; sourceTree = "<group>"; };
+		D0F65C881812FFAC0071172D /* zombie_walk_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_south.atlas; sourceTree = "<group>"; };
+		D0F65C891812FFAC0071172D /* zombie_walk_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_southeast.atlas; sourceTree = "<group>"; };
+		D0F65C8A1812FFAC0071172D /* zombie_walk_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_southwest.atlas; sourceTree = "<group>"; };
+		D0F65C8B1812FFAC0071172D /* zombie_walk_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = zombie_walk_west.atlas; sourceTree = "<group>"; };
+		D0F7108B181B850300A36015 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0AA0063180A4D5A00CCF93D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0F7108C181B850300A36015 /* libz.dylib in Frameworks */,
+				D0AA006C180A4D5A00CCF93D /* CoreGraphics.framework in Frameworks */,
+				D0AA006E180A4D5A00CCF93D /* UIKit.framework in Frameworks */,
+				D0DA04B5181B87BB00DC5419 /* libTestFlight.a in Frameworks */,
+				D0AA0070180A4D5A00CCF93D /* SpriteKit.framework in Frameworks */,
+				D0AA006A180A4D5A00CCF93D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0AA008B180A4D5A00CCF93D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0AA0090180A4D5A00CCF93D /* XCTest.framework in Frameworks */,
+				D0AA0092180A4D5A00CCF93D /* UIKit.framework in Frameworks */,
+				D0AA0091180A4D5A00CCF93D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D03416D41819C4D5004F3563 /* soundfx */ = {
+			isa = PBXGroup;
+			children = (
+				D098E71B181B45EF00940135 /* goblin_critdie.caf */,
+				D098E71C181B45EF00940135 /* goblin_die.caf */,
+				D098E71D181B45EF00940135 /* goblin_hit.caf */,
+				D098E71E181B45EF00940135 /* goblin_ment.caf */,
+				D098E71F181B45EF00940135 /* goblin_phys.caf */,
+				D0340CE7181AF02200A34CBA /* warcry.caf */,
+				D0340CE8181AF03000A34CBA /* female_die.caf */,
+				D0340CE9181AF05A00A34CBA /* level_up.caf */,
+				D0340CEA181AF05A00A34CBA /* shoot.caf */,
+				D0340CEB181AF05A00A34CBA /* zombie_critdie.caf */,
+				D0340CEC181AF05A00A34CBA /* zombie_die.caf */,
+				D0340CED181AF05A00A34CBA /* zombie_hit.caf */,
+				D0340CEE181AF05A00A34CBA /* zombie_ment.caf */,
+				D0340CEF181AF05A00A34CBA /* zombie_phys.caf */,
+				D098E6D3181B1B2D00940135 /* skeleton_critdie.caf */,
+				D098E6D4181B1B2D00940135 /* skeleton_die.caf */,
+				D098E6D5181B1B2D00940135 /* skeleton_hit.caf */,
+				D098E6D6181B1B2D00940135 /* skeleton_ment.caf */,
+				D098E6D7181B1B2D00940135 /* skeleton_phys.caf */,
+			);
+			name = soundfx;
+			path = "zombie-arcade/Resources/soundfx";
+			sourceTree = "<group>";
+		};
+		D089AC3A180DDF5100BCB105 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D089AC3B180DDF9500BCB105 /* ZACharacherSpriteNode.h */,
+				D089AC3C180DDF9500BCB105 /* ZACharacherSpriteNode.m */,
+				D098E6DB181B1C5600940135 /* ZAEnemySpriteNode.h */,
+				D098E6DC181B1C5600940135 /* ZAEnemySpriteNode.m */,
+				D098E6E4181B201700940135 /* ZASkeletonSpiteNode.h */,
+				D098E6E5181B201700940135 /* ZASkeletonSpiteNode.m */,
+				D098E6E7181B407100940135 /* ZAGoblinSpriteNode.h */,
+				D098E6E8181B407100940135 /* ZAGoblinSpriteNode.m */,
+				D0DD0224180CC04900EAFABB /* ZAHeroSpriteNode.h */,
+				D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */,
+				D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */,
+				D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */,
+				D0AD0A6D1818825F00CA98F1 /* ZAButtonSpriteNode.h */,
+				D0AD0A6E1818825F00CA98F1 /* ZAButtonSpriteNode.m */,
+				D03416CE1819A11E004F3563 /* ZABulletSpriteNode.h */,
+				D03416CF1819A11E004F3563 /* ZABulletSpriteNode.m */,
+				D03416D11819A129004F3563 /* ZANode.h */,
+				D03416D21819A129004F3563 /* ZANode.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D089AC3F180DE00F00BCB105 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D098E6EA181B425E00940135 /* goblin */,
+				D03416D41819C4D5004F3563 /* soundfx */,
+				A66B80E618172834006C756E /* bullet.png */,
+				D085911318139A9000C1CAC5 /* tiles.atlas */,
+				D098E692181B1A5800940135 /* skeleton */,
+				D0F65C731812FFAC0071172D /* zombie */,
+				D0F65C421812FF9F0071172D /* woman */,
+				D0AA0088180A4D5A00CCF93D /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D089AC40180DE03800BCB105 /* Model_Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model_Controllers;
+			sourceTree = "<group>";
+		};
+		D089AC41180DE04400BCB105 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D07E9372181B951D0051197E /* Ipad.storyboard */,
+				D07E9374181B951D0051197E /* Iphone.storyboard */,
+				D0AA0083180A4D5A00CCF93D /* ZAMyScene.h */,
+				D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D089AC42180DE04E00BCB105 /* View_Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA0080180A4D5A00CCF93D /* ZAViewController.h */,
+				D0AA0081180A4D5A00CCF93D /* ZAViewController.m */,
+			);
+			name = View_Controllers;
+			sourceTree = "<group>";
+		};
+		D098E692181B1A5800940135 /* skeleton */ = {
+			isa = PBXGroup;
+			children = (
+				D098E693181B1A5800940135 /* skeleton_attack_east.atlas */,
+				D098E694181B1A5800940135 /* skeleton_attack_north.atlas */,
+				D098E695181B1A5800940135 /* skeleton_attack_northeast.atlas */,
+				D098E696181B1A5800940135 /* skeleton_attack_northwest.atlas */,
+				D098E697181B1A5800940135 /* skeleton_attack_south.atlas */,
+				D098E698181B1A5800940135 /* skeleton_attack_southeast.atlas */,
+				D098E699181B1A5800940135 /* skeleton_attack_southwest.atlas */,
+				D098E69A181B1A5800940135 /* skeleton_attack_west.atlas */,
+				D098E69B181B1A5800940135 /* skeleton_die_east.atlas */,
+				D098E69C181B1A5800940135 /* skeleton_die_north.atlas */,
+				D098E69D181B1A5800940135 /* skeleton_die_northeast.atlas */,
+				D098E69E181B1A5800940135 /* skeleton_die_northwest.atlas */,
+				D098E69F181B1A5800940135 /* skeleton_die_south.atlas */,
+				D098E6A0181B1A5800940135 /* skeleton_die_southeast.atlas */,
+				D098E6A1181B1A5800940135 /* skeleton_die_southwest.atlas */,
+				D098E6A2181B1A5800940135 /* skeleton_die_west.atlas */,
+				D098E6A3181B1A5800940135 /* skeleton_stance_east.atlas */,
+				D098E6A4181B1A5800940135 /* skeleton_stance_north.atlas */,
+				D098E6A5181B1A5800940135 /* skeleton_stance_northeast.atlas */,
+				D098E6A6181B1A5800940135 /* skeleton_stance_northwest.atlas */,
+				D098E6A7181B1A5800940135 /* skeleton_stance_south.atlas */,
+				D098E6A8181B1A5800940135 /* skeleton_stance_southeast.atlas */,
+				D098E6A9181B1A5800940135 /* skeleton_stance_southwest.atlas */,
+				D098E6AA181B1A5800940135 /* skeleton_stance_west.atlas */,
+				D098E6AB181B1A5800940135 /* skeleton_walk_east.atlas */,
+				D098E6AC181B1A5800940135 /* skeleton_walk_north.atlas */,
+				D098E6AD181B1A5800940135 /* skeleton_walk_northeast.atlas */,
+				D098E6AE181B1A5800940135 /* skeleton_walk_northwest.atlas */,
+				D098E6AF181B1A5800940135 /* skeleton_walk_south.atlas */,
+				D098E6B0181B1A5800940135 /* skeleton_walk_southeast.atlas */,
+				D098E6B1181B1A5800940135 /* skeleton_walk_southwest.atlas */,
+				D098E6B2181B1A5800940135 /* skeleton_walk_west.atlas */,
+			);
+			name = skeleton;
+			path = "zombie-arcade/Resources/skeleton";
+			sourceTree = "<group>";
+		};
+		D098E6EA181B425E00940135 /* goblin */ = {
+			isa = PBXGroup;
+			children = (
+				D098E6EB181B425E00940135 /* goblin_attack_east.atlas */,
+				D098E6EC181B425E00940135 /* goblin_attack_north.atlas */,
+				D098E6ED181B425E00940135 /* goblin_attack_northeast.atlas */,
+				D098E6EE181B425E00940135 /* goblin_attack_northwest.atlas */,
+				D098E6EF181B425E00940135 /* goblin_attack_south.atlas */,
+				D098E6F0181B425E00940135 /* goblin_attack_southeast.atlas */,
+				D098E6F1181B425E00940135 /* goblin_attack_southwest.atlas */,
+				D098E6F2181B425E00940135 /* goblin_attack_west.atlas */,
+				D098E6F3181B425E00940135 /* goblin_die_east.atlas */,
+				D098E6F4181B425E00940135 /* goblin_die_north.atlas */,
+				D098E6F5181B425E00940135 /* goblin_die_northeast.atlas */,
+				D098E6F6181B425E00940135 /* goblin_die_northwest.atlas */,
+				D098E6F7181B425E00940135 /* goblin_die_south.atlas */,
+				D098E6F8181B425E00940135 /* goblin_die_southeast.atlas */,
+				D098E6F9181B425E00940135 /* goblin_die_southwest.atlas */,
+				D098E6FA181B425E00940135 /* goblin_die_west.atlas */,
+				D098E6FB181B425E00940135 /* goblin_walk_east.atlas */,
+				D098E6FC181B425E00940135 /* goblin_walk_north.atlas */,
+				D098E6FD181B425E00940135 /* goblin_walk_northeast.atlas */,
+				D098E6FE181B425E00940135 /* goblin_walk_northwest.atlas */,
+				D098E6FF181B425E00940135 /* goblin_walk_south.atlas */,
+				D098E700181B425E00940135 /* goblin_walk_southeast.atlas */,
+				D098E701181B425E00940135 /* goblin_walk_southwest.atlas */,
+				D098E702181B425E00940135 /* goblin_walk_west.atlas */,
+			);
+			name = goblin;
+			path = "zombie-arcade/Resources/goblin";
+			sourceTree = "<group>";
+		};
+		D0AA005D180A4D5A00CCF93D = {
+			isa = PBXGroup;
+			children = (
+				D0DA04AE181B87BB00DC5419 /* TestFlightSDK2.0.2 */,
+				D0C7B5DB180F336F007D8F41 /* Singletons */,
+				D0C7B5D4180EE9B4007D8F41 /* CategoriesAndInlines */,
+				D089AC3A180DDF5100BCB105 /* Models */,
+				D089AC40180DE03800BCB105 /* Model_Controllers */,
+				D089AC41180DE04400BCB105 /* Views */,
+				D089AC42180DE04E00BCB105 /* View_Controllers */,
+				D0AA0071180A4D5A00CCF93D /* Delegates */,
+				D089AC3F180DE00F00BCB105 /* Resources */,
+				D0AA0072180A4D5A00CCF93D /* Supporting Files */,
+				D0AA0095180A4D5A00CCF93D /* Tests */,
+				D0AA0068180A4D5A00CCF93D /* Frameworks */,
+				D0AA0067180A4D5A00CCF93D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0AA0067180A4D5A00CCF93D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA0066180A4D5A00CCF93D /* zombie-arcade.app */,
+				D0AA008E180A4D5A00CCF93D /* zombie-arcadeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0AA0068180A4D5A00CCF93D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0F7108B181B850300A36015 /* libz.dylib */,
+				D0AA0069180A4D5A00CCF93D /* Foundation.framework */,
+				D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */,
+				D0AA006D180A4D5A00CCF93D /* UIKit.framework */,
+				D0AA006F180A4D5A00CCF93D /* SpriteKit.framework */,
+				D0AA008F180A4D5A00CCF93D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0AA0071180A4D5A00CCF93D /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA007A180A4D5A00CCF93D /* ZAAppDelegate.h */,
+				D0AA007B180A4D5A00CCF93D /* ZAAppDelegate.m */,
+			);
+			name = Delegates;
+			path = "zombie-arcade";
+			sourceTree = "<group>";
+		};
+		D0AA0072180A4D5A00CCF93D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D07E9378181B96620051197E /* zombie-arcade-Info.plist */,
+				D0AA0074180A4D5A00CCF93D /* InfoPlist.strings */,
+				D0AA0077180A4D5A00CCF93D /* main.m */,
+				D0AA0079180A4D5A00CCF93D /* zombie-arcade-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = "zombie-arcade";
+			sourceTree = "<group>";
+		};
+		D0AA0095180A4D5A00CCF93D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA009B180A4D5A00CCF93D /* zombie_arcadeTests.m */,
+				D0AA0096180A4D5A00CCF93D /* Supporting Files */,
+			);
+			name = Tests;
+			path = "zombie-arcadeTests";
+			sourceTree = "<group>";
+		};
+		D0AA0096180A4D5A00CCF93D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0AA0097180A4D5A00CCF93D /* zombie-arcadeTests-Info.plist */,
+				D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0C7B5D4180EE9B4007D8F41 /* CategoriesAndInlines */ = {
+			isa = PBXGroup;
+			children = (
+				D07DED3D1812516C0070E750 /* ZAHelpers.h */,
+				D0C7B5D1180EE90F007D8F41 /* CGPointF.h */,
+			);
+			name = CategoriesAndInlines;
+			sourceTree = "<group>";
+		};
+		D0C7B5DB180F336F007D8F41 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				D0C7B5D5180EFF72007D8F41 /* ZACharachterAnimationFrames.h */,
+				D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */,
+			);
+			name = Singletons;
+			sourceTree = "<group>";
+		};
+		D0DA04AE181B87BB00DC5419 /* TestFlightSDK2.0.2 */ = {
+			isa = PBXGroup;
+			children = (
+				D0DA04AF181B87BB00DC5419 /* libTestFlight.a */,
+				D0DA04B0181B87BB00DC5419 /* README.md */,
+				D0DA04B1181B87BB00DC5419 /* release_notes.md */,
+				D0DA04B2181B87BB00DC5419 /* TestFlight+AsyncLogging.h */,
+				D0DA04B3181B87BB00DC5419 /* TestFlight+ManualSessions.h */,
+				D0DA04B4181B87BB00DC5419 /* TestFlight.h */,
+			);
+			path = TestFlightSDK2.0.2;
+			sourceTree = "<group>";
+		};
+		D0F65C421812FF9F0071172D /* woman */ = {
+			isa = PBXGroup;
+			children = (
+				D0F65C431812FF9F0071172D /* woman_die_east.atlas */,
+				D0F65C441812FF9F0071172D /* woman_die_north.atlas */,
+				D0F65C451812FF9F0071172D /* woman_die_northeast.atlas */,
+				D0F65C461812FF9F0071172D /* woman_die_northwest.atlas */,
+				D0F65C471812FF9F0071172D /* woman_die_south.atlas */,
+				D0F65C481812FF9F0071172D /* woman_die_southeast.atlas */,
+				D0F65C491812FF9F0071172D /* woman_die_southwest.atlas */,
+				D0F65C4A1812FF9F0071172D /* woman_die_west.atlas */,
+				D0F65C4B1812FF9F0071172D /* woman_stance_east.atlas */,
+				D0F65C4C1812FF9F0071172D /* woman_stance_north.atlas */,
+				D0F65C4D1812FF9F0071172D /* woman_stance_northeast.atlas */,
+				D0F65C4E1812FF9F0071172D /* woman_stance_northwest.atlas */,
+				D0F65C4F1812FF9F0071172D /* woman_stance_south.atlas */,
+				D0F65C501812FF9F0071172D /* woman_stance_southeast.atlas */,
+				D0F65C511812FF9F0071172D /* woman_stance_southwest.atlas */,
+				D0F65C521812FF9F0071172D /* woman_stance_west.atlas */,
+				D0F65C531812FF9F0071172D /* woman_walk_east.atlas */,
+				D0F65C541812FF9F0071172D /* woman_walk_north.atlas */,
+				D0F65C551812FF9F0071172D /* woman_walk_northeast.atlas */,
+				D0F65C561812FF9F0071172D /* woman_walk_northwest.atlas */,
+				D0F65C571812FF9F0071172D /* woman_walk_south.atlas */,
+				D0F65C581812FF9F0071172D /* woman_walk_southeast.atlas */,
+				D0F65C591812FF9F0071172D /* woman_walk_southwest.atlas */,
+				D0F65C5A1812FF9F0071172D /* woman_walk_west.atlas */,
+			);
+			name = woman;
+			path = "zombie-arcade/Resources/woman";
+			sourceTree = "<group>";
+		};
+		D0F65C731812FFAC0071172D /* zombie */ = {
+			isa = PBXGroup;
+			children = (
+				D0F65C741812FFAC0071172D /* zombie_attack_east.atlas */,
+				D0F65C751812FFAC0071172D /* zombie_attack_north.atlas */,
+				D0F65C761812FFAC0071172D /* zombie_attack_northeast.atlas */,
+				D0F65C771812FFAC0071172D /* zombie_attack_northwest.atlas */,
+				D0F65C781812FFAC0071172D /* zombie_attack_south.atlas */,
+				D0F65C791812FFAC0071172D /* zombie_attack_southeast.atlas */,
+				D0F65C7A1812FFAC0071172D /* zombie_attack_southwest.atlas */,
+				D0F65C7B1812FFAC0071172D /* zombie_attack_west.atlas */,
+				D0F65C7C1812FFAC0071172D /* zombie_die_east.atlas */,
+				D0F65C7D1812FFAC0071172D /* zombie_die_north.atlas */,
+				D0F65C7E1812FFAC0071172D /* zombie_die_northeast.atlas */,
+				D0F65C7F1812FFAC0071172D /* zombie_die_northwest.atlas */,
+				D0F65C801812FFAC0071172D /* zombie_die_south.atlas */,
+				D0F65C811812FFAC0071172D /* zombie_die_southeast.atlas */,
+				D0F65C821812FFAC0071172D /* zombie_die_southwest.atlas */,
+				D0F65C831812FFAC0071172D /* zombie_die_west.atlas */,
+				D0F65C841812FFAC0071172D /* zombie_walk_east.atlas */,
+				D0F65C851812FFAC0071172D /* zombie_walk_north.atlas */,
+				D0F65C861812FFAC0071172D /* zombie_walk_northeast.atlas */,
+				D0F65C871812FFAC0071172D /* zombie_walk_northwest.atlas */,
+				D0F65C881812FFAC0071172D /* zombie_walk_south.atlas */,
+				D0F65C891812FFAC0071172D /* zombie_walk_southeast.atlas */,
+				D0F65C8A1812FFAC0071172D /* zombie_walk_southwest.atlas */,
+				D0F65C8B1812FFAC0071172D /* zombie_walk_west.atlas */,
+			);
+			name = zombie;
+			path = "zombie-arcade/Resources/zombie";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0AA0065180A4D5A00CCF93D /* zombie-arcade */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0AA009F180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "zombie-arcade" */;
+			buildPhases = (
+				D0AA0062180A4D5A00CCF93D /* Sources */,
+				D0AA0063180A4D5A00CCF93D /* Frameworks */,
+				D0AA0064180A4D5A00CCF93D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "zombie-arcade";
+			productName = "zombie-arcade";
+			productReference = D0AA0066180A4D5A00CCF93D /* zombie-arcade.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0AA008D180A4D5A00CCF93D /* zombie-arcadeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0AA00A2180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "zombie-arcadeTests" */;
+			buildPhases = (
+				D0AA008A180A4D5A00CCF93D /* Sources */,
+				D0AA008B180A4D5A00CCF93D /* Frameworks */,
+				D0AA008C180A4D5A00CCF93D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0AA0094180A4D5A00CCF93D /* PBXTargetDependency */,
+			);
+			name = "zombie-arcadeTests";
+			productName = "zombie-arcadeTests";
+			productReference = D0AA008E180A4D5A00CCF93D /* zombie-arcadeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0AA005E180A4D5A00CCF93D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZA;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Will Kamp";
+				TargetAttributes = {
+					D0AA0065180A4D5A00CCF93D = {
+						DevelopmentTeam = TH39V46468;
+					};
+					D0AA008D180A4D5A00CCF93D = {
+						TestTargetID = D0AA0065180A4D5A00CCF93D;
+					};
+				};
+			};
+			buildConfigurationList = D0AA0061180A4D5A00CCF93D /* Build configuration list for PBXProject "Zombie-Arcade" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0AA005D180A4D5A00CCF93D;
+			productRefGroup = D0AA0067180A4D5A00CCF93D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0AA0065180A4D5A00CCF93D /* zombie-arcade */,
+				D0AA008D180A4D5A00CCF93D /* zombie-arcadeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0AA0064180A4D5A00CCF93D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0340CF0181AF08300A34CBA /* warcry.caf in Resources */,
+				D098E720181B461900940135 /* goblin_critdie.caf in Resources */,
+				D098E721181B461900940135 /* goblin_die.caf in Resources */,
+				D098E722181B461900940135 /* goblin_hit.caf in Resources */,
+				D098E723181B461900940135 /* goblin_ment.caf in Resources */,
+				D098E724181B461900940135 /* goblin_phys.caf in Resources */,
+				D0340CF1181AF08600A34CBA /* female_die.caf in Resources */,
+				D098E70E181B425E00940135 /* goblin_die_northwest.atlas in Resources */,
+				D0340CF2181AF09600A34CBA /* level_up.caf in Resources */,
+				D0340CF3181AF09600A34CBA /* shoot.caf in Resources */,
+				D098E715181B425E00940135 /* goblin_walk_northeast.atlas in Resources */,
+				D098E70D181B425E00940135 /* goblin_die_northeast.atlas in Resources */,
+				D0340CF4181AF09600A34CBA /* zombie_critdie.caf in Resources */,
+				D0340CF5181AF09600A34CBA /* zombie_die.caf in Resources */,
+				D0340CF6181AF09600A34CBA /* zombie_hit.caf in Resources */,
+				D098E6DE181B1F8100940135 /* skeleton_critdie.caf in Resources */,
+				D098E6DF181B1F8100940135 /* skeleton_die.caf in Resources */,
+				D098E6E0181B1F8100940135 /* skeleton_hit.caf in Resources */,
+				D098E6E1181B1F8100940135 /* skeleton_ment.caf in Resources */,
+				D098E6E2181B1F8100940135 /* skeleton_phys.caf in Resources */,
+				D098E6BA181B1A5800940135 /* skeleton_attack_west.atlas in Resources */,
+				D098E70A181B425E00940135 /* goblin_attack_west.atlas in Resources */,
+				D0340CF7181AF09600A34CBA /* zombie_ment.caf in Resources */,
+				D098E719181B425E00940135 /* goblin_walk_southwest.atlas in Resources */,
+				D098E714181B425E00940135 /* goblin_walk_north.atlas in Resources */,
+				D098E6CD181B1A5800940135 /* skeleton_walk_northeast.atlas in Resources */,
+				D0340CF8181AF09600A34CBA /* zombie_phys.caf in Resources */,
+				D0F65C971812FFAC0071172D /* zombie_die_northwest.atlas in Resources */,
+				D0F65C671812FF9F0071172D /* woman_stance_south.atlas in Resources */,
+				D0F65C961812FFAC0071172D /* zombie_die_northeast.atlas in Resources */,
+				D098E6BE181B1A5800940135 /* skeleton_die_northwest.atlas in Resources */,
+				D098E710181B425E00940135 /* goblin_die_southeast.atlas in Resources */,
+				D0F65CA01812FFAC0071172D /* zombie_walk_south.atlas in Resources */,
+				D098E6D0181B1A5800940135 /* skeleton_walk_southeast.atlas in Resources */,
+				D098E6CC181B1A5800940135 /* skeleton_walk_north.atlas in Resources */,
+				D0F65C9C1812FFAC0071172D /* zombie_walk_east.atlas in Resources */,
+				D0F65C601812FF9F0071172D /* woman_die_southeast.atlas in Resources */,
+				D0F65C6E1812FF9F0071172D /* woman_walk_northwest.atlas in Resources */,
+				D098E71A181B425E00940135 /* goblin_walk_west.atlas in Resources */,
+				D0F65C9B1812FFAC0071172D /* zombie_die_west.atlas in Resources */,
+				D0F65C931812FFAC0071172D /* zombie_attack_west.atlas in Resources */,
+				D0F65C721812FF9F0071172D /* woman_walk_west.atlas in Resources */,
+				D098E6BD181B1A5800940135 /* skeleton_die_northeast.atlas in Resources */,
+				D098E705181B425E00940135 /* goblin_attack_northeast.atlas in Resources */,
+				A66B80E718172834006C756E /* bullet.png in Resources */,
+				D0F65C6C1812FF9F0071172D /* woman_walk_north.atlas in Resources */,
+				D098E6B5181B1A5800940135 /* skeleton_attack_northeast.atlas in Resources */,
+				D0F65C5C1812FF9F0071172D /* woman_die_north.atlas in Resources */,
+				D0F65C8E1812FFAC0071172D /* zombie_attack_northeast.atlas in Resources */,
+				D0AA0076180A4D5A00CCF93D /* InfoPlist.strings in Resources */,
+				D098E716181B425E00940135 /* goblin_walk_northwest.atlas in Resources */,
+				D0F65C911812FFAC0071172D /* zombie_attack_southeast.atlas in Resources */,
+				D0F65C8F1812FFAC0071172D /* zombie_attack_northwest.atlas in Resources */,
+				D098E6CB181B1A5800940135 /* skeleton_walk_east.atlas in Resources */,
+				D0F65CA21812FFAC0071172D /* zombie_walk_southwest.atlas in Resources */,
+				D098E706181B425E00940135 /* goblin_attack_northwest.atlas in Resources */,
+				D085911418139A9000C1CAC5 /* tiles.atlas in Resources */,
+				D098E711181B425E00940135 /* goblin_die_southwest.atlas in Resources */,
+				D0F65C921812FFAC0071172D /* zombie_attack_southwest.atlas in Resources */,
+				D0F65C8D1812FFAC0071172D /* zombie_attack_north.atlas in Resources */,
+				D07E9376181B951D0051197E /* Ipad.storyboard in Resources */,
+				D098E717181B425E00940135 /* goblin_walk_south.atlas in Resources */,
+				D0F65CA31812FFAC0071172D /* zombie_walk_west.atlas in Resources */,
+				D098E70C181B425E00940135 /* goblin_die_north.atlas in Resources */,
+				D098E6B7181B1A5800940135 /* skeleton_attack_south.atlas in Resources */,
+				D0F65C651812FF9F0071172D /* woman_stance_northeast.atlas in Resources */,
+				D0F65C711812FF9F0071172D /* woman_walk_southwest.atlas in Resources */,
+				D098E704181B425E00940135 /* goblin_attack_north.atlas in Resources */,
+				D098E70B181B425E00940135 /* goblin_die_east.atlas in Resources */,
+				D098E6C1181B1A5800940135 /* skeleton_die_southwest.atlas in Resources */,
+				D0AA0089180A4D5A00CCF93D /* Images.xcassets in Resources */,
+				D0F65C701812FF9F0071172D /* woman_walk_southeast.atlas in Resources */,
+				D0F65C641812FF9F0071172D /* woman_stance_north.atlas in Resources */,
+				D0F65C5B1812FF9F0071172D /* woman_die_east.atlas in Resources */,
+				D0F65C951812FFAC0071172D /* zombie_die_north.atlas in Resources */,
+				D0F65C621812FF9F0071172D /* woman_die_west.atlas in Resources */,
+				D098E70F181B425E00940135 /* goblin_die_south.atlas in Resources */,
+				D098E6CF181B1A5800940135 /* skeleton_walk_south.atlas in Resources */,
+				D0F65C9E1812FFAC0071172D /* zombie_walk_northeast.atlas in Resources */,
+				D0F65CA11812FFAC0071172D /* zombie_walk_southeast.atlas in Resources */,
+				D098E709181B425E00940135 /* goblin_attack_southwest.atlas in Resources */,
+				D098E6C0181B1A5800940135 /* skeleton_die_southeast.atlas in Resources */,
+				D098E6B3181B1A5800940135 /* skeleton_attack_east.atlas in Resources */,
+				D0F65C5E1812FF9F0071172D /* woman_die_northwest.atlas in Resources */,
+				D0F65C681812FF9F0071172D /* woman_stance_southeast.atlas in Resources */,
+				D098E6BF181B1A5800940135 /* skeleton_die_south.atlas in Resources */,
+				D07E9379181B96620051197E /* zombie-arcade-Info.plist in Resources */,
+				D0F65C9A1812FFAC0071172D /* zombie_die_southwest.atlas in Resources */,
+				D0F65C9F1812FFAC0071172D /* zombie_walk_northwest.atlas in Resources */,
+				D0F65C661812FF9F0071172D /* woman_stance_northwest.atlas in Resources */,
+				D0F65C5F1812FF9F0071172D /* woman_die_south.atlas in Resources */,
+				D098E713181B425E00940135 /* goblin_walk_east.atlas in Resources */,
+				D0F65C981812FFAC0071172D /* zombie_die_south.atlas in Resources */,
+				D0F65C6B1812FF9F0071172D /* woman_walk_east.atlas in Resources */,
+				D0F65C6A1812FF9F0071172D /* woman_stance_west.atlas in Resources */,
+				D0F65C631812FF9F0071172D /* woman_stance_east.atlas in Resources */,
+				D0F65C6F1812FF9F0071172D /* woman_walk_south.atlas in Resources */,
+				D0F65C611812FF9F0071172D /* woman_die_southwest.atlas in Resources */,
+				D098E708181B425E00940135 /* goblin_attack_southeast.atlas in Resources */,
+				D0F65C901812FFAC0071172D /* zombie_attack_south.atlas in Resources */,
+				D098E6BB181B1A5800940135 /* skeleton_die_east.atlas in Resources */,
+				D098E6B8181B1A5800940135 /* skeleton_attack_southeast.atlas in Resources */,
+				D098E712181B425E00940135 /* goblin_die_west.atlas in Resources */,
+				D098E6C2181B1A5800940135 /* skeleton_die_west.atlas in Resources */,
+				D0F65C691812FF9F0071172D /* woman_stance_southwest.atlas in Resources */,
+				D098E718181B425E00940135 /* goblin_walk_southeast.atlas in Resources */,
+				D0F65C9D1812FFAC0071172D /* zombie_walk_north.atlas in Resources */,
+				D098E6BC181B1A5800940135 /* skeleton_die_north.atlas in Resources */,
+				D0F65C941812FFAC0071172D /* zombie_die_east.atlas in Resources */,
+				D098E707181B425E00940135 /* goblin_attack_south.atlas in Resources */,
+				D0F65C6D1812FF9F0071172D /* woman_walk_northeast.atlas in Resources */,
+				D07E9377181B951D0051197E /* Iphone.storyboard in Resources */,
+				D098E6CE181B1A5800940135 /* skeleton_walk_northwest.atlas in Resources */,
+				D098E6B6181B1A5800940135 /* skeleton_attack_northwest.atlas in Resources */,
+				D098E6B9181B1A5800940135 /* skeleton_attack_southwest.atlas in Resources */,
+				D098E703181B425E00940135 /* goblin_attack_east.atlas in Resources */,
+				D098E6B4181B1A5800940135 /* skeleton_attack_north.atlas in Resources */,
+				D098E6D1181B1A5800940135 /* skeleton_walk_southwest.atlas in Resources */,
+				D0F65C5D1812FF9F0071172D /* woman_die_northeast.atlas in Resources */,
+				D0F65C991812FFAC0071172D /* zombie_die_southeast.atlas in Resources */,
+				D098E6D2181B1A5800940135 /* skeleton_walk_west.atlas in Resources */,
+				D0F65C8C1812FFAC0071172D /* zombie_attack_east.atlas in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0AA008C180A4D5A00CCF93D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0AA009A180A4D5A00CCF93D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0AA0062180A4D5A00CCF93D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */,
+				D089AC3D180DDF9500BCB105 /* ZACharacherSpriteNode.m in Sources */,
+				D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */,
+				D03416D31819A129004F3563 /* ZANode.m in Sources */,
+				D0AA0085180A4D5A00CCF93D /* ZAMyScene.m in Sources */,
+				D0AD0A6F1818825F00CA98F1 /* ZAButtonSpriteNode.m in Sources */,
+				D0AA0078180A4D5A00CCF93D /* main.m in Sources */,
+				D0AA007C180A4D5A00CCF93D /* ZAAppDelegate.m in Sources */,
+				D098E6DD181B1C5600940135 /* ZAEnemySpriteNode.m in Sources */,
+				D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */,
+				D098E6E9181B407100940135 /* ZAGoblinSpriteNode.m in Sources */,
+				D03416D01819A11E004F3563 /* ZABulletSpriteNode.m in Sources */,
+				D0C7B5D7180EFF72007D8F41 /* ZACharachterAnimationFrames.m in Sources */,
+				D098E6E6181B201700940135 /* ZASkeletonSpiteNode.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0AA008A180A4D5A00CCF93D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0AA009C180A4D5A00CCF93D /* zombie_arcadeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0AA0094180A4D5A00CCF93D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0AA0065180A4D5A00CCF93D /* zombie-arcade */;
+			targetProxy = D0AA0093180A4D5A00CCF93D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D07E9372181B951D0051197E /* Ipad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D07E9373181B951D0051197E /* Base */,
+			);
+			name = Ipad.storyboard;
+			sourceTree = "<group>";
+		};
+		D07E9374181B951D0051197E /* Iphone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D07E9375181B951D0051197E /* Base */,
+			);
+			name = Iphone.storyboard;
+			sourceTree = "<group>";
+		};
+		D0AA0074180A4D5A00CCF93D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0AA0075180A4D5A00CCF93D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0AA0099180A4D5A00CCF93D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0AA009D180A4D5A00CCF93D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+			};
+			name = Debug;
+		};
+		D0AA009E180A4D5A00CCF93D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0AA00A0180A4D5A00CCF93D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "zombie-arcade/zombie-arcade-Prefix.pch";
+				INFOPLIST_FILE = "zombie-arcade/zombie-arcade-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/williamkamp/Documents/workspace-ios/zombie-arcade/TestFlightSDK2.0.2",
+					"/Users/williamkamp/Documents/workspace-ios/zombie-arcade/TestFlightSDK2.0.2",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D0AA00A1180A4D5A00CCF93D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "zombie-arcade/zombie-arcade-Prefix.pch";
+				INFOPLIST_FILE = "zombie-arcade/zombie-arcade-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/williamkamp/Documents/workspace-ios/zombie-arcade/TestFlightSDK2.0.2",
+					"/Users/williamkamp/Documents/workspace-ios/zombie-arcade/TestFlightSDK2.0.2",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D0AA00A3180A4D5A00CCF93D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/zombie-arcade.app/zombie-arcade";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "zombie-arcade/zombie-arcade-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "zombie-arcadeTests/zombie-arcadeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D0AA00A4180A4D5A00CCF93D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/zombie-arcade.app/zombie-arcade";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "zombie-arcade/zombie-arcade-Prefix.pch";
+				INFOPLIST_FILE = "zombie-arcadeTests/zombie-arcadeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0AA0061180A4D5A00CCF93D /* Build configuration list for PBXProject "Zombie-Arcade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0AA009D180A4D5A00CCF93D /* Debug */,
+				D0AA009E180A4D5A00CCF93D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0AA009F180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "zombie-arcade" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0AA00A0180A4D5A00CCF93D /* Debug */,
+				D0AA00A1180A4D5A00CCF93D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0AA00A2180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "zombie-arcadeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0AA00A3180A4D5A00CCF93D /* Debug */,
+				D0AA00A4180A4D5A00CCF93D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0AA005E180A4D5A00CCF93D /* Project object */;
+}
