@@ -335,6 +335,7 @@
     
     if ([touches containsObject:secondTouch]) {
         [self.heroSpriteNode setContinuousFire:NO];
+        NSLog(@"Continuous fire is off");
         secondTouchDown = NO;
     }
 }

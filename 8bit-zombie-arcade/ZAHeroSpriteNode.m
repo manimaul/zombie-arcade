@@ -73,26 +73,53 @@ static NSArray* actions = nil;
         velocity = self.velocity;
     
     if (on) {
+        NSLog(@"Continuous fire is on");
         CGFloat newRadian = CGPointToAngleRadians(velocity);
-        [self fireBulletTowardAngleRadians:newRadian];
+        ZABulletSpriteNode *bullet = [ZABulletSpriteNode createBulletSprite];
+        [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"shoot.caf"]];
+        
+        
+        
+        if (bullet) {
+            [self.scene addChild:bullet];
+            bullet.position = self.position;
+            CGPoint destination = ProjectPoint(self.position, self.scene.size.width, newRadian);
+            
+            SKAction *bulletAction = [SKAction sequence:@[
+                                                   [SKAction moveTo:destination duration:2.0],
+                                                   [SKAction fadeInWithDuration:0.5],
+                                                   [SKAction removeFromParent]
+                                                   ]];
+//            [self.scene addChild:bullet];
+
+            [bullet runAction:bulletAction];
+            
+//            [SKAction repeatActionForever:bulletAction];
+            
+        }
+//        [self fireBulletTowardAngleRadians:newRadian];
     }
 }
 
-- (void)fireBulletTowardAngleRadians:(CGFloat)radians
+- (void)addChild:(SKNode *)node
 {
-    ZABulletSpriteNode *bullet = [ZABulletSpriteNode createBulletSprite];
-    [self runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"shoot.caf"]];
-    if (bullet) {
-        [self.scene addChild:bullet];
-        bullet.position = self.position;
-        CGPoint destination = ProjectPoint(self.position, self.scene.size.width, radians);
-        [bullet runAction:[SKAction sequence:@[
-                                               [SKAction moveTo:destination duration:2.0],
-                                               [SKAction fadeInWithDuration:0.5],
-                                               [SKAction removeFromParent]
-                                               ]]];
-    }
+    
 }
+
+//- (void)fireBulletTowardAngleRadians:(CGFloat)radians
+//{
+//    ZABulletSpriteNode *bullet = [ZABulletSpriteNode createBulletSprite];
+//    if (bullet) {
+//        [self.scene addChild:bullet];
+//        bullet.position = self.position;
+//        CGPoint destination = ProjectPoint(self.position, self.scene.size.width, radians);
+//        [bullet runAction:[SKAction sequence:@[
+//                                               [SKAction moveTo:destination duration:2.0],
+//                                               [SKAction fadeInWithDuration:0.5],
+//                                               [SKAction removeFromParent]
+//                                               ]]];
+//    }
+//}
 
 
 

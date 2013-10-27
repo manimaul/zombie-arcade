@@ -78,7 +78,7 @@
 - (void)configurePhysicsBody
 {
     //image is 128x128 but characther is 30x55 or .25x.45
-    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.frame.size.width * .25, self.frame.size.height * .45)];
+    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.frame.size.width * .45, self.frame.size.height * .65)];
     
     self.physicsBody.affectedByGravity = NO;
     self.physicsBody.allowsRotation = NO;
