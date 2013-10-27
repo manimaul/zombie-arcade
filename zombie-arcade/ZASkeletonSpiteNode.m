@@ -14,40 +14,13 @@
 {
     ZASkeletonSpiteNode *s = [[ZASkeletonSpiteNode alloc] initWithCharachterType:skeleton withHitPoints:4.];
     s.cardinal = east;
-    s.action = walk;
     s.movementSpeed = 60.;
     s.timePerframe = .125;
     s.attackPower = 1.5;
     s.zPosition = 2.;
     s.meleeSpeed = .75;
-//    [s.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"skeleton_ment.caf"]];
+    [s setImmediateAction:walk];
     return s;
-}
-
-#pragma mark - actions
-
-- (void)takeHit:(NSInteger)points withEnemies:(NSMutableArray *)trackedNodes
-{
-    [self.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"skeleton_hit.caf"]];
-    [super takeHit:points withEnemies:trackedNodes];
-}
-
-- (void)performDeath:(NSMutableArray*)trackedNodes
-{
-    [self.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"skeleton_critdie.caf"]];
-    
-    //super called last on purpose here
-    [super performDeath:trackedNodes];
-}
-
-- (void)attackHero
-{
-    if (self.action == die)
-        return;
-    
-    [self.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"skeleton_phys.caf"]];
-    [super attackHero];
-    
 }
 
 - (void)configurePhysicsBody

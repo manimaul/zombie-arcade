@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Zombie-Arcade.xcodeproj">
+      location = "self:ZombieArcade.xcodeproj">
    </FileRef>
 </Workspace>

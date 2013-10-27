@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0AA0065180A4D5A00CCF93D"
-               BuildableName = "zombie-arcade.app"
-               BlueprintName = "zombie-arcade"
-               ReferencedContainer = "container:Zombie-Arcade.xcodeproj">
+               BuildableName = "zombiearcade.app"
+               BlueprintName = "zombiearcade"
+               ReferencedContainer = "container:ZombieArcade.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0AA008D180A4D5A00CCF93D"
-               BuildableName = "zombie-arcadeTests.xctest"
-               BlueprintName = "zombie-arcadeTests"
-               ReferencedContainer = "container:Zombie-Arcade.xcodeproj">
+               BuildableName = "zombiearcadeTests.xctest"
+               BlueprintName = "zombiearcadeTests"
+               ReferencedContainer = "container:ZombieArcade.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0AA0065180A4D5A00CCF93D"
-            BuildableName = "zombie-arcade.app"
-            BlueprintName = "zombie-arcade"
-            ReferencedContainer = "container:Zombie-Arcade.xcodeproj">
+            BuildableName = "zombiearcade.app"
+            BlueprintName = "zombiearcade"
+            ReferencedContainer = "container:ZombieArcade.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0AA0065180A4D5A00CCF93D"
-            BuildableName = "zombie-arcade.app"
-            BlueprintName = "zombie-arcade"
-            ReferencedContainer = "container:Zombie-Arcade.xcodeproj">
+            BuildableName = "zombiearcade.app"
+            BlueprintName = "zombiearcade"
+            ReferencedContainer = "container:ZombieArcade.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0AA0065180A4D5A00CCF93D"
-            BuildableName = "zombie-arcade.app"
-            BlueprintName = "zombie-arcade"
-            ReferencedContainer = "container:Zombie-Arcade.xcodeproj">
+            BuildableName = "zombiearcade.app"
+            BlueprintName = "zombiearcade"
+            ReferencedContainer = "container:ZombieArcade.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

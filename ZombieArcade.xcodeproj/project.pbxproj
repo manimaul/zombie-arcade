@@ -101,7 +101,6 @@
 		D0AA009A180A4D5A00CCF93D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0AA0098180A4D5A00CCF93D /* InfoPlist.strings */; };
 		D0AA009C180A4D5A00CCF93D /* zombie_arcadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA009B180A4D5A00CCF93D /* zombie_arcadeTests.m */; };
 		D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */; };
-		D0AD0A6F1818825F00CA98F1 /* ZAButtonSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AD0A6E1818825F00CA98F1 /* ZAButtonSpriteNode.m */; };
 		D0C7B5D7180EFF72007D8F41 /* ZACharachterAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */; };
 		D0DA04B5181B87BB00DC5419 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DA04AF181B87BB00DC5419 /* libTestFlight.a */; };
 		D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */; };
@@ -204,14 +203,6 @@
 		D098E6A0181B1A5800940135 /* skeleton_die_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_die_southeast.atlas; sourceTree = "<group>"; };
 		D098E6A1181B1A5800940135 /* skeleton_die_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_die_southwest.atlas; sourceTree = "<group>"; };
 		D098E6A2181B1A5800940135 /* skeleton_die_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_die_west.atlas; sourceTree = "<group>"; };
-		D098E6A3181B1A5800940135 /* skeleton_stance_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_east.atlas; sourceTree = "<group>"; };
-		D098E6A4181B1A5800940135 /* skeleton_stance_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_north.atlas; sourceTree = "<group>"; };
-		D098E6A5181B1A5800940135 /* skeleton_stance_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_northeast.atlas; sourceTree = "<group>"; };
-		D098E6A6181B1A5800940135 /* skeleton_stance_northwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_northwest.atlas; sourceTree = "<group>"; };
-		D098E6A7181B1A5800940135 /* skeleton_stance_south.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_south.atlas; sourceTree = "<group>"; };
-		D098E6A8181B1A5800940135 /* skeleton_stance_southeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_southeast.atlas; sourceTree = "<group>"; };
-		D098E6A9181B1A5800940135 /* skeleton_stance_southwest.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_southwest.atlas; sourceTree = "<group>"; };
-		D098E6AA181B1A5800940135 /* skeleton_stance_west.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_stance_west.atlas; sourceTree = "<group>"; };
 		D098E6AB181B1A5800940135 /* skeleton_walk_east.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_walk_east.atlas; sourceTree = "<group>"; };
 		D098E6AC181B1A5800940135 /* skeleton_walk_north.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_walk_north.atlas; sourceTree = "<group>"; };
 		D098E6AD181B1A5800940135 /* skeleton_walk_northeast.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = skeleton_walk_northeast.atlas; sourceTree = "<group>"; };
@@ -260,7 +251,7 @@
 		D098E71D181B45EF00940135 /* goblin_hit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = goblin_hit.caf; path = cafs/goblin_hit.caf; sourceTree = "<group>"; };
 		D098E71E181B45EF00940135 /* goblin_ment.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = goblin_ment.caf; path = cafs/goblin_ment.caf; sourceTree = "<group>"; };
 		D098E71F181B45EF00940135 /* goblin_phys.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = goblin_phys.caf; path = cafs/goblin_phys.caf; sourceTree = "<group>"; };
-		D0AA0066180A4D5A00CCF93D /* zombie-arcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "zombie-arcade.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0AA0066180A4D5A00CCF93D /* zombiearcade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zombiearcade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AA0069180A4D5A00CCF93D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0AA006B180A4D5A00CCF93D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D0AA006D180A4D5A00CCF93D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -275,15 +266,13 @@
 		D0AA0083180A4D5A00CCF93D /* ZAMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ZAMyScene.h; path = "zombie-arcade/ZAMyScene.h"; sourceTree = "<group>"; };
 		D0AA0084180A4D5A00CCF93D /* ZAMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ZAMyScene.m; path = "zombie-arcade/ZAMyScene.m"; sourceTree = "<group>"; };
 		D0AA0088180A4D5A00CCF93D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "zombie-arcade/Images.xcassets"; sourceTree = "<group>"; };
-		D0AA008E180A4D5A00CCF93D /* zombie-arcadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "zombie-arcadeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0AA008E180A4D5A00CCF93D /* zombiearcadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zombiearcadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0AA008F180A4D5A00CCF93D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D0AA0097180A4D5A00CCF93D /* zombie-arcadeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "zombie-arcadeTests-Info.plist"; sourceTree = "<group>"; };
 		D0AA0099180A4D5A00CCF93D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0AA009B180A4D5A00CCF93D /* zombie_arcadeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = zombie_arcadeTests.m; sourceTree = "<group>"; };
 		D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAZombieSpriteNode.h; path = "zombie-arcade/ZAZombieSpriteNode.h"; sourceTree = "<group>"; };
 		D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAZombieSpriteNode.m; path = "zombie-arcade/ZAZombieSpriteNode.m"; sourceTree = "<group>"; };
-		D0AD0A6D1818825F00CA98F1 /* ZAButtonSpriteNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAButtonSpriteNode.h; path = "zombie-arcade/ZAButtonSpriteNode.h"; sourceTree = "<group>"; };
-		D0AD0A6E1818825F00CA98F1 /* ZAButtonSpriteNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAButtonSpriteNode.m; path = "zombie-arcade/ZAButtonSpriteNode.m"; sourceTree = "<group>"; };
 		D0C7B5D1180EE90F007D8F41 /* CGPointF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CGPointF.h; path = "zombie-arcade/CGPointF.h"; sourceTree = "<group>"; };
 		D0C7B5D5180EFF72007D8F41 /* ZACharachterAnimationFrames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZACharachterAnimationFrames.h; path = "zombie-arcade/ZACharachterAnimationFrames.h"; sourceTree = "<group>"; };
 		D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZACharachterAnimationFrames.m; path = "zombie-arcade/ZACharachterAnimationFrames.m"; sourceTree = "<group>"; };
@@ -415,8 +404,6 @@
 				D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */,
 				D0AA00B6180BBEB400CCF93D /* ZAZombieSpriteNode.h */,
 				D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */,
-				D0AD0A6D1818825F00CA98F1 /* ZAButtonSpriteNode.h */,
-				D0AD0A6E1818825F00CA98F1 /* ZAButtonSpriteNode.m */,
 				D03416CE1819A11E004F3563 /* ZABulletSpriteNode.h */,
 				D03416CF1819A11E004F3563 /* ZABulletSpriteNode.m */,
 				D03416D11819A129004F3563 /* ZANode.h */,
@@ -486,14 +473,6 @@
 				D098E6A0181B1A5800940135 /* skeleton_die_southeast.atlas */,
 				D098E6A1181B1A5800940135 /* skeleton_die_southwest.atlas */,
 				D098E6A2181B1A5800940135 /* skeleton_die_west.atlas */,
-				D098E6A3181B1A5800940135 /* skeleton_stance_east.atlas */,
-				D098E6A4181B1A5800940135 /* skeleton_stance_north.atlas */,
-				D098E6A5181B1A5800940135 /* skeleton_stance_northeast.atlas */,
-				D098E6A6181B1A5800940135 /* skeleton_stance_northwest.atlas */,
-				D098E6A7181B1A5800940135 /* skeleton_stance_south.atlas */,
-				D098E6A8181B1A5800940135 /* skeleton_stance_southeast.atlas */,
-				D098E6A9181B1A5800940135 /* skeleton_stance_southwest.atlas */,
-				D098E6AA181B1A5800940135 /* skeleton_stance_west.atlas */,
 				D098E6AB181B1A5800940135 /* skeleton_walk_east.atlas */,
 				D098E6AC181B1A5800940135 /* skeleton_walk_north.atlas */,
 				D098E6AD181B1A5800940135 /* skeleton_walk_northeast.atlas */,
@@ -561,8 +540,8 @@
 		D0AA0067180A4D5A00CCF93D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0AA0066180A4D5A00CCF93D /* zombie-arcade.app */,
-				D0AA008E180A4D5A00CCF93D /* zombie-arcadeTests.xctest */,
+				D0AA0066180A4D5A00CCF93D /* zombiearcade.app */,
+				D0AA008E180A4D5A00CCF93D /* zombiearcadeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -719,9 +698,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D0AA0065180A4D5A00CCF93D /* zombie-arcade */ = {
+		D0AA0065180A4D5A00CCF93D /* zombiearcade */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0AA009F180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "zombie-arcade" */;
+			buildConfigurationList = D0AA009F180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "zombiearcade" */;
 			buildPhases = (
 				D0AA0062180A4D5A00CCF93D /* Sources */,
 				D0AA0063180A4D5A00CCF93D /* Frameworks */,
@@ -731,14 +710,14 @@
 			);
 			dependencies = (
 			);
-			name = "zombie-arcade";
+			name = zombiearcade;
 			productName = "zombie-arcade";
-			productReference = D0AA0066180A4D5A00CCF93D /* zombie-arcade.app */;
+			productReference = D0AA0066180A4D5A00CCF93D /* zombiearcade.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D0AA008D180A4D5A00CCF93D /* zombie-arcadeTests */ = {
+		D0AA008D180A4D5A00CCF93D /* zombiearcadeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0AA00A2180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "zombie-arcadeTests" */;
+			buildConfigurationList = D0AA00A2180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "zombiearcadeTests" */;
 			buildPhases = (
 				D0AA008A180A4D5A00CCF93D /* Sources */,
 				D0AA008B180A4D5A00CCF93D /* Frameworks */,
@@ -749,9 +728,9 @@
 			dependencies = (
 				D0AA0094180A4D5A00CCF93D /* PBXTargetDependency */,
 			);
-			name = "zombie-arcadeTests";
+			name = zombiearcadeTests;
 			productName = "zombie-arcadeTests";
-			productReference = D0AA008E180A4D5A00CCF93D /* zombie-arcadeTests.xctest */;
+			productReference = D0AA008E180A4D5A00CCF93D /* zombiearcadeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -772,7 +751,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D0AA0061180A4D5A00CCF93D /* Build configuration list for PBXProject "Zombie-Arcade" */;
+			buildConfigurationList = D0AA0061180A4D5A00CCF93D /* Build configuration list for PBXProject "ZombieArcade" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -785,8 +764,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D0AA0065180A4D5A00CCF93D /* zombie-arcade */,
-				D0AA008D180A4D5A00CCF93D /* zombie-arcadeTests */,
+				D0AA0065180A4D5A00CCF93D /* zombiearcade */,
+				D0AA008D180A4D5A00CCF93D /* zombiearcadeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -941,7 +920,6 @@
 				D0AA0082180A4D5A00CCF93D /* ZAViewController.m in Sources */,
 				D03416D31819A129004F3563 /* ZANode.m in Sources */,
 				D0AA0085180A4D5A00CCF93D /* ZAMyScene.m in Sources */,
-				D0AD0A6F1818825F00CA98F1 /* ZAButtonSpriteNode.m in Sources */,
 				D0AA0078180A4D5A00CCF93D /* main.m in Sources */,
 				D0AA007C180A4D5A00CCF93D /* ZAAppDelegate.m in Sources */,
 				D098E6DD181B1C5600940135 /* ZAEnemySpriteNode.m in Sources */,
@@ -966,7 +944,7 @@
 /* Begin PBXTargetDependency section */
 		D0AA0094180A4D5A00CCF93D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D0AA0065180A4D5A00CCF93D /* zombie-arcade */;
+			target = D0AA0065180A4D5A00CCF93D /* zombiearcade */;
 			targetProxy = D0AA0093180A4D5A00CCF93D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1106,6 +1084,7 @@
 		D0AA00A1180A4D5A00CCF93D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1170,7 +1149,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D0AA0061180A4D5A00CCF93D /* Build configuration list for PBXProject "Zombie-Arcade" */ = {
+		D0AA0061180A4D5A00CCF93D /* Build configuration list for PBXProject "ZombieArcade" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0AA009D180A4D5A00CCF93D /* Debug */,
@@ -1179,7 +1158,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0AA009F180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "zombie-arcade" */ = {
+		D0AA009F180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "zombiearcade" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0AA00A0180A4D5A00CCF93D /* Debug */,
@@ -1188,7 +1167,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0AA00A2180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "zombie-arcadeTests" */ = {
+		D0AA00A2180A4D5A00CCF93D /* Build configuration list for PBXNativeTarget "zombiearcadeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0AA00A3180A4D5A00CCF93D /* Debug */,

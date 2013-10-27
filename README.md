@@ -1,12 +1,12 @@
-zombie-arcade
-==================
+zombie-arcade 
+================== 
+ 
+CodeFellows final collaborative team project - iOS sprite kit game 
+ 
+Authors: 
+Will Kamp 
+Christian Hansen 
+Jason Koceja 
 
-CodeFellows final collaborative team project - iOS sprite kit game
-
-Authors:
-Will Kamp
-Christian Hansen
-Jason Koceja
-
-Sprite Artwork:
+Sprite Artwork: 
 https://github.com/clintbellanger/flare
