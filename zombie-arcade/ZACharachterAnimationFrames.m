@@ -40,11 +40,15 @@
                                            @"goblin"  : @{@"die": @8, @"walk": @8, @"attack": @4}};
             [self buildAnimationActionDbWithAtlasActions:atlasActions];
             
-            NSArray *soundFiles = @[@"warcry.caf", @"female_die.caf", @"level_up.caf", @"shoot.caf", @"zombie_die.caf",
-                                    @"zombie_critdie.caf", @"zombie_hit.caf", @"zombie_ment.caf", @"zombie_phys.caf",
-                                    @"skeleton_critdie.caf", @"skeleton_die.caf", @"skeleton_hit.caf", @"skeleton_ment.caf",
-                                    @"skeleton_phys.caf", @"goblin_critdie.caf", @"goblin_hit.caf", @"goblin_ment.caf",
-                                    @"goblin_phys.caf"];
+            NSArray *soundFiles = @[//hero
+                                    @"warcry.caf", @"female_die.caf", @"level_up.caf", @"shoot.caf",
+                                    //zombie
+                                    @"zombie_die.caf", @"zombie_critdie.caf", @"zombie_hit.caf", @"zombie_ment.caf", @"zombie_phys.caf",
+                                    //skeleton
+                                    @"skeleton_die.caf", @"skeleton_critdie.caf", @"skeleton_hit.caf", @"skeleton_ment.caf", @"skeleton_phys.caf",
+                                    //goblin
+                                    @"goblin_die.caf", @"goblin_critdie.caf", @"goblin_hit.caf", @"goblin_ment.caf", @"goblin_phys.caf"
+                                    ];
             [self buildSoundActionDbWithSoundFiles:soundFiles];
             
             //put the completion block back on the mainQueue so UI stuff can happen

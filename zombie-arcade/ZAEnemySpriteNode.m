@@ -15,11 +15,23 @@
 
 - (void)takeHit:(NSInteger)points withEnemies:(NSMutableArray *)trackedNodes
 {
+    NSString *sound = [self.charachterAtlasPrefix stringByAppendingString:@"_hit.caf"];
+    [self.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:sound]];
     [super takeHit:points withEnemies:trackedNodes];
 }
 
 - (void)performDeath:(NSMutableArray*)trackedNodes
 {
+    NSString *sound;
+    if (arc4random() %2)
+        sound = @"_die.caf";
+    else
+        sound = @"_critdie.caf";
+    
+    sound = [self.charachterAtlasPrefix stringByAppendingString:sound];
+    
+    [self.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:sound]];
+    
     ZAMyScene *scene = (ZAMyScene*) self.scene;
     [scene setZombieKills:scene.zombieKills + 1];
     [scene updateHud];
@@ -32,6 +44,9 @@
 {
     if (self.action == die)
         return;
+    
+    NSString *sound = [self.charachterAtlasPrefix stringByAppendingString:@"_phys.caf"];
+    [self.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:sound]];
     
     [self faceTowards:self.attackTarget.position];
     

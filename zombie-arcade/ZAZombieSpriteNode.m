@@ -18,40 +18,13 @@
 {
     ZAZombieSpriteNode *s = [[ZAZombieSpriteNode alloc] initWithCharachterType:zombie withHitPoints:2.];
     s.cardinal = east;
-    s.action = walk;
     s.movementSpeed = 80.;
     s.timePerframe = .125;
     s.attackPower = 1;
     s.zPosition = 2.;
     s.meleeSpeed = .75;
-//    [s.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_ment.caf"]];
+    [s setImmediateAction:walk];
     return s;
-}
-
-#pragma mark - actions
-
-- (void)takeHit:(NSInteger)points withEnemies:(NSMutableArray *)trackedNodes
-{
-    [self.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_hit.caf"]];
-    [super takeHit:points withEnemies:trackedNodes];
-}
-
-- (void)performDeath:(NSMutableArray*)trackedNodes
-{
-    [self.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_critdie.caf"]];
-    
-    //super called last on purpose here
-    [super performDeath:trackedNodes];
-}
-
-- (void)attackHero
-{
-    if (self.action == die)
-        return;
-    
-    [self.scene runAction:[[ZACharachterAnimationFrames sharedFrames] getSoundActionForFile:@"zombie_phys.caf"]];
-    [super attackHero];
-    
 }
 
 - (void)configurePhysicsBody

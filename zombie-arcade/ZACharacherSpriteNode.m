@@ -97,7 +97,6 @@
             break;
     }
     
-    //NSLog(@"%@", sequenceKey);
     return sequenceKey;
 }
 
@@ -116,14 +115,12 @@
     if (self.action == die)
         return;
     
-    //[self boundsCheck];
     SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action] withTimePerFrame:self.timePerframe];
     if (animation) {
         [self runAction:[SKAction sequence:@[animation, [SKAction runBlock:^{
             [self actionLoop];
         }]]]];
     } else {
-        //NSLog(@"error: nil animation %@", [self getSequenceForCardinal:self.cardinal forAction:self.action]);
         [self performSelector:@selector(actionLoop) withObject:nil afterDelay:1];
     }
 }
@@ -236,7 +233,6 @@
     self.velocity = CGPointMake(0., 0.);
     self.physicsBody = nil;
     self.action = die;
-    //SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action]];
     SKAction *animation = [self.frames animationForSequence:[self getSequenceForCardinal:self.cardinal forAction:self.action] withTimePerFrame:self.timePerframe];
     if (animation) {
         [self runAction:[SKAction sequence:@[animation, [SKAction fadeOutWithDuration:1.25],[SKAction removeFromParent]]]];
