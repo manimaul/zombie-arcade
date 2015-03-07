@@ -16,7 +16,7 @@
 #import "ZAHelpers.h"
 #import "ZACharachterAnimationFrames.h"
 #import "ZACharacherSpriteNode.h"
-#import "ZAButtonSpriteNode.h"
+//#import "ZAButtonSpriteNode.h"
 #import "ZABulletSpriteNode.h"
 
 @interface ZAMyScene()

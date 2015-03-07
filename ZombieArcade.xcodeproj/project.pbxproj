@@ -102,7 +102,6 @@
 		D0AA009C180A4D5A00CCF93D /* zombie_arcadeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA009B180A4D5A00CCF93D /* zombie_arcadeTests.m */; };
 		D0AA00B8180BBEB400CCF93D /* ZAZombieSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AA00B7180BBEB400CCF93D /* ZAZombieSpriteNode.m */; };
 		D0C7B5D7180EFF72007D8F41 /* ZACharachterAnimationFrames.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7B5D6180EFF72007D8F41 /* ZACharachterAnimationFrames.m */; };
-		D0DA04B5181B87BB00DC5419 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DA04AF181B87BB00DC5419 /* libTestFlight.a */; };
 		D0DD0226180CC04900EAFABB /* ZAHeroSpriteNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD0225180CC04900EAFABB /* ZAHeroSpriteNode.m */; };
 		D0F65C5B1812FF9F0071172D /* woman_die_east.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C431812FF9F0071172D /* woman_die_east.atlas */; };
 		D0F65C5C1812FF9F0071172D /* woman_die_north.atlas in Resources */ = {isa = PBXBuildFile; fileRef = D0F65C441812FF9F0071172D /* woman_die_north.atlas */; };
@@ -343,7 +342,6 @@
 				D0F7108C181B850300A36015 /* libz.dylib in Frameworks */,
 				D0AA006C180A4D5A00CCF93D /* CoreGraphics.framework in Frameworks */,
 				D0AA006E180A4D5A00CCF93D /* UIKit.framework in Frameworks */,
-				D0DA04B5181B87BB00DC5419 /* libTestFlight.a in Frameworks */,
 				D0AA0070180A4D5A00CCF93D /* SpriteKit.framework in Frameworks */,
 				D0AA006A180A4D5A00CCF93D /* Foundation.framework in Frameworks */,
 			);
@@ -1069,11 +1067,7 @@
 				GCC_PREFIX_HEADER = "zombie-arcade/zombie-arcade-Prefix.pch";
 				INFOPLIST_FILE = "zombie-arcade/zombie-arcade-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/williamkamp/Documents/workspace-ios/zombie-arcade/TestFlightSDK2.0.2",
-					"/Users/williamkamp/Documents/workspace-ios/zombie-arcade/TestFlightSDK2.0.2",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1092,11 +1086,7 @@
 				GCC_PREFIX_HEADER = "zombie-arcade/zombie-arcade-Prefix.pch";
 				INFOPLIST_FILE = "zombie-arcade/zombie-arcade-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/williamkamp/Documents/workspace-ios/zombie-arcade/TestFlightSDK2.0.2",
-					"/Users/williamkamp/Documents/workspace-ios/zombie-arcade/TestFlightSDK2.0.2",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

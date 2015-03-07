@@ -7,7 +7,7 @@
 //
 
 #import "ZAAppDelegate.h"
-#import "TestFlight.h"
+//#import "TestFlight.h"
 
 @implementation ZAAppDelegate
 
@@ -20,7 +20,7 @@
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // start of your application:didFinishLaunchingWithOptions // ...
-    [TestFlight takeOff:@"7ce88d9a-09c2-4d3b-a6ae-a4b0aa0f5bca"];
+    //[TestFlight takeOff:@"7ce88d9a-09c2-4d3b-a6ae-a4b0aa0f5bca"];
     // The rest of your application:didFinishLaunchingWithOptions method// ...
     return YES;
 }

@@ -10,29 +10,29 @@
 	<string>ZombieArcade</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>E960A515-EF88-4F28-BC28-EF5DE3949358</key>
-		<string>ssh://github.com/manimaul/8bit-zombie-arcade.git</string>
+		<key>0E64C62BC4430ACA3DC479E4FE7CCBE21AD3849B</key>
+		<string>github.com:manimaul/zombie-arcade.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ZombieArcade.xcodeproj/project.xcworkspace</string>
+	<string>ZombieArcade.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E960A515-EF88-4F28-BC28-EF5DE3949358</key>
+		<key>0E64C62BC4430ACA3DC479E4FE7CCBE21AD3849B</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/manimaul/8bit-zombie-arcade.git</string>
+	<string>github.com:manimaul/zombie-arcade.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E960A515-EF88-4F28-BC28-EF5DE3949358</string>
+	<string>0E64C62BC4430ACA3DC479E4FE7CCBE21AD3849B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E960A515-EF88-4F28-BC28-EF5DE3949358</string>
+			<string>0E64C62BC4430ACA3DC479E4FE7CCBE21AD3849B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>zombie-arcade</string>
 		</dict>

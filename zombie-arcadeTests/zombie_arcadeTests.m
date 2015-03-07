@@ -12,7 +12,7 @@
 
 @end
 
-@implementation _bit_zombie_arcadeTests
+@implementation zombie_arcadeTests
 
 - (void)setUp
 {
